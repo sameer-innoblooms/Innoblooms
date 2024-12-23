@@ -16,7 +16,7 @@ export default function AboutusSection() {
       <Container maxWidth="xl">
         <Box
           sx={{
-            textAlign: "center",
+            textAlign: "left",
             maxWidth: "1200px",
             mx: "auto",
           }}

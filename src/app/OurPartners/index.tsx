@@ -1,4 +1,4 @@
- import { Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
 import Partners from "./Partners";
@@ -10,14 +10,12 @@ interface SliderSettings {
   slidesToScroll: number;
   initialSlide: number;
   responsive: any;
-  autoplay:boolean;
-  autoplaySpeed:number;
-  cssEase:any;
-  
+  autoplay: boolean;
+  autoplaySpeed: number;
+  cssEase: any;
 }
 
-
-function SampleNextArrow(props:any) {
+function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -28,7 +26,7 @@ function SampleNextArrow(props:any) {
   );
 }
 
-function SamplePrevArrow(props:any) {
+function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -42,7 +40,7 @@ function SamplePrevArrow(props:any) {
 const OurPartners: React.FC = () => {
   const partnerDetails = [
     {
-      imag:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkj6H2_50pB8bmlu2kpvxFgFjbJNCLaBMn1A&s'
+      imag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkj6H2_50pB8bmlu2kpvxFgFjbJNCLaBMn1A&s",
     },
     {
       imag: "https://www.twmg.com.au/kentico-bronze-partner.png",
@@ -57,21 +55,18 @@ const OurPartners: React.FC = () => {
       imag: "https://blog.markergroupe.com/images/2024/07/amazon-fba-logo-feature.jpg",
     },
     {
-      imag:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2p-6RxAhZyZj1T5r2S6ZsJffhf2n22arGw&s'
+      imag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2p-6RxAhZyZj1T5r2S6ZsJffhf2n22arGw&s",
     },
-    
-     {
-        imag:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnsTnxapHtwI7ceGoU1x3doz9Hh67o6ZEXIA&s'
-    } ,
+
     {
-      imag:'https://static.vecteezy.com/system/resources/previews/020/040/714/non_2x/team-community-partners-logo-template-social-network-corporate-branding-identity-free-vector.jpg'
-    }
-   
-    
+      imag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnsTnxapHtwI7ceGoU1x3doz9Hh67o6ZEXIA&s",
+    },
+    {
+      imag: "https://static.vecteezy.com/system/resources/previews/020/040/714/non_2x/team-community-partners-logo-template-social-network-corporate-branding-identity-free-vector.jpg",
+    },
   ];
   //@ts-expect-error : should expect a string
   const settings: SliderSettings = {
- 
     dots: true,
     infinite: true,
     slidesToShow: 3,
@@ -82,16 +77,19 @@ const OurPartners: React.FC = () => {
     cssEase: "linear",
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />
-
   };
 
   return (
-    <Box sx={{boxShadow:4,m:4 , 
-      height:"100%",
-      width:"1600px",
-      margin:"auto",
-      position: "relative",
-    }}>
+    <Box
+      sx={{
+        boxShadow: 4,
+        m: 4,
+        height: "100%",
+        width: "1600px",
+        margin: "auto",
+        position: "relative",
+      }}
+    >
       <Box>
         <Typography
           variant="h5"
@@ -99,7 +97,7 @@ const OurPartners: React.FC = () => {
             textDecoration: "underline",
             textAlign: "center",
             // color: "#2F3974",
-            color: 'black',
+            color: "black",
             mt: 10,
             fontWeight: "bold",
             textTransform: "uppercase",
@@ -109,23 +107,19 @@ const OurPartners: React.FC = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ mt: 5, mb: 5,p:3 }}>
-          <Slider {...settings}
-          >
-            {partnerDetails.map((item, index) => {
-              return (
-                <Box key={index}>
-                  <Partners partnerDetails={item} />
-                </Box>
-              );
-            })}
-          </Slider>
-       
+      <Box sx={{ mt: 5, mb: 5, p: 3 }}>
+        <Slider {...settings}>
+          {partnerDetails.map((item, index) => {
+            return (
+              <Box key={index}>
+                <Partners partnerDetails={item} key={index} />
+              </Box>
+            );
+          })}
+        </Slider>
       </Box>
     </Box>
   );
 };
 
-export default OurPartners; 
-
-
+export default OurPartners;

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -12,9 +13,13 @@ const StyledSection = styled(Box)(({}) => ({
 
 export default function Process() {
   return (
-    <Container maxWidth="lg" sx={{
-      mt: 10,
-    }}>
+    <Container
+      maxWidth="lg"
+      sx={{
+        mt: 10,
+        mb: 10,
+      }}
+    >
       <Typography
         variant="h3"
         component="h1"

@@ -39,6 +39,7 @@ export default function FounderPage() {
           "url(https://www.transparenttextures.com/patterns/crossword.png)",
         // bgcolor: "aqua",
         py: 8,
+        mb: 5,
       }}
     >
       <Box

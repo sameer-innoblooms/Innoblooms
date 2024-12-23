@@ -10,6 +10,13 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import CodeIcon from "@mui/icons-material/Code";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import ComputerIcon from "@mui/icons-material/Computer";
+import StorageIcon from "@mui/icons-material/Storage";
+import BusinessIcon from "@mui/icons-material/Business";
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 
 type ServiceItem = string;
 
@@ -62,17 +69,13 @@ const services: ServiceCategory = {
 };
 
 const technologies: ServiceCategory = {
-  // Add technology categories here
   FRONTEND: ["React", "Vue.js", "Angular", "Next.js", "TypeScript"],
   BACKEND: ["Node.js", "Python", "Ruby on Rails", "Java", "PHP"],
-  // Add more categories as needed
 };
 
 const industries: ServiceCategory = {
-  // Add industry categories here
   TECHNOLOGY: ["SaaS", "Fintech", "E-commerce", "Artificial Intelligence"],
   HEALTHCARE: ["Telemedicine", "Health Tech", "Medical Devices"],
-  // Add more categories as needed
 };
 
 const accordionSections: AccordionSection[] = [
@@ -80,6 +83,27 @@ const accordionSections: AccordionSection[] = [
   { id: "technologies", title: "Show all technologies", data: technologies },
   { id: "industries", title: "Show all industries", data: industries },
 ];
+
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case "DESIGN":
+      return <DesignServicesIcon sx={{ mr: 1, fontSize: 20 }} />;
+    case "DEVELOPMENT":
+      return <CodeIcon sx={{ mr: 1, fontSize: 20 }} />;
+    case "MARKETING":
+      return <CampaignIcon sx={{ mr: 1, fontSize: 20 }} />;
+    case "FRONTEND":
+      return <ComputerIcon sx={{ mr: 1, fontSize: 20 }} />;
+    case "BACKEND":
+      return <StorageIcon sx={{ mr: 1, fontSize: 20 }} />;
+    case "TECHNOLOGY":
+      return <BusinessIcon sx={{ mr: 1, fontSize: 20 }} />;
+    case "HEALTHCARE":
+      return <LocalHospitalIcon sx={{ mr: 1, fontSize: 20 }} />;
+    default:
+      return null;
+  }
+};
 
 export default function ServicesAccordion() {
   const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -90,12 +114,7 @@ export default function ServicesAccordion() {
     };
 
   return (
-    <Box sx={{ width: "100%", 
-    
-        // bgcolor: "#0A061D" 
-        // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
-          bgcolor: '#000000'
-        }}>
+    <Box sx={{ width: "100%", bgcolor: "#000000" }}>
       {accordionSections.map((section) => (
         <Accordion
           key={section.id}
@@ -147,8 +166,11 @@ export default function ServicesAccordion() {
                     fontSize: "16px",
                     fontWeight: 600,
                     mb: 3,
+                    display: "flex",
+                    alignItems: "center",
                   }}
                 >
+                  {getCategoryIcon(category)}
                   {category}
                 </Typography>
                 <Grid container spacing={2}>
@@ -163,8 +185,11 @@ export default function ServicesAccordion() {
                           "&:hover": {
                             color: "white",
                           },
+                          display: "flex",
+                          alignItems: "center",
                         }}
                       >
+                        <AddIcon sx={{ mr: 1, fontSize: 16 }} />
                         {item}
                       </Typography>
                     </Grid>

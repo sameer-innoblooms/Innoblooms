@@ -1,47 +1,47 @@
-"use client";
-// import React, { useState } from 'react';
-// import { Box, Typography } from '@mui/material';
-// import Link from 'next/link';
-// import { usePathname, useRouter } from 'next/navigation';
+// "use client";
+// import React, { useState } from "react";
+// import { Box, Typography } from "@mui/material";
+// import Link from "next/link";
+// import { usePathname, useRouter } from "next/navigation";
 
 // const ServiceSubcategories = [
 //   {
-//     category: 'Web Development',
+//     category: "Web Development",
 //     subcategories: [
-//       { text: 'Frontend Development', href: '/services/frontend' },
-//       { text: 'Backend Development', href: '/services/backend' },
-//       { text: 'Full Stack Solutions', href: '/services/fullstack' }
-//     ]
+//       { text: "Frontend Development", href: "/services/frontend" },
+//       { text: "Backend Development", href: "/services/backend" },
+//       { text: "Full Stack Solutions", href: "/services/fullstack" },
+//     ],
 //   },
 //   {
-//     category: 'Digital Marketing',
+//     category: "Digital Marketing",
 //     subcategories: [
-//       { text: 'SEO Optimization', href: '/services/seo' },
-//       { text: 'Social Media Marketing', href: '/services/social-media' },
-//       { text: 'Content Marketing', href: '/services/content-marketing' }
-//     ]
+//       { text: "SEO Optimization", href: "/services/seo" },
+//       { text: "Social Media Marketing", href: "/services/social-media" },
+//       { text: "Content Marketing", href: "/services/content-marketing" },
+//     ],
 //   },
 //   {
-//     category: 'Cloud Solutions',
+//     category: "Cloud Solutions",
 //     subcategories: [
-//       { text: 'Cloud Migration', href: '/services/cloud-migration' },
-//       { text: 'Cloud Management', href: '/services/cloud-management' },
-//       { text: 'Cloud Security', href: '/services/cloud-security' }
-//     ]
-//   }
+//       { text: "Cloud Migration", href: "/services/cloud-migration" },
+//       { text: "Cloud Management", href: "/services/cloud-management" },
+//       { text: "Cloud Security", href: "/services/cloud-security" },
+//     ],
+//   },
 // ];
 
 // const ServicesDropdown = () => {
 //   const [isOpen, setIsOpen] = useState(false);
-//   const router = useRouter()
-//   const pathname = usePathname()
+//   const router = useRouter();
+//   const pathname = usePathname();
 
 //   return (
 //     <Box
 //       onMouseEnter={() => setIsOpen(true)}
 //       onMouseLeave={() => setIsOpen(false)}
-//       sx={{ position: 'relative' }}
-//       onClick = {()=> router.push('/services')}
+//       sx={{ position: "relative" }}
+//       onClick={() => router.push("/services")}
 //     >
 //       <Typography
 //         variant="h6"
@@ -51,9 +51,9 @@
 //           px: 4,
 //           py: 3,
 //           fontSize: { xs: "16px", sm: "18px" },
-//           cursor: 'pointer',
-//           fontWeight: '10px',
-//           textDecoration: pathname === '/services' ? "underline" : "",
+//           cursor: "pointer",
+//           fontWeight: "10px",
+//           textDecoration: pathname === "/services" ? "underline" : "",
 //         }}
 //       >
 //         Services
@@ -62,13 +62,13 @@
 //       {isOpen && (
 //         <Box
 //           sx={{
-//             position: 'absolute',
-//             top: '100%',
+//             position: "absolute",
+//             top: "100%",
 //             left: 0,
-//             width: '300px',
-//             bgcolor: 'white',
-//             boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-//             borderRadius: '8px',
+//             width: "300px",
+//             bgcolor: "white",
+//             boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+//             borderRadius: "8px",
 //             p: 2,
 //             zIndex: 1000,
 //           }}
@@ -78,28 +78,24 @@
 //               <Typography
 //                 variant="subtitle1"
 //                 sx={{
-//                   fontWeight: 'bold',
-//                   color: 'black',
+//                   fontWeight: "bold",
+//                   color: "black",
 //                   mb: 1,
-//                   borderBottom: '1px solid #eee'
+//                   borderBottom: "1px solid #eee",
 //                 }}
 //               >
 //                 {serviceGroup.category}
 //               </Typography>
 //               {serviceGroup.subcategories.map((subcat) => (
-//                 <Link
-//                   key={subcat.text}
-//                   href={subcat.href}
-//                   passHref
-//                 >
+//                 <Link key={subcat.text} href={subcat.href} passHref>
 //                   <Typography
 //                     sx={{
-//                       color: 'black',
+//                       color: "black",
 //                       p: 1,
-//                       '&:hover': {
-//                         bgcolor: '#f0f0f0',
-//                         borderRadius: '4px'
-//                       }
+//                       "&:hover": {
+//                         bgcolor: "#f0f0f0",
+//                         borderRadius: "4px",
+//                       },
 //                     }}
 //                   >
 //                     {subcat.text}
@@ -128,25 +124,21 @@ const ServiceSubcategories = [
     category: "BUSINESS CONSULTING",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-
   },
   {
     category: "AUTOMATION WITH AI",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-
   },
   {
     category: "RESOURCE AUGMENTATION",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-
   },
   {
     category: "SOFTWARE SERVICES",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-
   },
 ];
 
@@ -174,12 +166,14 @@ const ServicesDropdown = () => {
           cursor: "pointer",
           fontWeight: 500,
           // borderBottom: pathname === "/services" ? "2px solid white" : "none",
-          borderBottom: pathname.startsWith("/services") ? "2px solid #FFB247" : "none",
+          borderBottom: pathname.startsWith("/services")
+            ? "2px solid #FFB247"
+            : "none",
           color: pathname.startsWith("/services") ? " #FFB247" : "none",
 
           ":hover": {
-            // borderBottom: "2px solid #FFB247",
-            color: '#FFB247'
+            borderBottom: "2px solid #FFB247",
+            color: "#FFB247",
           },
           display: "inline-block",
         }}
@@ -201,21 +195,16 @@ const ServicesDropdown = () => {
             zIndex: 1000,
           }}
         >
-          <Grid
-            container
-            spacing={4}
-            sx={{ maxWidth: "1400px", }}
-          >
+          <Grid container spacing={4} sx={{ maxWidth: "1400px" }}>
             <Grid item xs={12} md={3}>
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: 'column',
+                  flexDirection: "column",
                   height: "100%",
                   justifyContent: "center",
                 }}
               >
-               
                 <Typography
                   variant="h2"
                   sx={{
@@ -224,23 +213,24 @@ const ServicesDropdown = () => {
                     fontSize: "50px",
                     // mt: 1,
                     lineHeight: 1.2,
-                    textAlign:'center'
+                    textAlign: "center",
                   }}
                 >
                   OUR
                   <br />
                   SERVICES
                 </Typography>
-                <Box sx={{
-                pl:12
-                }}>
-                <Image
-                  src="/Setting-image.png?height=100&width=100"
-                  alt="Our Services"
-                  width={100}
-                  height={100}
-                  
-                />
+                <Box
+                  sx={{
+                    pl: 12,
+                  }}
+                >
+                  <Image
+                    src="/Setting-image.png?height=100&width=100"
+                    alt="Our Services"
+                    width={100}
+                    height={100}
+                  />
                 </Box>
               </Box>
             </Grid>
@@ -261,7 +251,7 @@ const ServicesDropdown = () => {
                         sx={{
                           fontWeight: "bold",
                           color: "black",
-                          fontSize: '16px',
+                          fontSize: "16px",
                           borderBottom: "2px solid #eee",
                           pb: 1,
                         }}
@@ -279,7 +269,7 @@ const ServicesDropdown = () => {
                       >
                         {serviceGroup.description}
                       </Typography>
-                     
+
                       <Link
                         href={`/services/${serviceGroup.category
                           .toLowerCase()
@@ -319,3 +309,101 @@ const ServicesDropdown = () => {
 };
 
 export default ServicesDropdown;
+
+// "use client";
+
+// import React, { useState } from "react";
+// import { Box, Typography } from "@mui/material";
+// import Link from "next/link";
+// import { usePathname } from "next/navigation";
+
+// const AboutLinks = [
+//   { text: "Business Consulting", href: "/services/business-consulting" },
+//   { text: "Automation With Ai", href: "/services/automation-with-ai" },
+//   { text: "Resource Augmentation", href: "/services/resource-augmentation" },
+//   { text: "Software Service", href: "/services/software-services" },
+// ];
+
+// const AboutUsDropdown: React.FC = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const pathname = usePathname();
+
+//   return (
+//     <Box
+//       onMouseEnter={() => setIsOpen(true)}
+//       onMouseLeave={() => setIsOpen(false)}
+//       sx={{ position: "static" }}
+//     >
+//       <Typography
+//         variant="h6"
+//         component="span"
+//         sx={{
+//           px: 4,
+//           py: 3,
+//           fontSize: { xs: "16px", sm: "18px" },
+//           cursor: "pointer",
+//           fontWeight: 500,
+//           borderBottom: pathname.startsWith("/service")
+//             ? "2px solid #FFB247"
+//             : "none",
+//           color: pathname.startsWith("/aboutus") ? "#FFB247" : "white",
+//           ":hover": {
+//             borderBottom: "2px solid #FFB247",
+//             color: "#FFB247",
+//           },
+//           display: "inline-block",
+//         }}
+//       >
+//         Services
+//       </Typography>
+
+//       {isOpen && (
+//         <Box
+//           sx={{
+//             position: "absolute",
+//             top: "100%",
+//             // left: 0,
+//             width: "300px",
+//             bgcolor: "white",
+//             boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+//             borderRadius: "8px",
+//             p: 2,
+//             zIndex: 1000,
+//           }}
+//         >
+//           {AboutLinks.map((link) => (
+//             <Link
+//               key={link.text}
+//               href={link.href}
+//               style={{ textDecoration: "none" }}
+//             >
+//               <Typography
+//                 sx={{
+//                   // color: "#6B46C1",
+//                   color: "rg9, 49, 49)"b(4,
+//                   p: 2,
+//                   fontSize: "16px",
+//                   fontWeight: 500,
+//                   transition: "all 0.2s ease",
+//                   "&:hover": {
+//                     // bgcolor: "#f0f0f0",
+//                     color: "#FFB247",
+//                     transform: "translateX(5px)",
+//                   },
+//                   borderBottom: "1px solid #eee",
+//                   "&:last-child": {
+//                     borderBottom: "none",
+//                   },
+//                 }}
+//               >
+//                 {link.text}
+//               </Typography>
+//             </Link>
+//           ))}
+//         </Box>
+//       )}
+//     </Box>
+//   );
+// };
+
+// export default AboutUsDropdown;

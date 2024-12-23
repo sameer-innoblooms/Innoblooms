@@ -44,7 +44,14 @@ export default function ContactPage() {
   const [countryCode, setCountryCode] = useState("+91");
 
   return (
-    <Box sx={{ bgcolor: "#F5F8FF", minHeight: "auto", py: 8 }}>
+    <Box
+      sx={{
+        bgcolor: "#F5F8FF",
+        minHeight: "auto",
+        py: 8,
+        borderRadius: "0 0 60px 60px",
+      }}
+    >
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           {/* Left Column */}

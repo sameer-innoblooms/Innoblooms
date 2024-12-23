@@ -18,14 +18,16 @@ import {
   Email,
   LocationOn,
   AccessTime,
+  Twitter,
+  Message,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
 
-const GradientBackground = styled(Box)(({  }) => ({
+const GradientBackground = styled(Box)(({}) => ({
   // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
 
-  background: '#000000',
+  background: "#000000",
   color: "white",
   position: "relative",
   "&::before": {
@@ -40,12 +42,12 @@ const GradientBackground = styled(Box)(({  }) => ({
   },
 }));
 
-const StyledLink = styled(Link)(({  }) => ({
+const StyledLink = styled(Typography)(({}) => ({
   color: "white",
   textDecoration: "none",
-  "&:hover": {
-    textDecoration: "underline",
-  },
+  // "&:hover": {
+  //   textDecoration: "underline",
+  // },
 }));
 
 export default function Footer() {
@@ -95,11 +97,11 @@ export default function Footer() {
           <Grid item xs={12} md={4}>
             <Box sx={{ mb: 3 }}>
               <Image
-                src="/placeholder.svg"
+                src="/Innoblooms-logo.png"
                 alt="Innoblooms"
                 width={200}
                 height={60}
-                style={{ filter: "brightness(0) invert(1)" }}
+                // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
             <Typography sx={{ mb: 3 }}>
@@ -108,25 +110,29 @@ export default function Footer() {
               strategy, technology, marketing, and people services.
             </Typography>
             <Stack direction="row" spacing={1}>
-               <Link href="https://www.facebook.com/people/Innoblooms-Info-Services-Pvt-Ltd/100095194770163/">             
-              <IconButton sx={{ color: "white" }} aria-label="LinkedIn">
-                <LinkedIn />
-              </IconButton>
+              <Link href="https://in.linkedin.com/company/innoblooms-info-services-pvt-ltd">
+                <IconButton sx={{ color: "white" }} aria-label="LinkedIn">
+                  <LinkedIn />
+                </IconButton>
               </Link>
-              <IconButton sx={{ color: "white" }} aria-label="Facebook">
-                <Facebook />
-              </IconButton>
-              <IconButton sx={{ color: "white" }} aria-label="Facebook">
-                <Facebook />
-              </IconButton>
+              <Link href="https://x.com/services21256">
+                <IconButton sx={{ color: "white" }} aria-label="Facebook">
+                  <Twitter />
+                </IconButton>
+              </Link>
+              <Link href="https://www.facebook.com/people/Innoblooms-Info-Services-Pvt-Ltd/100095194770163/">
+                <IconButton sx={{ color: "white" }} aria-label="Facebook">
+                  <Facebook />
+                </IconButton>
+              </Link>
             </Stack>
             <Box sx={{ mt: 4 }}>
               <Image
-                src="/placeholder.svg"
+                src="/ISO-9001-certified.png"
                 alt="ISO 9001 Certified"
-                width={100}
-                height={100}
-                style={{ filter: "brightness(0) invert(1)" }}
+                width={50}
+                height={50}
+                // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
           </Grid>
@@ -137,17 +143,20 @@ export default function Footer() {
               Commerce Solutions
             </Typography>
             <Stack spacing={2}>
-              <StyledLink href="#">Business consulting</StyledLink>
+              {/* <StyledLink href="#">Business consulting</StyledLink>
               <StyledLink href="#"> Resource augmentation</StyledLink>
-              <StyledLink href="#">Software services</StyledLink>
+              <StyledLink href="#">Software services</StyledLink> */}
+              <StyledLink>Business consulting</StyledLink>
+              <StyledLink> Resource augmentation</StyledLink>
+              <StyledLink>Software services</StyledLink>
             </Stack>
 
             <Typography variant="h6" sx={{ mt: 4, mb: 3 }}>
               Other Solutions
             </Typography>
             <Stack spacing={2}>
-              <StyledLink href="#">Mobile App Development</StyledLink>
-              <StyledLink href="#">Web App Development</StyledLink>
+              <StyledLink>Mobile App Development</StyledLink>
+              <StyledLink>Web App Development</StyledLink>
             </Stack>
           </Grid>
 
@@ -192,7 +201,7 @@ export default function Footer() {
                 borderTop: "1px solid grey",
               }}
             >
-              © 2023 All Rights Reserved By Innoblooms Pvt. Ltd.
+              © 2024 All Rights Reserved By Innoblooms Info Services Pvt. Ltd.
             </Typography>
           </Grid>
         </Grid>

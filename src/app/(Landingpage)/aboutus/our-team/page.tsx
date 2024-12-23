@@ -1,15 +1,14 @@
-import React from "react";
-import Container from "@mui/material/Container";
 import { Box, Typography } from "@mui/material";
-import Overview from "./Overview";
+import React from "react";
+import Breadcrumb from "../Breadcrumb";
+import AboutusSection from "../AboutusSection";
+import FounderPage from "../FoundersPage";
 import ServicesAccordion from "@/app/components/ServicesAccordian";
 import Footer from "@/app/Footer";
-import WhatWeDo from "./WhatwedoBusiness";
-import Breadcrumb from "@/app/components/Breadcrumb";
 
 const page = () => {
   return (
-    <div>
+    <>
       <Box
         sx={{
           display: "flex",
@@ -26,7 +25,8 @@ const page = () => {
           position: "relative",
           objectFit: "cover",
           maxHeight: "1500px",
-          backgroundImage: `url(/Business-consulting.jpg)`,
+          // backgroundPositionY: -115,
+          backgroundImage: `url(/images/about-us-background.jpg)`,
           "&::before": {
             content: '""',
             position: "absolute",
@@ -34,10 +34,7 @@ const page = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            // backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
-            background:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))", // Gradient overlay
-
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
             zIndex: 1, // Ensure the overlay is above the background image
           },
         }}
@@ -51,7 +48,7 @@ const page = () => {
             mb: 2,
           }}
         >
-          Business Consulting
+          Our Team
         </Typography>
         <Box
           sx={{
@@ -66,24 +63,13 @@ const page = () => {
         >
           <Breadcrumb />
         </Box>
-        {/* <Typography
-            variant="body1"
-            color="white"
-            sx={{
-              zIndex: 9,
-              width: '700px'
-            }}
-          >
-            Overcome challenges, tap into opportunities and achieve your
-            business potential. Our experienced consultants provide customized
-            solutions that suit the needs at every level.
-          </Typography> */}
       </Box>
-      <Overview />
-      <WhatWeDo />
+      <AboutusSection />
+
+      <FounderPage />
       <ServicesAccordion />
       <Footer />
-    </div>
+    </>
   );
 };
 

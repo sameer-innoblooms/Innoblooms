@@ -42,7 +42,7 @@ const StyledImage = styled(Image)(({}) => ({
   },
 }));
 
-export default function PartnersPage() {
+export default function Partners() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
@@ -108,102 +108,35 @@ export default function PartnersPage() {
     slidesToShow: isMobile ? 2 : isTablet ? 3 : 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 1200,
     cssEase: "linear",
-    rows: 4,
+    rows: 1,
     slidesPerRow: 1,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: theme.breakpoints.values.md,
-        settings: {
-          slidesToShow: 3,
-          rows: 4,
-        },
-      },
-      {
-        breakpoint: theme.breakpoints.values.sm,
-        settings: {
-          slidesToShow: 2,
-          rows: 4,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: theme.breakpoints.values.md,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       rows: 4,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: theme.breakpoints.values.sm,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       rows: 4,
+    //     },
+    //   },
+    // ],
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          justifyItems: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          height: { xs: "50vh", sm: "60vh", md: "70vh" },
-          width: "100%",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          transition: "background-size 0.5s ease",
-          position: "relative",
-          objectFit: "cover",
-          maxHeight: "1500px",
-          backgroundPositionY: -115,
-          backgroundImage: `url(/images/resource-augmentation.jpg)`,
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
-            zIndex: 1, // Ensure the overlay is above the background image
-          },
-        }}
-      >
-        <Typography
-          variant="h1"
-          color="white"
-          align="center"
-          sx={{
-            zIndex: 9,
-            mb: 2,
-          }}
-        >
-          Partners & Team
-        </Typography>
-        <Box
-          sx={{
-            zIndex: 9,
-            width: "700px",
-            display: "flex",
-            justifyContent: "center",
-            justifyItems: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <Breadcrumb />
-        </Box>
-        {/* <Typography
-            variant="body1"
-            color="white"
-            sx={{
-              zIndex: 9,
-              width: '700px'
-            }}
-          >
-            Overcome challenges, tap into opportunities and achieve your
-            business potential. Our experienced consultants provide customized
-            solutions that suit the needs at every level.
-          </Typography> */}
-      </Box>
       <Container maxWidth="xl" sx={{ py: 6, mt: 1 }}>
         <Box
           sx={{
-            mb: 6,
+            mb: 4,
             display: "flex",
 
             flexDirection: "column",
@@ -220,9 +153,9 @@ export default function PartnersPage() {
             gutterBottom
             fontWeight="bold"
           >
-            Collaborative Excellence: Building Bridges, Driving Success
+            Our Partners
           </Typography>
-          <Typography
+          {/* <Typography
             variant="body1"
             color="text.secondary"
             align="center"
@@ -232,7 +165,7 @@ export default function PartnersPage() {
             unparalleled excellence. Our dedicated approach and shared vision
             create a synergy that fuels innovation and drives sustainable
             success for all.
-          </Typography>
+          </Typography> */}
         </Box>
 
         <Box
@@ -289,7 +222,7 @@ export default function PartnersPage() {
           </Slider>
         </Box>
 
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
@@ -333,10 +266,10 @@ export default function PartnersPage() {
           >
             Become a partner
           </Button>
-        </Box>
+        </Box> */}
       </Container>
-      <ServicesAccordion />
-      <Footer />
+      {/* <ServicesAccordion />
+      <Footer /> */}
     </ThemeProvider>
   );
 }

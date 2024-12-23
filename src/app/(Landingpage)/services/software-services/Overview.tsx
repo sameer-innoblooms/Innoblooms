@@ -1,53 +1,54 @@
-'use client'
+"use client";
 
-import { Box, Container, Grid, Typography, useTheme } from '@mui/material'
-import { styled } from '@mui/material/styles'
-import Image from 'next/image'
+import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Image from "next/image";
 
 const StyledOverview = styled(Typography)(({ theme }) => ({
-  color: '#8B3DFF',
+  // color: '#8B3DFF',
+  color: "black",
   marginBottom: theme.spacing(2),
   fontWeight: 500,
-}))
+}));
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
-  color: '#4A4A4A',
+  color: "#4A4A4A",
   marginBottom: theme.spacing(3),
   fontWeight: 600,
-  fontSize: '2.5rem',
+  fontSize: "2.5rem",
   lineHeight: 1.2,
-  [theme.breakpoints.down('md')]: {
-    fontSize: '2rem',
+  [theme.breakpoints.down("md")]: {
+    fontSize: "2rem",
   },
-}))
+}));
 
 const StyledSubheading = styled(Typography)(({ theme }) => ({
-  color: '#666666',
+  color: "#666666",
   marginBottom: theme.spacing(2),
-  fontSize: '1.25rem',
+  fontSize: "1.25rem",
   fontWeight: 500,
-}))
+}));
 
 const StyledDescription = styled(Typography)(({ theme }) => ({
-  color: '#666666',
+  color: "#666666",
   marginBottom: theme.spacing(4),
   lineHeight: 1.7,
-}))
+}));
 
-const ImageWrapper = styled(Box)(({  }) => ({
-  position: 'relative',
-  '&::before': {
+const ImageWrapper = styled(Box)(({}) => ({
+  position: "relative",
+  "&::before": {
     content: '""',
-    position: 'absolute',
-    top: '-20%',
-    right: '-20%',
-    width: '100%',
-    height: '100%',
-    background: 'linear-gradient(45deg, #FF6B6B 0%, #FFB84D 100%)',
-    borderRadius: '50%',
+    position: "absolute",
+    top: "-20%",
+    right: "-20%",
+    width: "100%",
+    height: "100%",
+    background: "linear-gradient(45deg, #FF6B6B 0%, #FFB84D 100%)",
+    borderRadius: "50%",
     zIndex: -1,
   },
-}))
+}));
 
 export default function Overview() {
   // const theme = useTheme()
@@ -56,10 +57,10 @@ export default function Overview() {
   return (
     <Box
       sx={{
-        backgroundColor: '#FFFFFF',
-        minHeight: '700px',
-        display: 'flex',
-        alignItems: 'center',
+        backgroundColor: "#FFFFFF",
+        minHeight: "700px",
+        display: "flex",
+        alignItems: "center",
         py: 8,
       }}
     >
@@ -67,17 +68,18 @@ export default function Overview() {
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
             <Box>
-              <StyledOverview variant="subtitle1">
-                OVERVIEW
-              </StyledOverview>
+              <StyledOverview variant="subtitle1">OVERVIEW</StyledOverview>
               <StyledHeading variant="h1">
-              Empower Your Business with Innovative Software Services
+                Empower Your Business with Innovative Software Services
               </StyledHeading>
               <StyledSubheading>
-              Transform Your Business with Smart Software
+                Transform Your Business with Smart Software
               </StyledSubheading>
               <StyledDescription>
-              Unlock your business's potential with our advanced software solutions. Create scalable, high-quality applications with us! At Moptra, we provide personalized software services designed to propel your business forward and ensure smooth operations.
+                Unlock your business's potential with our advanced software
+                solutions. Create scalable, high-quality applications with us!
+                At Moptra, we provide personalized software services designed to
+                propel your business forward and ensure smooth operations.
               </StyledDescription>
             </Box>
           </Grid>
@@ -89,10 +91,10 @@ export default function Overview() {
                 width={600}
                 height={400}
                 style={{
-                  width: '100%',
-                  height: 'auto',
-                  maxWidth: '100%',
-                  display: 'block',
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "100%",
+                  display: "block",
                 }}
                 priority
               />
@@ -101,6 +103,5 @@ export default function Overview() {
         </Grid>
       </Container>
     </Box>
-  )
+  );
 }
-

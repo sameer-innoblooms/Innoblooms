@@ -5,7 +5,8 @@ import { styled } from "@mui/material/styles";
 import Image from "next/image";
 
 const StyledOverview = styled(Typography)(({ theme }) => ({
-  color: "#8B3DFF",
+  // color: "#8B3DFF",
+  color: "black",
   marginBottom: theme.spacing(2),
   fontWeight: 500,
 }));
@@ -76,7 +77,11 @@ export default function Overview() {
                 Elevate Your Business with Us!
               </StyledSubheading>
               <StyledDescription>
-              At Innoblooms, we are dedicated to helping you navigate the complex world of business with bespoke, innovative solutions. Our consulting expertise will empower your organization to overcome challenges and achieve sustainable success. Partner with us and transform your business aspirations into reality.
+                At Innoblooms, we are dedicated to helping you navigate the
+                complex world of business with bespoke, innovative solutions.
+                Our consulting expertise will empower your organization to
+                overcome challenges and achieve sustainable success. Partner
+                with us and transform your business aspirations into reality.
               </StyledDescription>
             </Box>
           </Grid>
