@@ -1,33 +1,65 @@
 "use clients";
-import { Box, Grid, Typography, Button } from "@mui/material";
-import { Link } from "lucide-react";
+import {
+  Box,
+  Grid,
+  Typography,
+  Button,
+  Container,
+  styled,
+} from "@mui/material";
 import { useRouter } from "next/navigation";
 import React from "react";
+
+const InterText = styled("text")({
+  fontFamily: "Inter, sans-serif", // Example font weight
+});
 
 const Services = () => {
   const router = useRouter();
   return (
-    <div>
+    <Container maxWidth="xl">
       <Box>
         <Typography
-          variant="h5"
+          variant="h3"
+          color="initial"
           sx={{
-            textDecoration: "underline",
+            // textDecoration: "underline",
             textAlign: "center",
             // color: "#a6a5b1",
-            color: "black",
+            // color: "black",
+            color: "#4A4A4A",
             mt: 5,
             fontWeight: "bold",
-            textTransform: "uppercase",
+            fontFamily: "Inter, sans-serif",
+            // textTransform: "uppercase",
           }}
         >
-          Our Services
+          <Box
+            component="span"
+            sx={{
+              background: "linear-gradient(to right, #476884, #35A7C6)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+              fontFamily: "Inter, sans-serif",
+            }}
+          >
+            Our
+          </Box>{" "}
+          Services
         </Typography>
       </Box>
       <Box>
         <Typography
-          variant="h5"
-          sx={{ textAlign: "center", mt: 2, mb: 2, color: "black" }}
+          variant="h6"
+          sx={{
+            textAlign: "center",
+            mt: 2,
+            mb: 2,
+            // color: "black",
+            color: "rgba(0, 0, 0, 0.6)",
+            fontSize: "1.130rem",
+          }}
         >
           AI automation, consulting, software solutions, and resource
           augmentation.
@@ -432,7 +464,7 @@ const Services = () => {
           </Box>
         </Grid>
       </Grid>
-    </div>
+    </Container>
   );
 };
 

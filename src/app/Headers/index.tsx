@@ -6,7 +6,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -15,7 +14,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import CloseIcon from "@mui/icons-material/Close";
-import { useScrollTrigger } from "@mui/material";
+import { Box, useScrollTrigger } from "@mui/material";
 import ServicesDropdown from "../components/ServicePopover";
 import Image from "next/image";
 import AboutUsDropdown from "../components/AboutUsDropdown";
@@ -73,13 +72,14 @@ const Header = () => {
                 fontSize: { xs: "16px", sm: "18px" },
                 cursor: "pointer",
                 fontWeight: 500,
-                borderBottomStyle:
+
+                borderBottom:
                   pathname === link.href && pathname !== "/"
-                    ? "2px solid #FFB247 "
+                    ? "2px solid #68a9b7 "
                     : "none",
                 color:
                   pathname === link.href && pathname !== "/"
-                    ? " #FFB247 "
+                    ? " #68a9b7 "
                     : "none",
                 // ":hover": {
                 //   borderBottom: "2px solid white",
@@ -88,10 +88,11 @@ const Header = () => {
                 // display: "inline-block",
 
                 // textDecoration: pathname === link.href ? "underline" : "none",
-                transition: "color 0.9s ease",
+                transition: "color 0.2s ease",
                 "&:hover": {
-                  borderBottom: pathname !== "/" ? "2px solid #FFB247" : "none",
-                  color: "#FFB247",
+                  borderBottom: "2px solid #4294a5",
+                  // color: "#FFB247",
+                  color: "#68a9b7",
                 },
               }}
             >
@@ -107,7 +108,8 @@ const Header = () => {
             width: { xs: "100px", sm: "130px", md: "150px" },
             height: { xs: "35px", sm: "45px", md: "50px" },
             minWidth: "100px",
-            bgcolor: "#FFB247",
+            bgcolor: "#4294a5",
+            // bgcolor: "#FFB247",
             color: "black",
             fontWeight: "bold",
             borderRadius: "50px",
@@ -191,6 +193,7 @@ const Header = () => {
             // pathname === "/services" ||
             // pathname === "/blogs" ||
             // pathname === "/aboutus" ||
+            // pathname.startsWith("/blog") ||
             trigger ? "#000000" : "transparent",
           transition: "background-color 0.3s ease",
           boxShadow: 0,
@@ -224,12 +227,19 @@ const Header = () => {
                 // boxShadow: "5px 5px 5px white",
               }}
             >
-              <Image
-                src="/Innoblooms-logo.png"
-                alt="Innoblooms Logo"
-                width={350}
-                height={80}
-              />
+              <Box
+                sx={{
+                  width: { xs: "40px", sm: "50px", md: "60px" },
+                }}
+              >
+                <Image
+                  src="/Innoblooms-logo.png"
+                  alt="Innoblooms Logo"
+                  width={350}
+                  height={80}
+                />
+              </Box>
+
               {/* Innoblooms */}
             </Typography>
           </Link>

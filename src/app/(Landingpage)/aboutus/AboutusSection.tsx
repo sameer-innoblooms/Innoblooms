@@ -11,6 +11,7 @@ export default function AboutusSection() {
 
         // bgcolor: 'grey',
         py: { xs: 8, md: 12 },
+        bgcolor: "#F5F9FF",
       }}
     >
       <Container maxWidth="xl">
@@ -42,6 +43,7 @@ export default function AboutusSection() {
               mb: 3,
               fontSize: { xs: "2rem", md: "2.75rem" },
               lineHeight: 1.2,
+              color: "#4A4A4A",
             }}
           >
             Innoblooms Info Services

@@ -8,7 +8,6 @@ import WhyChooseUs from "../WhyChooseUs";
 import ServicesAccordion from "@/app/components/ServicesAccordian";
 import Footer from "@/app/Footer";
 import Services from "@/app/services";
-import OurPartners from "@/app/components/Ourpartners";
 import Partners from "@/app/components/Ourpartners";
 
 const page = () => {

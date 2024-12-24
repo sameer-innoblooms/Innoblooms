@@ -10,9 +10,6 @@ import {
   TextField,
   Button,
   Link,
-  Select,
-  MenuItem,
-  InputAdornment,
   styled,
 } from "@mui/material";
 import { Mail } from "lucide-react";
@@ -47,6 +44,7 @@ export default function ContactPage() {
     <Box
       sx={{
         bgcolor: "#F5F8FF",
+        // bgcolor: "#68a9b7",
         minHeight: "auto",
         py: 8,
         borderRadius: "0 0 60px 60px",

@@ -6,7 +6,8 @@ import Image from "next/image";
 
 const StyledOverview = styled(Typography)(({ theme }) => ({
   // color: "#8B3DFF",
-  color: "black",
+  // color: "black",
+  color: "#4A4A4A",
   marginBottom: theme.spacing(2),
   fontWeight: 500,
 }));
@@ -58,7 +59,7 @@ export default function Overview() {
     <Box
       sx={{
         backgroundColor: "#FFFFFF",
-        minHeight: "100vh",
+        minHeight: "700px",
         display: "flex",
         alignItems: "center",
         py: 8,

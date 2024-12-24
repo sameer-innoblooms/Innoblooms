@@ -20,7 +20,7 @@ function Dashboard() {
       <Headers />
       <Home />
       <Services />
-      <BackgroundImage />
+      {/* <BackgroundImage /> */}
       <ClientsSay />
       {/* <OurPartners /> */}
 

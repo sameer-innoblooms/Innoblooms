@@ -20,6 +20,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "@/app/Footer";
 import ServicesAccordion from "@/app/components/ServicesAccordian";
+import Link from "next/link";
 
 const theme = createTheme({
   palette: {
@@ -321,18 +322,20 @@ export default function PartnersPage() {
               Join the partners network
             </Typography>
           </Box>
-          <Button
-            variant="contained"
-            endIcon={<ArrowForwardIcon />}
-            sx={{
-              "&:hover .MuiSvgIcon-root": {
-                transform: "translateX(4px)",
-                transition: "transform 0.2s",
-              },
-            }}
-          >
-            Become a partner
-          </Button>
+          <Link href={"/contact"}>
+            <Button
+              variant="contained"
+              endIcon={<ArrowForwardIcon />}
+              sx={{
+                "&:hover .MuiSvgIcon-root": {
+                  transform: "translateX(4px)",
+                  transition: "transform 0.2s",
+                },
+              }}
+            >
+              Become a partner
+            </Button>
+          </Link>
         </Box>
       </Container>
       <ServicesAccordion />

@@ -118,6 +118,7 @@ import { Box, Typography, Grid } from "@mui/material";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
+import { ArrowDropDown } from "@mui/icons-material";
 
 const ServiceSubcategories = [
   {
@@ -167,18 +168,19 @@ const ServicesDropdown = () => {
           fontWeight: 500,
           // borderBottom: pathname === "/services" ? "2px solid white" : "none",
           borderBottom: pathname.startsWith("/services")
-            ? "2px solid #FFB247"
+            ? "2px solid #4294a5"
             : "none",
-          color: pathname.startsWith("/services") ? " #FFB247" : "none",
+          color: pathname.startsWith("/services") ? " #4294a5" : "none",
 
           ":hover": {
-            borderBottom: "2px solid #FFB247",
-            color: "#FFB247",
+            borderBottom: "2px solid #4294a5",
+            color: "#4294a5",
           },
           display: "inline-block",
         }}
       >
         Service
+        <ArrowDropDown sx={{ position: "absolute", mx: 0.5 }} />
       </Typography>
 
       {isOpen && (

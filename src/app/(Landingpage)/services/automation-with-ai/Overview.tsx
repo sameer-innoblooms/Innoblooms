@@ -5,7 +5,8 @@ import { styled } from "@mui/material/styles";
 import Image from "next/image";
 
 const StyledOverview = styled(Typography)(({ theme }) => ({
-  color: "black",
+  // color: "black",
+  color: "#4A4A4A",
   marginBottom: theme.spacing(2),
   fontWeight: 500,
 }));

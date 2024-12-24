@@ -133,7 +133,7 @@ export default function Partners() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ py: 6, mt: 1 }}>
+      <Container maxWidth="xl" sx={{ py: 5, my: 2 }}>
         <Box
           sx={{
             mb: 4,
@@ -151,9 +151,27 @@ export default function Partners() {
             variant="h4"
             component="h1"
             gutterBottom
-            fontWeight="bold"
+            // fontWeight="bold"
+            // fontSize="2.5rem"
+            sx={{
+              color: "#4A4A4A",
+              fontSize: { xs: "2rem", md: "2.5rem" },
+              fontWeight: 600,
+            }}
           >
-            Our Partners
+            <Box
+              component="span"
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              Our
+            </Box>{" "}
+            Partners
           </Typography>
           {/* <Typography
             variant="body1"

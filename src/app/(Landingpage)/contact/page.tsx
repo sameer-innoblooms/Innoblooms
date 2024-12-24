@@ -7,6 +7,7 @@ import BackgroundImage from "@/app/BackgroundImage";
 import Footer from "@/app/Footer";
 import Breadcrumb from "./Breadcrumb";
 import ContactPage from "@/app/components/FormFeedback";
+import ServicesAccordion from "@/app/components/ServicesAccordian";
 
 export default function ContactSection() {
   return (
@@ -175,7 +176,7 @@ export default function ContactSection() {
           </Box>
         </Box>
       </Container>
-
+      <ServicesAccordion />
       <Footer />
     </>
   );

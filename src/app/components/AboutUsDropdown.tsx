@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ArrowDropDown } from "@mui/icons-material";
 
 const AboutLinks = [
   { text: "Our team  ", href: "/aboutus/our-team" },
@@ -21,28 +22,33 @@ const AboutUsDropdown: React.FC = () => {
       onMouseLeave={() => setIsOpen(false)}
       sx={{ position: "static" }}
     >
-      <Typography
-        variant="h6"
-        component="span"
-        sx={{
-          px: 4,
-          py: 3,
-          fontSize: { xs: "16px", sm: "18px" },
-          cursor: "pointer",
-          fontWeight: 500,
-          borderBottom: pathname.startsWith("/aboutus")
-            ? "2px solid #FFB247"
-            : "none",
-          color: pathname.startsWith("/aboutus") ? "#FFB247" : "white",
-          ":hover": {
-            borderBottom: "2px solid #FFB247",
-            color: "#FFB247",
-          },
-          display: "inline-block",
-        }}
-      >
-        About Us
-      </Typography>
+      <Box sx={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
+        <Typography
+          variant="h6"
+          component="span"
+          alignItems="center"
+          sx={{
+            px: 4,
+            py: 3,
+            fontSize: { xs: "16px", sm: "18px" },
+            cursor: "pointer",
+            fontWeight: 500,
+            borderBottom: pathname.startsWith("/aboutus")
+              ? "2px solid #4294a5"
+              : "none",
+            color: pathname.startsWith("/aboutus") ? "#4294a5" : "white",
+            ":hover": {
+              borderBottom: "2px solid #4294a5",
+              color: "#4294a5",
+            },
+            display: "inline-block",
+          }}
+        >
+          About Us
+          <ArrowDropDown sx={{ position: "absolute", mx: 0.5 }} />
+        </Typography>
+        <Box></Box>
+      </Box>
 
       {isOpen && (
         <Box

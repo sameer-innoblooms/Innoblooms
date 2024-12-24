@@ -47,7 +47,7 @@ export default function ProjectLandingPage() {
       sx={{
         // bgcolor: '#000014',
         bgcolor: "#000000",
-        minHeight: "100vh",
+        // minHeight: "100vh",
         py: { xs: 4, md: 8 },
       }}
     >

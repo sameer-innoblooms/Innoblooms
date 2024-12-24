@@ -23,6 +23,7 @@ import {
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
+import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
 
 const GradientBackground = styled(Box)(({}) => ({
   // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
@@ -80,11 +81,24 @@ export default function Footer() {
           </Typography>
           <Button
             variant="contained"
+            endIcon={<ArrowForwardIcon />}
             sx={{
-              bgcolor: "rgba(255, 255, 255, 0.2)",
-              "&:hover": { bgcolor: "rgba(255, 255, 255, 0.3)" },
+              // bgcolor: "rgba(255, 255, 255, 0.2)",
+              // bgcolor: "#4294a5",
+              color: "black",
+              backgroundColor: "#4294a5",
+              "&:hover": {
+                // bgcolor: "rgba(255, 255, 255, 0.3)",
+                bgcolor: "white",
+              },
+              "&:hover .MuiSvgIcon-root": {
+                transform: "translateX(4px)",
+                transition: "transform 0.2s",
+              },
+
               px: 4,
               py: 1.5,
+              fontFamily: "Inter, sans-serif",
             }}
             onClick={() => router.push("/contact")}
           >

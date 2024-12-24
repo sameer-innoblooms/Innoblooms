@@ -37,8 +37,8 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <Box sx={{ py: 8 }}>
-      <Container maxWidth="lg">
+    <Box sx={{ py: 10, bgcolor: "#F5F9FF", borderRadius: "70px 70px 0 0" }}>
+      <Container maxWidth="lg" sx={{}}>
         <Box sx={{ mb: 6, textAlign: "center" }}>
           {/* <Typography
             sx={{
