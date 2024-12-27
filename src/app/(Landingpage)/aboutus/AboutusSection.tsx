@@ -11,7 +11,9 @@ export default function AboutusSection() {
 
         // bgcolor: 'grey',
         py: { xs: 8, md: 12 },
-        bgcolor: "#F5F9FF",
+        // bgcolor: "#F5F9FF",
+        bgcolor: "#e9f5f9",
+        // bgcolor: "#d3eaf2",
       }}
     >
       <Container maxWidth="xl">
@@ -46,7 +48,19 @@ export default function AboutusSection() {
               color: "#4A4A4A",
             }}
           >
-            Innoblooms Info Services
+            <Box
+              component="span"
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              Innoblooms
+            </Box>{" "}
+            Info Services
           </Typography>
 
           <Typography

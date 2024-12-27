@@ -12,7 +12,9 @@ export default function ClientsCard({ cardDetails }: any) {
           minHeight: "390px",
           borderRadius: "16px",
           //backgroundColor: "#3046C54D",
-          background: "linear-gradient( to right, #3046C54D, #4E31144D);",
+          // background: "linear-gradient( to right, #3046C54D, #4E31144D);",
+          background:
+            "linear-gradient(to right top, #4294a5, #38a1ab, #33adad, #39b9ac, #48c5a8);",
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
@@ -27,7 +29,7 @@ export default function ClientsCard({ cardDetails }: any) {
             // title="green iguana"
           />
         </Box>
-        <CardContent sx={{ textAlign: "center" }}>
+        <CardContent sx={{ textAlign: "center", color: "#4A4A4A" }}>
           <Typography
             variant="body1"
             component="div"

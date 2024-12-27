@@ -71,8 +71,18 @@ export default function Overview() {
             <Box>
               <StyledOverview variant="subtitle1">OVERVIEW</StyledOverview>
               <StyledHeading variant="h1">
-                Take your business to a whole new level with a user friendly web
-                application.
+                <Box
+                  sx={{
+                    background: "linear-gradient(to right, #476884, #35A7C6)",
+                    // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    display: "inline-block",
+                  }}
+                >
+                  Take your business
+                </Box>{" "}
+                to a whole new level with a user friendly web application.
               </StyledHeading>
               <StyledSubheading>
                 Elevate Your Business with Us!

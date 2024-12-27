@@ -14,35 +14,30 @@ export default function WhatWeDo() {
   const services = [
     {
       title: "Strategy Consulting",
-      icon: <Science sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Science,
       description:
         "Strategy consultants advise organisations on high-level decisions in an unbiased fashion, using deep industry knowledge to deliver the best results.",
     },
     {
-      title: "Hr Consulting",
-      icon: <Cloud sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      title: "HR Consulting",
+      icon: Cloud,
       description:
-        " A Human Resources Consultant initiates and leads HR programs and projects, conducts research to identify issues, provides advice and recommendations, formulates strategic plans, and assists in recruitment, training, and management of personnel.",
+        "A Human Resources Consultant initiates and leads HR programs and projects, conducts research to identify issues, provides advice and recommendations, formulates strategic plans, and assists in recruitment, training, and management of personnel.",
     },
     {
       title: "Information Technology Consulting",
-      icon: <Devices sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Devices,
       description:
-        "This can involve assessing elements of a company&apos;s computer systems like cybersecurity, software performance and data and analytics that can affect how a business might benefit from the technology they use.",
+        "This can involve assessing elements of a company's computer systems like cybersecurity, software performance and data and analytics that can affect how a business might benefit from the technology they use.",
     },
   ];
 
   return (
     <Box
       sx={{
-        bgcolor: "#F5F9FF",
+        // bgcolor: "#F5F9FF",
+        bgcolor: "#e9f5f9",
         py: 8,
-        // background:
-        //   "linear-gradient(45deg, rgba(107,47,179,0.05) 0%, rgba(107,47,179,0.1) 100%)",
-        // backgroundImage: `
-        //   linear-gradient(45deg, rgba(107,47,179,0.05) 0%, rgba(107,47,179,0.1) 100%),
-        //   repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(107,47,179,0.03) 2px, rgba(107,47,179,0.03) 3px)
-        // `,
       }}
     >
       <Container maxWidth="lg">
@@ -51,12 +46,24 @@ export default function WhatWeDo() {
           sx={{
             textAlign: "center",
             mb: 6,
-            color: "#333",
+            // color: "#333",
+            color: "#4A4A4A",
             fontSize: { xs: "2rem", md: "2.5rem" },
             fontWeight: 600,
           }}
         >
-          Consulting We Provide
+          <Box
+            sx={{
+              background: "linear-gradient(to right, #476884, #35A7C6)",
+              // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+            }}
+          >
+            Consulting
+          </Box>{" "}
+          We Provide
         </Typography>
         <Grid container spacing={4}>
           {services.map((service, index) => (
@@ -69,10 +76,10 @@ export default function WhatWeDo() {
                   borderRadius: "16px",
                   boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                   overflow: "hidden",
-                  // border: "1px solid rgba(107,47,179,0.1)",
                   transition: "transform 0.2s ease-in-out",
                   "&:hover": {
                     transform: "translateY(-8px)",
+                    color: "#4294A5",
                   },
                 }}
               >
@@ -83,17 +90,30 @@ export default function WhatWeDo() {
                     alignItems: "center",
                     pt: 4,
                     pb: 2,
-                    bgcolor: "black",
+                    // bgcolor: "black",
+                    bgcolor: "#4d7990",
+                    transition: "color 0.2s ease-in-out",
+                    // "&:hover": {
+                    //   color: "#4294A5",
+                    //   "& svg": {
+                    //     color: "#4294A5", // Change icon color on hover
+                    //   },
+                    // },
                   }}
                 >
-                  {service.icon}
+                  <service.icon
+                    sx={{
+                      fontSize: 64,
+                      color: "white",
+                      transition: "color 0.2s ease-in-out",
+                    }}
+                  />
                 </Box>
                 <Box
                   sx={{
-                    // bgcolor: '#6B2FB3',
                     py: 2,
                     px: 3,
-                    bgcolor: "black",
+                    bgcolor: "#4d7990",
                   }}
                 >
                   <Typography

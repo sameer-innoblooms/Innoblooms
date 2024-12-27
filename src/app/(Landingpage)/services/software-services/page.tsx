@@ -22,6 +22,8 @@ const page = () => {
           position: "relative",
           overflow: "hidden", // Ensure no overflow from the video
           maxHeight: "1500px",
+          background:
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))",
         }}
       >
         {/* Background Video */}

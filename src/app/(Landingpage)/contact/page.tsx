@@ -121,6 +121,7 @@ export default function ContactSection() {
               mb: 6,
               fontSize: { xs: "2.5rem", md: "3.5rem" },
               fontWeight: 600,
+              color: "#4A4A4A",
               ml: 5,
             }}
           >
@@ -133,7 +134,8 @@ export default function ContactSection() {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#000000DE",
+                  // color: "#000000DE",
+                  color: "#4A4A4A",
                   fontSize: "1.1rem",
                   "&:hover": { color: "#000000" },
                 }}
@@ -149,7 +151,8 @@ export default function ContactSection() {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#000000DE",
+                  // color: "#000000DE",
+                  color: "#4A4A4A",
                   fontSize: "1.1rem",
                   "&:hover": { color: "#000000" },
                 }}
@@ -165,7 +168,8 @@ export default function ContactSection() {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#000000DE",
+                  // color: "#000000DE",
+                  color: "#4A4A4A",
                   fontSize: "1.1rem",
                   maxWidth: "300px",
                 }}

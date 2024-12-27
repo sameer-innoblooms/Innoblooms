@@ -37,7 +37,14 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <Box sx={{ py: 10, bgcolor: "#F5F9FF", borderRadius: "70px 70px 0 0" }}>
+    <Box
+      sx={{
+        py: 10,
+        // bgcolor: "#F5F9FF",
+        bgcolor: "#e9f5f9",
+        borderRadius: "70px 70px 0 0",
+      }}
+    >
       <Container maxWidth="lg" sx={{}}>
         <Box sx={{ mb: 6, textAlign: "center" }}>
           {/* <Typography
@@ -61,7 +68,19 @@ export default function WhyChooseUs() {
               mb: 4,
             }}
           >
-            Why Choose Us
+            Why{" "}
+            <Box
+              component="span"
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              Choose us
+            </Box>
           </Typography>
         </Box>
 
@@ -70,19 +89,21 @@ export default function WhyChooseUs() {
             <Box
               sx={{
                 // bgcolor: '#6B2FB3',
-                bgcolor: "black",
+                // bgcolor: "black",
+                bgcolor: "#4d7990",
                 borderRadius: "32px",
                 p: { xs: 4, md: 6 },
                 height: "100%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                borderBottomRightRadius: 200,
               }}
             >
               <Typography
                 sx={{
                   color: "white",
-                  fontSize: { xs: "1.5rem", md: "2rem" },
+                  fontSize: { xs: "1.5rem", md: "1.9rem" },
                   fontWeight: 500,
                   textAlign: "center",
                   lineHeight: 1.4,
@@ -129,7 +150,7 @@ export default function WhyChooseUs() {
                       sx={{
                         //  color: '#6B2FB3'
 
-                        color: "black",
+                        color: "#49647f",
                       }}
                     />
                   </ListItemIcon>

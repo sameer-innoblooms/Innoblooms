@@ -108,10 +108,12 @@ const Header = () => {
             width: { xs: "100px", sm: "130px", md: "150px" },
             height: { xs: "35px", sm: "45px", md: "50px" },
             minWidth: "100px",
-            bgcolor: "#4294a5",
+            bgcolor: "#4294A5",
+            // bgcolor: "#4d7990",
             // bgcolor: "#FFB247",
             color: "black",
-            fontWeight: "bold",
+            // fontWeight: "bold",
+            fontWeight: "medium",
             borderRadius: "50px",
             fontSize: { xs: "11px", sm: "13px", md: "15px" },
             ml: { xs: 1, sm: 2 },
@@ -194,10 +196,10 @@ const Header = () => {
             // pathname === "/blogs" ||
             // pathname === "/aboutus" ||
             // pathname.startsWith("/blog") ||
-            trigger ? "#000000" : "transparent",
+            trigger ? "white" : "transparent",
           transition: "background-color 0.3s ease",
           boxShadow: 0,
-          color: "white",
+          color: trigger ? "black" : "white",
           height: { xs: "60px", sm: "70px", md: "80px" },
         }}
       >

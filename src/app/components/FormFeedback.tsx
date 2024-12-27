@@ -12,7 +12,20 @@ import {
   Link,
   styled,
 } from "@mui/material";
-import { Mail } from "lucide-react";
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#1976d2',
+//     },
+//     secondary: {
+//       main: '#dc004e',
+//     },
+//     custom: {
+//       myColor: '#4A4A4A', // Your custom color
+//     },
+//   },
+// });
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(4),
@@ -28,7 +41,10 @@ const Section = ({
   description: string;
 }) => (
   <Box sx={{ mb: 4 }}>
-    <Typography variant="h6" sx={{ mb: 1, fontWeight: 500 }}>
+    <Typography
+      variant="h6"
+      sx={{ mb: 1, color: "#4A4A4A", fontWeight: "bold" }}
+    >
       {title}
     </Typography>
     <Typography variant="body1" color="text.secondary">
@@ -43,19 +59,39 @@ export default function ContactPage() {
   return (
     <Box
       sx={{
-        bgcolor: "#F5F8FF",
+        // bgcolor: "#F5F8FF",
+        bgcolor: "#e9f5f9",
         // bgcolor: "#68a9b7",
         minHeight: "auto",
         py: 8,
-        borderRadius: "0 0 60px 60px",
+        // borderRadius: "0 0 60px 60px",
       }}
     >
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           {/* Left Column */}
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
-              Contact Us
+            <Typography
+              variant="h2"
+              sx={{
+                color: "#4A4A4A",
+                mb: 2,
+                fontWeight: 700,
+                //  color: "#4A4A4A"
+              }}
+            >
+              Contact{" "}
+              <Box
+                sx={{
+                  background: "linear-gradient(to right, #476884, #35A7C6)",
+                  // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  display: "inline-block",
+                }}
+              >
+                Us
+              </Box>
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, color: "text.secondary" }}>
               Email, call, or complete the form to learn how Snappy can solve
@@ -63,13 +99,23 @@ export default function ContactPage() {
             </Typography>
 
             <Box sx={{ mb: 4 }}>
-              <Typography variant="body1" sx={{ mb: 1 }}>
+              <Typography
+                variant="body1"
+                sx={{ mb: 1, color: "#4A4A4A", fontWeight: "bold" }}
+              >
                 info@innoblooms.com
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography
+                variant="body1"
+                sx={{ mb: 2, color: "#4A4A4A", fontWeight: "bold" }}
+              >
                 +91 7252833134
               </Typography>
-              <Link href="#" underline="hover" color="text.primary">
+              <Link
+                href="#"
+                underline="hover"
+                sx={{ color: "#4A4A4A", fontWeight: "bold" }}
+              >
                 Customer Support
               </Link>
             </Box>
@@ -93,8 +139,19 @@ export default function ContactPage() {
           {/* Right Column */}
           <Grid item xs={12} md={6}>
             <StyledPaper>
-              <Typography variant="h4" sx={{ mb: 1 }}>
-                Get in Touch
+              <Typography variant="h4" sx={{ mb: 1, color: "#4A4A4A" }}>
+                Get in{" "}
+                <Box
+                  sx={{
+                    background: "linear-gradient(to right, #476884, #35A7C6)",
+                    // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    display: "inline-block",
+                  }}
+                >
+                  Touch
+                </Box>
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
                 You can reach us anytime
@@ -156,7 +213,9 @@ export default function ContactPage() {
                     size="large"
                     sx={{
                       //   bgcolor: '#0066FF',
-                      bgcolor: "black",
+                      // bgcolor: "black",
+                      // bgcolor: "#4294A6",
+                      bgcolor: "#4d7990",
                       borderRadius: "8px",
                       textTransform: "none",
                       py: 1.5,
@@ -167,13 +226,29 @@ export default function ContactPage() {
                 </Grid>
               </Grid>
 
-              <Typography variant="body2" align="center" sx={{ mt: 2 }}>
+              <Typography
+                variant="body2"
+                align="center"
+                sx={{ mt: 2, color: "#4A4A4A" }}
+              >
                 By contacting us, you agree to our{" "}
-                <Link href="#" underline="hover">
+                <Link
+                  href="#"
+                  underline="hover"
+                  sx={{
+                    color: "#4294A6",
+                  }}
+                >
                   Terms of service
                 </Link>{" "}
                 and{" "}
-                <Link href="#" underline="hover">
+                <Link
+                  href="#"
+                  underline="hover"
+                  sx={{
+                    color: "#4294A6",
+                  }}
+                >
                   Privacy Policy
                 </Link>
               </Typography>

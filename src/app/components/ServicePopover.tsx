@@ -211,7 +211,8 @@ const ServicesDropdown = () => {
                   variant="h2"
                   sx={{
                     fontWeight: "bold",
-                    color: "black",
+                    // color: "black",
+                    color: "#4A4A4A",
                     fontSize: "50px",
                     // mt: 1,
                     lineHeight: 1.2,
@@ -230,6 +231,7 @@ const ServicesDropdown = () => {
                   <Image
                     src="/Setting-image.png?height=100&width=100"
                     alt="Our Services"
+                    color="#4A4A4A"
                     width={100}
                     height={100}
                   />
@@ -252,8 +254,10 @@ const ServicesDropdown = () => {
                         variant="h6"
                         sx={{
                           fontWeight: "bold",
-                          color: "black",
+                          // color: "black",
+                          color: "#4A4A4A",
                           fontSize: "16px",
+
                           borderBottom: "2px solid #eee",
                           pb: 1,
                         }}

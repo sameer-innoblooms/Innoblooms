@@ -5,6 +5,7 @@ import AboutusSection from "../AboutusSection";
 import FounderPage from "../FoundersPage";
 import ServicesAccordion from "@/app/components/ServicesAccordian";
 import Footer from "@/app/Footer";
+import Founders from "../Founders";
 
 const page = () => {
   return (
@@ -34,6 +35,8 @@ const page = () => {
             left: 0,
             right: 0,
             bottom: 0,
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))",
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
             zIndex: 1, // Ensure the overlay is above the background image
           },
@@ -65,7 +68,7 @@ const page = () => {
         </Box>
       </Box>
       <AboutusSection />
-
+      {/* <Founders /> */}
       <FounderPage />
       <ServicesAccordion />
       <Footer />

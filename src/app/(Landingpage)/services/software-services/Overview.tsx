@@ -70,13 +70,24 @@ export default function Overview() {
             <Box>
               <StyledOverview variant="subtitle1">OVERVIEW</StyledOverview>
               <StyledHeading variant="h1">
-                Empower Your Business with Innovative Software Services
+                <Box
+                  sx={{
+                    background: "linear-gradient(to right, #476884, #35A7C6)",
+                    // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    display: "inline-block",
+                  }}
+                >
+                  Empower
+                </Box>{" "}
+                Your Business with Innovative Software Services
               </StyledHeading>
               <StyledSubheading>
                 Transform Your Business with Smart Software
               </StyledSubheading>
               <StyledDescription>
-                Unlock your business's potential with our advanced software
+                Unlock your business&apos;s potential with our advanced software
                 solutions. Create scalable, high-quality applications with us!
                 At Moptra, we provide personalized software services designed to
                 propel your business forward and ensure smooth operations.

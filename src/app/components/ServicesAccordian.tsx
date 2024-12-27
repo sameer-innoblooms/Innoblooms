@@ -232,6 +232,7 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import SearchIcon from "@mui/icons-material/Search";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LaunchIcon from "@mui/icons-material/Launch";
+import Image from "next/image";
 
 type ServiceItem = string;
 
@@ -274,12 +275,12 @@ const services: ServiceCategory = {
     "Social Media Design",
     "Local SEO",
     "Conversion Rate Optimization",
-    "Pitch Deck Design",
-    "Technical SEO",
-    "GA4 consulting",
-    "Product Hunt launch",
-    "SEO Audit",
-    "Content Marketing",
+    // "Pitch Deck Design",
+    // "Technical SEO",
+    // "GA4 consulting",
+    // "Product Hunt launch",
+    // "SEO Audit",
+    // "Content Marketing",
   ],
 };
 
@@ -301,20 +302,20 @@ const accordionSections: AccordionSection[] = [
 
 const getCategoryIcon = (category: string) => {
   switch (category) {
-    case "DESIGN":
-      return <DesignServicesIcon sx={{ mr: 1, fontSize: 20 }} />;
-    case "DEVELOPMENT":
-      return <CodeIcon sx={{ mr: 1, fontSize: 20 }} />;
-    case "MARKETING":
-      return <CampaignIcon sx={{ mr: 1, fontSize: 20 }} />;
-    case "FRONTEND":
-      return <ComputerIcon sx={{ mr: 1, fontSize: 20 }} />;
-    case "BACKEND":
-      return <StorageIcon sx={{ mr: 1, fontSize: 20 }} />;
-    case "TECHNOLOGY":
-      return <BusinessIcon sx={{ mr: 1, fontSize: 20 }} />;
-    case "HEALTHCARE":
-      return <LocalHospitalIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "DESIGN":
+    //   return <DesignServicesIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "DEVELOPMENT":
+    //   return <CodeIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "MARKETING":
+    //   return <CampaignIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "FRONTEND":
+    // // return <ComputerIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "BACKEND":
+    // // return <StorageIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "TECHNOLOGY":
+    //   return <BusinessIcon sx={{ mr: 1, fontSize: 20 }} />;
+    // case "HEALTHCARE":
+    //   return <LocalHospitalIcon sx={{ mr: 1, fontSize: 20 }} />;
     default:
       return null;
   }
@@ -322,55 +323,415 @@ const getCategoryIcon = (category: string) => {
 
 const getItemIcon = (item: string) => {
   switch (item.toLowerCase()) {
+    case "saas website design":
+      return (
+        <Image
+          src="/logo/saas-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "web design":
+      return (
+        <Image
+          src="/logo/telemedicin-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "landing website design":
+      return (
+        <Image
+          src="/logo/landingWebsiteDesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "responsive web design":
+      return (
+        <Image
+          src="/logo/webDesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "website redesign":
-      return <WebIcon sx={{ mr: 1, fontSize: 16 }} />;
+      return (
+        <Image
+          src="/logo/webDesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "ui/ux design":
+      return (
+        <Image
+          src="/logo/uiux-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "rebranding":
+      return (
+        <Image
+          src="/logo/rebranding-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "branding for startups":
-      return <BrushIcon sx={{ mr: 1, fontSize: 16 }} />;
+      return (
+        <Image
+          src="/logo/branding-startup.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "mobile app design":
-      return <PhoneAndroidIcon sx={{ mr: 1, fontSize: 16 }} />;
+      return (
+        <Image
+          src="/logo/mobileAppDesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "software product development":
+      return (
+        <Image
+          src="/logo/software.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "web application development":
+      return (
+        <Image
+          src="/logo/webApplicationDevelopment.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "web portal development":
+      return (
+        <Image
+          src="/logo/webPortalDevelopment.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "web development":
-    case "front-end development":
-    case "react":
-    case "vue.js":
-    case "angular":
-      return <CodeIcon sx={{ mr: 1, fontSize: 16 }} />;
-    case "next.js":
-    case "typescript":
-      return <CodeIcon sx={{ mr: 1, fontSize: 16 }} />;
-    case "back-end development":
+      return (
+        <Image
+          src="/logo/webDevelopment.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "mobile app development":
+      return (
+        <Image
+          src="/logo/mobileAppDesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "cms development":
+      return (
+        <Image
+          src="/logo/cms-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "back-end development":
+      return (
+        <Image
+          src="/logo/backenDevelopment-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "mvp development":
+      return (
+        <Image
+          src="/logo/webdesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "front-end development":
+      return (
+        <Image
+          src="/logo/frontendDevelopment-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "react":
+      return (
+        <Image
+          src="/react-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "vue.js":
+      return (
+        <Image
+          src="/logo/vue-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "angular":
+      return (
+        <Image
+          src="/logo/angular-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "next.js":
+      return (
+        <Image
+          src="/logo/next-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "typescript":
+      return (
+        <Image
+          src="/logo/typescript-logo.png"
+          alt="react logo"
+          height={20}
+          width={21}
+          style={{ marginRight: 10 }}
+        />
+      );
+    // case "back-end development":
+    // case "cms development":
     case "node.js":
+      return (
+        <Image
+          src="/logo/nodejs-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "python":
+      return (
+        <Image
+          src="/logo/python-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "ruby on rails":
+      return (
+        <Image
+          src="/logo/ruby-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "java":
+      return (
+        <Image
+          src="/logo/java-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "php":
-      return <StorageIcon sx={{ mr: 1, fontSize: 16 }} />;
+      return (
+        <Image
+          src="/logo/php-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "search engine optimisation":
+      return (
+        <Image
+          src="/logo/seo-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "local seo":
+      return (
+        <Image
+          src="/logo/seo-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "technical audit":
+      return (
+        <Image
+          src="/logo/technichalAudit-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "social media design":
+      return (
+        <Image
+          src="/logo/socialMediaDesign-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "technical seo":
     case "seo audit":
       return <SearchIcon sx={{ mr: 1, fontSize: 16 }} />;
     case "conversion rate optimization":
+      return (
+        <Image
+          src="/logo/coversionRateOptimization-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "ga4 consulting":
       return <BarChartIcon sx={{ mr: 1, fontSize: 16 }} />;
     case "product hunt launch":
       return <LaunchIcon sx={{ mr: 1, fontSize: 16 }} />;
     case "saas":
+      return (
+        <Image
+          src="/logo/saas-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "fintech":
+      return (
+        <Image
+          src="/logo/fintech-logo.png"
+          alt="react logo"
+          height={20}
+          width={20}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "e-commerce":
+      return (
+        <Image
+          src="/logo/ecom-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "artificial intelligence":
-      return <BusinessIcon sx={{ mr: 1, fontSize: 16 }} />;
+      return (
+        <Image
+          src="/logo/ai-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "telemedicine":
+      return (
+        <Image
+          src="/logo/telemedicin-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "health tech":
+      return (
+        <Image
+          src="/logo/healthTech-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     case "medical devices":
-      return <LocalHospitalIcon sx={{ mr: 1, fontSize: 16 }} />;
+      return (
+        <Image
+          src="/logo/medicalDevices-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
     default:
       return <AddIcon sx={{ mr: 1, fontSize: 16 }} />;
   }

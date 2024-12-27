@@ -159,6 +159,8 @@ export default function PartnersPage() {
             left: 0,
             right: 0,
             bottom: 0,
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))",
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
             zIndex: 1, // Ensure the overlay is above the background image
           },
@@ -220,8 +222,22 @@ export default function PartnersPage() {
             component="h1"
             gutterBottom
             fontWeight="bold"
+            sx={{
+              color: "#4A4A4A",
+            }}
           >
-            Collaborative Excellence: Building Bridges, Driving Success
+            <Box
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+              }}
+            >
+              Collaborative Excellence:
+            </Box>{" "}
+            Building Bridges, Driving Success
           </Typography>
           <Typography
             variant="body1"
@@ -302,7 +318,7 @@ export default function PartnersPage() {
             borderRadius: 2,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          {/* <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <AvatarGroup max={4}>
               {teamAvatars.map((member, index) => (
                 <Avatar
@@ -318,15 +334,31 @@ export default function PartnersPage() {
                 />
               ))}
             </AvatarGroup>
-            <Typography variant="subtitle1" fontWeight="medium">
+            <Typography
+              variant="subtitle1"
+              fontWeight="medium"
+              sx={{
+                color: "#4A4A4A",
+              }}
+            >
               Join the partners network
             </Typography>
-          </Box>
-          <Link href={"/contact"}>
+          </Box> */}
+          {/* <Link href={"/contact"}>
             <Button
               variant="contained"
               endIcon={<ArrowForwardIcon />}
               sx={{
+                width: { xs: "100px", sm: "130px", md: "230px" },
+                height: { xs: "35px", sm: "45px", md: "50px" },
+                minWidth: "100px",
+                bgcolor: "#4294a5",
+                // bgcolor: "#FFB247",
+                color: "black",
+                fontWeight: "bold",
+                borderRadius: "50px",
+                fontSize: { xs: "11px", sm: "13px", md: "15px" },
+                ml: { xs: 1, sm: 2 },
                 "&:hover .MuiSvgIcon-root": {
                   transform: "translateX(4px)",
                   transition: "transform 0.2s",
@@ -335,7 +367,7 @@ export default function PartnersPage() {
             >
               Become a partner
             </Button>
-          </Link>
+          </Link> */}
         </Box>
       </Container>
       <ServicesAccordion />

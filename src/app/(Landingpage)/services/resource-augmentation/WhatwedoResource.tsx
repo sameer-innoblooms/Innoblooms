@@ -14,19 +14,19 @@ export default function WhatWeDoResource() {
   const services = [
     {
       title: "Skilled Talent Integration",
-      icon: <Science sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Science,
       description:
         "Augment your team with highly skilled professionals who seamlessly integrate into your existing workflow. Our experts bring specialized knowledge and experience to enhance your project capabilities and accelerate your business outcomes.",
     },
     {
       title: "Flexible Staffing Solutions",
-      icon: <Cloud sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Cloud,
       description:
         " Adapt to changing business needs with our flexible staffing solutions. Whether you require short-term support or long-term partnerships, we provide the right resources to meet your project demands, ensuring you always have the right talent at the right time.",
     },
     {
       title: "Efficient Resource Management",
-      icon: <Devices sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Devices,
       description:
         "Optimize your budget with our cost-effective resource management strategies. By leveraging our resource augmentation services, you can reduce overhead costs, minimize hiring risks, and achieve greater efficiency in your operations..",
     },
@@ -35,13 +35,8 @@ export default function WhatWeDoResource() {
   return (
     <Box
       sx={{
-        py: 8,
         bgcolor: "#F5F9FF",
-        // background: 'linear-gradient(45deg, rgba(107,47,179,0.05) 0%, rgba(107,47,179,0.1) 100%)',
-        // backgroundImage: `
-        //   linear-gradient(45deg, rgba(107,47,179,0.05) 0%, rgba(107,47,179,0.1) 100%),
-        //   repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(107,47,179,0.03) 2px, rgba(107,47,179,0.03) 3px)
-        // `,
+        py: 8,
       }}
     >
       <Container maxWidth="lg">
@@ -50,12 +45,23 @@ export default function WhatWeDoResource() {
           sx={{
             textAlign: "center",
             mb: 6,
-            color: "#333",
+            color: "#4A4A4A",
             fontSize: { xs: "2rem", md: "2.5rem" },
             fontWeight: 600,
           }}
         >
-          Comprehensive Resource Augmentation Solutions{" "}
+          <Box
+            sx={{
+              background: "linear-gradient(to right, #476884, #35A7C6)",
+              // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+            }}
+          >
+            Comprehensive
+          </Box>{" "}
+          Resource Augmentation Solution
         </Typography>
         <Grid container spacing={4}>
           {services.map((service, index) => (
@@ -68,10 +74,10 @@ export default function WhatWeDoResource() {
                   borderRadius: "16px",
                   boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                   overflow: "hidden",
-                  // border: "1px solid rgba(107,47,179,0.1)",
                   transition: "transform 0.2s ease-in-out",
                   "&:hover": {
                     transform: "translateY(-8px)",
+                    color: "#4294A5",
                   },
                 }}
               >
@@ -82,17 +88,29 @@ export default function WhatWeDoResource() {
                     alignItems: "center",
                     pt: 4,
                     pb: 2,
-                    bgcolor: "black",
+                    bgcolor: "#4d7990",
+                    transition: "color 0.2s ease-in-out",
+                    // "&:hover": {
+                    //   color: "#4294A5",
+                    //   "& svg": {
+                    //     color: "#4294A5", // Change icon color on hover
+                    //   },
+                    // },
                   }}
                 >
-                  {service.icon}
+                  <service.icon
+                    sx={{
+                      fontSize: 64,
+                      color: "white",
+                      transition: "color 0.2s ease-in-out",
+                    }}
+                  />
                 </Box>
                 <Box
                   sx={{
-                    // bgcolor: '#6B2FB3',
                     py: 2,
                     px: 3,
-                    bgcolor: "black",
+                    bgcolor: "#4d7990",
                   }}
                 >
                   <Typography

@@ -70,7 +70,18 @@ export default function Overview() {
             <Box>
               <StyledOverview variant="subtitle1">OVERVIEW</StyledOverview>
               <StyledHeading variant="h1">
-                Elevate Your Business with Top Talent and Expertise{" "}
+                <Box
+                  sx={{
+                    background: "linear-gradient(to right, #476884, #35A7C6)",
+                    // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    display: "inline-block",
+                  }}
+                >
+                  Elevate
+                </Box>{" "}
+                Your Business with Top Talent and Expertise{" "}
               </StyledHeading>
               <StyledSubheading>
                 Enhance Your Business with Our Resource Augmentation!{" "}

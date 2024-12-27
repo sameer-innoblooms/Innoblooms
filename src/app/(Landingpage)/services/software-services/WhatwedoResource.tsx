@@ -14,19 +14,19 @@ export default function WhatWeDoSoftware() {
   const services = [
     {
       title: "Custom Software Engineering",
-      icon: <Science sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Science,
       description:
         "Develop bespoke software solutions tailored to your business requirements. Our scalable and robust applications drive efficiency and growth.",
     },
     {
       title: "User-Centric Application Design",
-      icon: <Cloud sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Cloud,
       description:
         "Create applications that prioritize user experience. Our designs focus on usability and functionality to ensure a seamless user journey.",
     },
     {
       title: "Reliable Maintenance and Support",
-      icon: <Devices sx={{ fontSize: 64, color: "#bbbbbb" }} />,
+      icon: Devices,
       description:
         "Ensure your software stays up-to-date and efficient with our dedicated maintenance and support. We provide timely updates and solutions to any issues.",
     },
@@ -35,15 +35,8 @@ export default function WhatWeDoSoftware() {
   return (
     <Box
       sx={{
-        py: 8,
         // bgcolor: "#F5F9FF",
-
-        // background:
-        //   "linear-gradient(45deg, rgba(107,47,179,0.05) 0%, rgba(107,47,179,0.1) 100%)",
-        // backgroundImage: `
-        //   linear-gradient(45deg, rgba(107,47,179,0.05) 0%, rgba(107,47,179,0.1) 100%),
-        //   repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(107,47,179,0.03) 2px, rgba(107,47,179,0.03) 3px)
-        // `,
+        py: 8,
       }}
     >
       <Container maxWidth="lg">
@@ -52,12 +45,23 @@ export default function WhatWeDoSoftware() {
           sx={{
             textAlign: "center",
             mb: 6,
-            color: "#333",
             fontSize: { xs: "2rem", md: "2.5rem" },
             fontWeight: 600,
+            color: "#4A4A4A",
           }}
         >
-          Innovative Software Services{" "}
+          <Box
+            sx={{
+              background: "linear-gradient(to right, #476884, #35A7C6)",
+              // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+            }}
+          >
+            Innovative
+          </Box>{" "}
+          Software Services
         </Typography>
         <Grid container spacing={4}>
           {services.map((service, index) => (
@@ -70,10 +74,10 @@ export default function WhatWeDoSoftware() {
                   borderRadius: "16px",
                   boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
                   overflow: "hidden",
-                  // border: "1px solid rgba(107,47,179,0.1)",
                   transition: "transform 0.2s ease-in-out",
                   "&:hover": {
                     transform: "translateY(-8px)",
+                    color: "#4294A5",
                   },
                 }}
               >
@@ -84,17 +88,29 @@ export default function WhatWeDoSoftware() {
                     alignItems: "center",
                     pt: 4,
                     pb: 2,
-                    bgcolor: "black",
+                    bgcolor: "#4d7990",
+                    transition: "color 0.2s ease-in-out",
+                    // "&:hover": {
+                    //   color: "#4294A5",
+                    //   "& svg": {
+                    //     color: "#4294A5", // Change icon color on hover
+                    //   },
+                    // },
                   }}
                 >
-                  {service.icon}
+                  <service.icon
+                    sx={{
+                      fontSize: 64,
+                      color: "white",
+                      transition: "color 0.2s ease-in-out",
+                    }}
+                  />
                 </Box>
                 <Box
                   sx={{
-                    // bgcolor: '#6B2FB3',
                     py: 2,
                     px: 3,
-                    bgcolor: "black",
+                    bgcolor: "#4d7990",
                   }}
                 >
                   <Typography

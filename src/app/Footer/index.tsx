@@ -60,7 +60,7 @@ export default function Footer() {
       <Container maxWidth="lg" sx={{ pt: 8, pb: 8 }}>
         <Box
           sx={{
-            bgcolor: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
+            // bgcolor: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
             borderRadius: 4,
             p: 4,
             mb: 8,
@@ -76,29 +76,48 @@ export default function Footer() {
             component="h2"
             sx={{ color: "white", maxWidth: 600 }}
           >
-            Let us know if there&apos;s an opportunity for us to build something
-            awesome together.
+            <Box
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+              }}
+            >
+              Let us know
+            </Box>{" "}
+            if there&apos;s an opportunity for us to build something awesome
+            together.
           </Typography>
           <Button
             variant="contained"
             endIcon={<ArrowForwardIcon />}
             sx={{
-              // bgcolor: "rgba(255, 255, 255, 0.2)",
-              // bgcolor: "#4294a5",
+              width: { xs: "100px", sm: "130px", md: "185px" },
+              height: { xs: "35px", sm: "45px", md: "50px" },
+              minWidth: "100px",
+              bgcolor: "#4294a5",
+              // bgcolor: "#4d7990",
+              // bgcolor: "#FFB247",
               color: "black",
-              backgroundColor: "#4294a5",
+              // fontWeight: "bold",
+              fontWeight: "16px",
+              borderRadius: "50px",
+              fontSize: { xs: "11px", sm: "13px", md: "15px" },
+              ml: { xs: 1, sm: 2 },
               "&:hover": {
-                // bgcolor: "rgba(255, 255, 255, 0.3)",
-                bgcolor: "white",
+                color: "black",
+                backgroundColor: "white",
               },
               "&:hover .MuiSvgIcon-root": {
                 transform: "translateX(4px)",
                 transition: "transform 0.2s",
               },
 
-              px: 4,
+              px: 1,
               py: 1.5,
-              fontFamily: "Inter, sans-serif",
+              // fontFamily: "Inter, sans-serif",
             }}
             onClick={() => router.push("/contact")}
           >

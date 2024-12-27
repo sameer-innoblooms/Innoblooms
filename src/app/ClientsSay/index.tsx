@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import TestimonialSlider from "../components/Testimonials";
 
 interface ClientCardDetails {
   imag: string;
@@ -43,7 +44,9 @@ const ClientsCard: React.FC<{ cardDetails: ClientCardDetails }> = ({
           width: "100%",
           minHeight: "390px",
           borderRadius: "16px",
-          background: "linear-gradient(#121028, #4E31144D)",
+          // background: "linear-gradient(#121028, #4E31144D)",
+          // background: "linear-gradient(to right top, #4294a5, #38a1ab, #33adad, #39b9ac, #48c5a8);",
+          background: "linear-gradient(to right, #476884, #35A7C6)",
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
@@ -154,7 +157,7 @@ const ClientsSay: React.FC = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
     pauseOnHover: true,
     responsive: [
       {
@@ -184,9 +187,13 @@ const ClientsSay: React.FC = () => {
   return (
     <Box
       sx={{
-        py: 10,
+        mt: 5,
+        py: 4,
+        pb: 6,
         // bgcolor: "#040404",
         // borderRadius: "0 0 70px 70px"
+        bgcolor: "#e9f5f9",
+        // borderRadius: "0 0 70px 70px", // Rounded corners at the bottom
       }}
     >
       <Typography
@@ -205,6 +212,7 @@ const ClientsSay: React.FC = () => {
         <Box
           sx={{
             background: "linear-gradient(to right, #476884, #35A7C6)",
+            // background: "linear-gradient(to right , #4294a5, #48c5a8);",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             display: "inline-block",
@@ -225,8 +233,9 @@ const ClientsSay: React.FC = () => {
             // fontWeight: "bold",
             mb: 2,
             // color: "rgba(0, 0, 0, 0.6)",
+            color: "#4A4A4A",
             // color: "#4A4A4A",
-            color: "white",
+            // color: "white",
             fontSize: "1.130rem",
           }}
         >
@@ -235,12 +244,13 @@ const ClientsSay: React.FC = () => {
         </Typography>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           position: "relative",
           width: "100%",
-          maxWidth: "1600px",
+          maxWidth: "1350px",
           mx: "auto",
+          // color: "#4A4A4A",
         }}
       >
         <Slider
@@ -252,7 +262,8 @@ const ClientsSay: React.FC = () => {
             <ClientsCard key={index} cardDetails={client} />
           ))}
         </Slider>
-      </Box>
+      </Box> */}
+      <TestimonialSlider />
     </Box>
   );
 };

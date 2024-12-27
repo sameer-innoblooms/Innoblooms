@@ -151,13 +151,13 @@ export default function ProjectShowcase() {
                   variant="contained"
                   endIcon={<KeyboardArrowDownIcon />}
                   sx={{
-                    bgcolor: "#FFB800",
+                    bgcolor: "#4294A5",
                     color: "black",
                     borderRadius: "24px",
                     px: 3,
                     py: 1.5,
                     "&:hover": {
-                      bgcolor: "#FFC835",
+                      bgcolor: "white",
                     },
                   }}
                 >

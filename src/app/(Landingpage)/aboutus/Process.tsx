@@ -18,7 +18,8 @@ export default function Process() {
         borderRadius: "0 0 70px 70px",
         // boxShadow: "0 0 30px black",
         // bgcolor: "rgb(45 45 100)",
-        bgcolor: "#F5F9FF",
+        // bgcolor: "#F5F9FF",
+        bgcolor: "#e9f5f9",
       }}
     >
       <Container
@@ -32,15 +33,28 @@ export default function Process() {
         <Typography
           variant="h3"
           component="h1"
-          color="initial"
+          // color="initial"
           align="center"
           gutterBottom
           sx={{
             mb: 1,
             fontWeight: "bold",
+            color: "#4A4A4A",
           }}
         >
-          Our Process
+          <Box
+            component="span"
+            sx={{
+              background: "linear-gradient(to right, #476884, #35A7C6)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+              fontFamily: "Inter, sans-serif",
+            }}
+          >
+            Our
+          </Box>{" "}
+          Process
         </Typography>
         <Typography
           variant="body1"
@@ -49,6 +63,7 @@ export default function Process() {
             mb: 8,
             maxWidth: "600px",
             mx: "auto",
+            color: "#4A4A4A",
           }}
         >
           Our process is a flexible framework that adapts, evolves and responds
@@ -69,7 +84,8 @@ export default function Process() {
                   left: -75,
                   zIndex: 9,
                   // bgcolor: "#fdfdfd",
-                  bgcolor: "#F5F9FF",
+                  // bgcolor: "#F5F9FF",
+                  bgcolor: "#e9f5f9",
                 }}
               >
                 01
@@ -85,8 +101,8 @@ export default function Process() {
                   }}
                 >
                   <Typography
-                    variant="h5"
-                    sx={{ fontWeight: "bold", mb: 2, ml: 5 }}
+                    variant="h4"
+                    sx={{ fontWeight: "bold", mb: 2, ml: 5, color: "#4A4A4A" }}
                   >
                     Plan
                   </Typography>
@@ -95,6 +111,7 @@ export default function Process() {
                     sx={{
                       mb: 2,
                       ml: 5,
+                      color: "#4A4A4A",
                     }}
                   >
                     We set priorities, organize content, and understand the
@@ -132,7 +149,8 @@ export default function Process() {
                   right: 550,
                   zIndex: 9,
                   // bgcolor: "#fdfdfd",
-                  bgcolor: "#F5F9FF",
+                  // bgcolor: "#F5F9FF",
+                  bgcolor: "#e9f5f9",
                   // bgcolor:'grey'
                 }}
               >
@@ -159,8 +177,8 @@ export default function Process() {
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ mt: 11 }}>
                   <Typography
-                    variant="h5"
-                    sx={{ fontWeight: "bold", mb: 2, ml: 5 }}
+                    variant="h4"
+                    sx={{ fontWeight: "bold", mb: 2, ml: 5, color: "#4A4A4A" }}
                   >
                     Design
                   </Typography>
@@ -169,6 +187,7 @@ export default function Process() {
                     sx={{
                       mb: 2,
                       ml: 5,
+                      color: "#4A4A4A",
                     }}
                   >
                     Once the Blueprint is approved, we create wireframes and a
@@ -195,7 +214,8 @@ export default function Process() {
                   left: -75,
                   zIndex: 9,
                   // bgcolor: "#fdfdfd",
-                  bgcolor: "#F5F9FF",
+                  // bgcolor: "#F5F9FF",
+                  bgcolor: "#e9f5f9",
                 }}
               >
                 03
@@ -212,8 +232,14 @@ export default function Process() {
                   }}
                 >
                   <Typography
-                    variant="h5"
-                    sx={{ fontWeight: "bold", mb: 2, ml: 5, pt: 11 }}
+                    variant="h4"
+                    sx={{
+                      fontWeight: "bold",
+                      mb: 2,
+                      ml: 5,
+                      pt: 11,
+                      color: "#4A4A4A",
+                    }}
                   >
                     Develop
                   </Typography>
@@ -222,6 +248,7 @@ export default function Process() {
                     sx={{
                       mb: 2,
                       ml: 5,
+                      color: "#4A4A4A",
                     }}
                   >
                     With the blueprint & design comps as our guide, the
@@ -258,7 +285,9 @@ export default function Process() {
                   right: 550,
                   zIndex: 9,
                   // bgcolor: "#fdfdfd",
-                  bgcolor: "#F5F9FF",
+                  // bgcolor: "#F5F9FF",
+                  bgcolor: "#e9f5f9",
+
                   // bgcolor:'grey'
                 }}
               >
@@ -292,8 +321,8 @@ export default function Process() {
                   }}
                 >
                   <Typography
-                    variant="h5"
-                    sx={{ fontWeight: "bold", mb: 2, ml: 5 }}
+                    variant="h4"
+                    sx={{ fontWeight: "bold", mb: 2, ml: 5, color: "#4A4A4A" }}
                   >
                     Deploy
                   </Typography>
@@ -302,6 +331,7 @@ export default function Process() {
                     sx={{
                       mb: 2,
                       ml: 5,
+                      color: "#4A4A4A",
                     }}
                   >
                     After testing and review, we present your new website. Upon

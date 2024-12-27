@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useScrollTrigger } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowDropDown } from "@mui/icons-material";
@@ -15,6 +15,10 @@ const AboutLinks = [
 const AboutUsDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  });
 
   return (
     <Box
@@ -36,7 +40,11 @@ const AboutUsDropdown: React.FC = () => {
             borderBottom: pathname.startsWith("/aboutus")
               ? "2px solid #4294a5"
               : "none",
-            color: pathname.startsWith("/aboutus") ? "#4294a5" : "white",
+            color: pathname.startsWith("/aboutus")
+              ? "#4294a5"
+              : trigger
+              ? "black"
+              : "white",
             ":hover": {
               borderBottom: "2px solid #4294a5",
               color: "#4294a5",
@@ -80,7 +88,8 @@ const AboutUsDropdown: React.FC = () => {
                   transition: "all 0.2s ease",
                   "&:hover": {
                     // bgcolor: "#f0f0f0",
-                    color: "#FFB247",
+                    // color: "#FFB247",
+                    color: "#4294a5",
                     transform: "translateX(5px)",
                   },
                   borderBottom: "1px solid #eee",

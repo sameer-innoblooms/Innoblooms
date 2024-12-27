@@ -16,28 +16,28 @@ export default function ProjectLandingPage() {
       title: "InnoTrac — Innovative peer-to-peer payment solution",
       category: "PAYMENT & TRANSACTION",
       image: "/InnobloomsERP.png?height=600&width=800",
-      backgroundColor: "#CC0000",
+      backgroundColor: "#537b88",
       // flag: "🇺🇸"
     },
     {
       title: "InnobloomsERP - In house e-commerce platform",
       category: "E-COMMERCE",
       image: "/InnoTrac.png?height=600&width=800",
-      backgroundColor: "#004D40",
+      backgroundColor: "#7a5388",
       // flag: "🇺🇸"
     },
     {
       title: "InnoTrac — Innovative peer-to-peer payment solution",
       category: "PAYMENT & TRANSACTION",
       image: "/InnobloomsERP.png?height=600&width=800",
-      backgroundColor: "#004D40",
+      backgroundColor: "#886053",
       // flag: "🇺🇸"
     },
     {
       title: "InnobloomsERP - In house e-commerce platform",
       category: "E-COMMERCE",
       image: "/InnoTrac.png?height=600&width=800",
-      backgroundColor: "#004D40",
+      backgroundColor: "#608853",
       // flag: "🇺🇸"
     },
   ];
