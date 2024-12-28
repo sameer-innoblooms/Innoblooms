@@ -19,9 +19,10 @@ export default function AboutusSection() {
       <Container maxWidth="xl">
         <Box
           sx={{
+            pl: 7,
             textAlign: "left",
             maxWidth: "1200px",
-            mx: "auto",
+            // mx: "auto",
           }}
         >
           {/* <Typography

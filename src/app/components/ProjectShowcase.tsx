@@ -60,7 +60,7 @@ export default function ProjectShowcase() {
             height: "4px",
             flex: 1,
             borderRadius: "4px",
-            bgcolor: index === activeStep ? "#6366F1" : "rgba(0, 0, 0, 0.1)",
+            bgcolor: index === activeStep ? "#4294a5" : "rgba(0, 0, 0, 0.1)",
             transition: "background-color 0.3s ease",
           }}
         />
@@ -188,6 +188,7 @@ export default function ProjectShowcase() {
                   borderRadius: 0,
                   padding: "10px",
                   color: "#000",
+                  // color: "#4294a5",
                   // transition: 'background-color 10s ease'
                 },
               }}
@@ -213,7 +214,13 @@ export default function ProjectShowcase() {
                       overflow: "hidden",
                     }}
                   />
-                  <CardContent sx={{ p: 3 }}>
+                  <CardContent
+                    sx={{
+                      p: 3,
+                      // bgcolor: "#e9f5f9"
+                      bgcolor: "white",
+                    }}
+                  >
                     {/* <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                       <Typography variant="overline" sx={{ 
                         color: 'text.secondary',

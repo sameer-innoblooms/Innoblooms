@@ -17,7 +17,6 @@ import ContactPage from "../components/FormFeedback";
 function Dashboard() {
   return (
     <Box>
-      <Headers />
       <Home />
       <Services />
       {/* <BackgroundImage /> */}

@@ -38,6 +38,8 @@ export default function ContactSection() {
             right: 0,
             bottom: 0,
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))",
             zIndex: 1, // Ensure the overlay is above the background image
           },
         }}

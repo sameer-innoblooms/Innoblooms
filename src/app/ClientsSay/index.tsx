@@ -9,6 +9,7 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Container,
 } from "@mui/material";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -187,64 +188,74 @@ const ClientsSay: React.FC = () => {
   return (
     <Box
       sx={{
-        mt: 5,
-        py: 4,
-        pb: 6,
-        // bgcolor: "#040404",
-        // borderRadius: "0 0 70px 70px"
         bgcolor: "#e9f5f9",
-        // borderRadius: "0 0 70px 70px", // Rounded corners at the bottom
       }}
     >
-      <Typography
-        variant="h4"
-        sx={{
-          textAlign: "center",
-          color: "#4A4A4A",
-          // color: "black",
-          // color:'rgb(102, 102, 232)',
-          // color:'black',
-          fontWeight: "bold",
-          mb: 2,
-        }}
-      >
-        What Our{" "}
+      <Container maxWidth="xl">
         <Box
           sx={{
-            background: "linear-gradient(to right, #476884, #35A7C6)",
-            // background: "linear-gradient(to right , #4294a5, #48c5a8);",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            display: "inline-block",
+            mt: 5,
+            pt: 3,
+            pb: 3,
+            pl: 2,
+            // pb: 1,
+            // bgcolor: "#040404",
+            // borderRadius: "0 0 70px 70px"
+            bgcolor: "#e9f5f9",
+            // borderRadius: "0 0 70px 70px", // Rounded corners at the bottom
           }}
         >
-          Clients Say
-        </Box>
-      </Typography>
-      <Box
-        sx={{
-          textAlign: "center",
-          mb: 4,
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{
-            // fontWeight: "bold",
-            mb: 2,
-            // color: "rgba(0, 0, 0, 0.6)",
-            color: "#4A4A4A",
-            // color: "#4A4A4A",
-            // color: "white",
-            fontSize: "1.130rem",
-          }}
-        >
-          At Innoblooms, we pride ourselves on delivering results that drive
-          success.
-        </Typography>
-      </Box>
+          <Typography
+            variant="h4"
+            sx={{
+              textAlign: "left",
+              color: "#4A4A4A",
+              // color: "black",
+              // color:'rgb(102, 102, 232)',
+              // color:'black',
+              fontWeight: "bold",
+              mb: 2,
+              pl: 4,
+            }}
+          >
+            What Our{" "}
+            <Box
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+              }}
+            >
+              Clients Say
+            </Box>
+          </Typography>
+          <Box
+            sx={{
+              textAlign: "left",
+              // mb: 4,
+            }}
+          >
+            <Typography
+              variant="h4"
+              sx={{
+                // fontWeight: "bold",
+                // mb: 2,
+                // color: "rgba(0, 0, 0, 0.6)",
+                color: "#4A4A4A",
+                // color: "#4A4A4A",
+                // color: "white",
+                fontSize: "1.130rem",
+                pl: 4,
+              }}
+            >
+              At Innoblooms, we pride ourselves on delivering results that drive
+              success.
+            </Typography>
+          </Box>
 
-      {/* <Box
+          {/* <Box
         sx={{
           position: "relative",
           width: "100%",
@@ -263,7 +274,9 @@ const ClientsSay: React.FC = () => {
           ))}
         </Slider>
       </Box> */}
-      <TestimonialSlider />
+          <TestimonialSlider />
+        </Box>
+      </Container>
     </Box>
   );
 };

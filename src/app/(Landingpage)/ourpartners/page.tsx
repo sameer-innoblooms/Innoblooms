@@ -203,15 +203,15 @@ export default function PartnersPage() {
             solutions that suit the needs at every level.
           </Typography> */}
       </Box>
-      <Container maxWidth="xl" sx={{ py: 6, mt: 1 }}>
+      <Container maxWidth="xl" sx={{ py: 6 }}>
         <Box
           sx={{
-            mb: 6,
+            mb: 3,
             display: "flex",
-
+            px: 7,
             flexDirection: "column",
             // justifyContent: 'center',
-            alignItems: "center",
+            alignItems: "left",
           }}
         >
           {/* <Typography variant="overline" color="text.secondary" gutterBottom>
@@ -242,8 +242,8 @@ export default function PartnersPage() {
           <Typography
             variant="body1"
             color="text.secondary"
-            align="center"
-            sx={{ maxWidth: "sm" }}
+            align="left"
+            sx={{ maxWidth: "md" }}
           >
             Empowering partnerships and fostering teamwork to achieve
             unparalleled excellence. Our dedicated approach and shared vision
@@ -306,7 +306,7 @@ export default function PartnersPage() {
           </Slider>
         </Box>
 
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
@@ -317,8 +317,8 @@ export default function PartnersPage() {
             p: 3,
             borderRadius: 2,
           }}
-        >
-          {/* <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        > */}
+        {/* <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <AvatarGroup max={4}>
               {teamAvatars.map((member, index) => (
                 <Avatar
@@ -344,7 +344,7 @@ export default function PartnersPage() {
               Join the partners network
             </Typography>
           </Box> */}
-          {/* <Link href={"/contact"}>
+        {/* <Link href={"/contact"}>
             <Button
               variant="contained"
               endIcon={<ArrowForwardIcon />}
@@ -368,7 +368,7 @@ export default function PartnersPage() {
               Become a partner
             </Button>
           </Link> */}
-        </Box>
+        {/* </Box> */}
       </Container>
       <ServicesAccordion />
       <Footer />

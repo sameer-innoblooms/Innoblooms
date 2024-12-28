@@ -9,6 +9,7 @@ import {
   CardContent,
   Avatar,
   styled,
+  Container,
 } from "@mui/material";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
@@ -75,7 +76,8 @@ const testimonials = [
 const SliderContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   backgroundColor: "#e9f5f9",
-  padding: theme.spacing(8),
+  // padding: theme.spacing(8),
+
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -104,13 +106,9 @@ const TestimonialCard = styled(Card)(({ theme }) => ({
 }));
 
 const NavigationButton = styled(IconButton)(({ theme }) => ({
-  position: "absolute",
-  bottom: theme.spacing(4),
-  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  position: "absolute", // Ensure the buttons are positioned absolutely
+  bottom: theme.spacing(2), // Adjust this value as needed
   color: "black",
-  "&:hover": {
-    backgroundColor: "rgba(255, 255, 255, 0.2)",
-  },
 }));
 
 const AuthorSection = styled(Box)(({ theme }) => ({
@@ -125,7 +123,7 @@ const AuthorSection = styled(Box)(({ theme }) => ({
 const IndicatorContainer = styled(Box)(({ theme }) => ({
   // left: 10,
   width: "100%",
-  maxWidth: "1500px",
+  maxWidth: "1400px",
   height: 2,
   backgroundColor: "#bbb",
 
@@ -160,71 +158,83 @@ export default function TestimonialSlider() {
   const progress = ((currentIndex - 0.5) / (testimonials.length - 1.5)) * 100;
 
   return (
-    <SliderContainer>
-      <CardsContainer
+    <Container maxWidth="xl">
+      <SliderContainer
         sx={{
-          transform: `translateX(-${currentIndex * 100}%)`,
+          pt: 2,
+          pb: 10,
         }}
       >
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={index} elevation={3}>
-            <CardContent
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <Box
-                component="img"
-                src={testimonial.logo}
-                alt="Company logo"
-                sx={{ height: 50, width: 90, mb: 3 }}
-              />
-              <Typography
-                variant="body1"
-                sx={{ flex: 1, mb: 4, color: "#4A4A4A" }}
+        <CardsContainer
+          sx={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            pl: 3,
+          }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} elevation={3}>
+              <CardContent
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
-                &quot;{testimonial.quote}&quot;
-              </Typography>
-              <AuthorSection>
-                <Avatar src={testimonial.avatar} alt={testimonial.author} />
-                <Box>
-                  <Typography variant="subtitle1">
-                    {testimonial.author}
-                  </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.7 }}>
-                    {testimonial.title}
-                  </Typography>
-                </Box>
-              </AuthorSection>
-            </CardContent>
-          </TestimonialCard>
-        ))}
-      </CardsContainer>
+                <Box
+                  component="img"
+                  src={testimonial.logo}
+                  alt="Company logo"
+                  sx={{ height: 50, width: 90, mb: 3 }}
+                />
+                <Typography
+                  variant="body1"
+                  sx={{ flex: 1, mb: 4, color: "#4A4A4A" }}
+                >
+                  &quot;{testimonial.quote}&quot;
+                </Typography>
+                <AuthorSection>
+                  <Avatar src={testimonial.avatar} alt={testimonial.author} />
+                  <Box>
+                    <Typography variant="subtitle1">
+                      {testimonial.author}
+                    </Typography>
+                    <Typography variant="body2" sx={{ opacity: 0.7 }}>
+                      {testimonial.title}
+                    </Typography>
+                  </Box>
+                </AuthorSection>
+              </CardContent>
+            </TestimonialCard>
+          ))}
+        </CardsContainer>
 
-      <IndicatorContainer>
-        <IndicatorBar progress={progress} />
-      </IndicatorContainer>
+        <IndicatorContainer sx={{}}>
+          <IndicatorBar progress={progress} />
+        </IndicatorContainer>
 
-      <NavigationButton
-        onClick={handlePrevious}
-        sx={{ left: { xs: 16, md: 40 }, bottom: { xs: 16, md: -30 } }}
-      >
-        <KeyboardArrowLeft
-          sx={{
-            fontSize: 70,
-            color: "#4A4A4A",
-          }}
-        />
-      </NavigationButton>
-      <NavigationButton
-        onClick={handleNext}
-        sx={{ left: { xs: 16, md: 110 }, bottom: { xs: 16, md: -30 } }}
-      >
-        <KeyboardArrowRight
-          sx={{
-            fontSize: 70,
-            color: "#4A4A4A",
-          }}
-        />
-      </NavigationButton>
-    </SliderContainer>
+        <NavigationButton
+          onClick={handlePrevious}
+          sx={{ left: { xs: 16, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+        >
+          <KeyboardArrowLeft
+            sx={{
+              fontSize: 70,
+              color: "#4A4A4A",
+            }}
+          />
+        </NavigationButton>
+        <NavigationButton
+          onClick={handleNext}
+          sx={{ left: { xs: 16, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+        >
+          <KeyboardArrowRight
+            sx={{
+              fontSize: 70,
+              color: "#4A4A4A",
+            }}
+          />
+        </NavigationButton>
+      </SliderContainer>
+    </Container>
   );
 }

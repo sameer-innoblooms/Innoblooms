@@ -1,124 +1,10 @@
-// "use client";
-// import React, { useState } from "react";
-// import { Box, Typography } from "@mui/material";
-// import Link from "next/link";
-// import { usePathname, useRouter } from "next/navigation";
-
-// const ServiceSubcategories = [
-//   {
-//     category: "Web Development",
-//     subcategories: [
-//       { text: "Frontend Development", href: "/services/frontend" },
-//       { text: "Backend Development", href: "/services/backend" },
-//       { text: "Full Stack Solutions", href: "/services/fullstack" },
-//     ],
-//   },
-//   {
-//     category: "Digital Marketing",
-//     subcategories: [
-//       { text: "SEO Optimization", href: "/services/seo" },
-//       { text: "Social Media Marketing", href: "/services/social-media" },
-//       { text: "Content Marketing", href: "/services/content-marketing" },
-//     ],
-//   },
-//   {
-//     category: "Cloud Solutions",
-//     subcategories: [
-//       { text: "Cloud Migration", href: "/services/cloud-migration" },
-//       { text: "Cloud Management", href: "/services/cloud-management" },
-//       { text: "Cloud Security", href: "/services/cloud-security" },
-//     ],
-//   },
-// ];
-
-// const ServicesDropdown = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const router = useRouter();
-//   const pathname = usePathname();
-
-//   return (
-//     <Box
-//       onMouseEnter={() => setIsOpen(true)}
-//       onMouseLeave={() => setIsOpen(false)}
-//       sx={{ position: "relative" }}
-//       onClick={() => router.push("/services")}
-//     >
-//       <Typography
-//         variant="h6"
-//         color="white"
-//         component="div"
-//         sx={{
-//           px: 4,
-//           py: 3,
-//           fontSize: { xs: "16px", sm: "18px" },
-//           cursor: "pointer",
-//           fontWeight: "10px",
-//           textDecoration: pathname === "/services" ? "underline" : "",
-//         }}
-//       >
-//         Services
-//       </Typography>
-
-//       {isOpen && (
-//         <Box
-//           sx={{
-//             position: "absolute",
-//             top: "100%",
-//             left: 0,
-//             width: "300px",
-//             bgcolor: "white",
-//             boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-//             borderRadius: "8px",
-//             p: 2,
-//             zIndex: 1000,
-//           }}
-//         >
-//           {ServiceSubcategories.map((serviceGroup) => (
-//             <Box key={serviceGroup.category} sx={{ mb: 2 }}>
-//               <Typography
-//                 variant="subtitle1"
-//                 sx={{
-//                   fontWeight: "bold",
-//                   color: "black",
-//                   mb: 1,
-//                   borderBottom: "1px solid #eee",
-//                 }}
-//               >
-//                 {serviceGroup.category}
-//               </Typography>
-//               {serviceGroup.subcategories.map((subcat) => (
-//                 <Link key={subcat.text} href={subcat.href} passHref>
-//                   <Typography
-//                     sx={{
-//                       color: "black",
-//                       p: 1,
-//                       "&:hover": {
-//                         bgcolor: "#f0f0f0",
-//                         borderRadius: "4px",
-//                       },
-//                     }}
-//                   >
-//                     {subcat.text}
-//                   </Typography>
-//                 </Link>
-//               ))}
-//             </Box>
-//           ))}
-//         </Box>
-//       )}
-//     </Box>
-//   );
-// };
-
-// export default ServicesDropdown;
-
 "use client";
 import React, { useState } from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, styled, Button } from "@mui/material";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { ArrowDropDown } from "@mui/icons-material";
+import { ArrowForwardIos } from "@mui/icons-material";
 
 const ServiceSubcategories = [
   {
@@ -143,9 +29,43 @@ const ServiceSubcategories = [
   },
 ];
 
+const SnakeButton = styled(Button)(({ theme }) => ({
+  position: "relative",
+  overflow: "hidden",
+  color: "red", // Set the text color
+  "&:before": {
+    content: '""',
+    position: "absolute",
+    top: "-2px",
+    right: "-2px",
+    bottom: "1em",
+    left: "0",
+    transformOrigin: "50% 50%",
+    animation: "snake-3-before 0.2s ease forwards",
+    zIndex: 1,
+  },
+  "&:after": {
+    content: '""',
+    position: "absolute",
+    color: "red",
+    top: "1em",
+    right: "0",
+    bottom: "-2px",
+    left: "-2px",
+    transformOrigin: "50% 50%",
+    animation: "snake-3-after 0.2s ease forwards",
+    zIndex: 0,
+  },
+  "&:hover:before": {
+    animation: "snake-3-hover-before 0.2s ease forwards",
+  },
+  "&:hover:after": {
+    animation: "snake-3-hover-after 0.2s ease forwards",
+  },
+}));
+
 const ServicesDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
   const pathname = usePathname();
 
   return (
@@ -154,38 +74,73 @@ const ServicesDropdown = () => {
       onMouseLeave={() => setIsOpen(false)}
       sx={{ position: "static" }}
     >
-      <Typography
-        variant="h6"
-        color="black"
-        component="div"
-        // onClick={() => router.push("/services")}
-        sx={{
-          // color: "white",
-          px: 4,
-          py: 3,
-          fontSize: { xs: "16px", sm: "18px" },
-          cursor: "pointer",
-          fontWeight: 500,
-          // borderBottom: pathname === "/services" ? "2px solid white" : "none",
-          borderBottom: pathname.startsWith("/services")
-            ? "2px solid #4294a5"
-            : "none",
-          color: pathname.startsWith("/services") ? " #4294a5" : "none",
+      <Box sx={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
+        <Typography
+          variant="h6"
+          component="span"
+          sx={{
+            pr: 5,
+            pl: 3,
+            py: 3,
+            fontSize: { xs: "16px", sm: "18px" },
+            cursor: "pointer",
+            fontWeight: 500,
+            position: "relative", // Required for the pseudo-element to work
 
-          ":hover": {
-            borderBottom: "2px solid #4294a5",
-            color: "#4294a5",
-          },
-          display: "inline-block",
-        }}
-      >
-        Service
-        <ArrowDropDown sx={{ position: "absolute", mx: 0.5 }} />
-      </Typography>
+            // Set the color based on the current pathname or hover state
+            borderBottom: pathname.startsWith("/services")
+              ? "3.5px solid #4294a5" // Show underline if not on /services pages
+              : "none", // Hide the bottom underline when on /services pages
+            color:
+              pathname.startsWith("/services") || isOpen ? "#4294a5" : "none",
+
+            display: "inline-block",
+            alignItems: "center",
+
+            // Use the ::after pseudo-element to create the underline effect
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              bottom: -1.5, // Position it at the bottom of the text
+              left: 0,
+              width: "100%",
+              height: "3px", // Thickness of the underline
+              backgroundColor: "#4294a5", // Color of the underline
+              transform: isOpen ? "scaleX(0)" : "scaleX(0)",
+              // transform: isOpen ? "scaleX(1)" : "scaleX(0)", // Persist underline when open
+              transition: pathname.startsWith("/services")
+                ? "none"
+                : "transform 0.3s ease", // No transition if on services page
+            },
+
+            // Reveal the underline on hover (only if not on the "/services" page)
+            "&:hover::after": pathname.startsWith("/services")
+              ? "none" // Don't show underline on hover when on /services page
+              : {
+                  transform: pathname.startsWith("/services")
+                    ? "none"
+                    : "scaleX(1)", // Make the underline appear
+                },
+          }}
+        >
+          Service
+          <ArrowForwardIos
+            sx={{
+              fontSize: "16px",
+              position: "absolute",
+              mx: 0.5,
+              mt: 0.8,
+              transition: "transform 0.3s ease",
+              transform: isOpen ? "rotate(270deg)" : "rotate(90deg)",
+            }}
+          />
+        </Typography>
+      </Box>
 
       {isOpen && (
         <Box
           sx={{
+            mt: 0.5,
             position: "absolute",
             top: "100%",
             left: 0,
@@ -211,10 +166,8 @@ const ServicesDropdown = () => {
                   variant="h2"
                   sx={{
                     fontWeight: "bold",
-                    // color: "black",
                     color: "#4A4A4A",
                     fontSize: "50px",
-                    // mt: 1,
                     lineHeight: 1.2,
                     textAlign: "center",
                   }}
@@ -223,11 +176,7 @@ const ServicesDropdown = () => {
                   <br />
                   SERVICES
                 </Typography>
-                <Box
-                  sx={{
-                    pl: 12,
-                  }}
-                >
+                <Box sx={{ pl: 12 }}>
                   <Image
                     src="/Setting-image.png?height=100&width=100"
                     alt="Our Services"
@@ -254,10 +203,8 @@ const ServicesDropdown = () => {
                         variant="h6"
                         sx={{
                           fontWeight: "bold",
-                          // color: "black",
                           color: "#4A4A4A",
                           fontSize: "16px",
-
                           borderBottom: "2px solid #eee",
                           pb: 1,
                         }}
@@ -289,13 +236,12 @@ const ServicesDropdown = () => {
                             mt: "auto",
                             pt: 2,
                             textAlign: "center",
-                            border: "1px solid #ddd",
+                            border: "1.5px solid #4294a5",
                             borderRadius: "6px",
                             p: 1,
                             transition: "all 0.2s ease",
                             "&:hover": {
-                              bgcolor: "#f5f5f5",
-                              borderColor: "#000",
+                              bgcolor: "#e9f5f9",
                             },
                           }}
                         >
@@ -315,101 +261,3 @@ const ServicesDropdown = () => {
 };
 
 export default ServicesDropdown;
-
-// "use client";
-
-// import React, { useState } from "react";
-// import { Box, Typography } from "@mui/material";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-
-// const AboutLinks = [
-//   { text: "Business Consulting", href: "/services/business-consulting" },
-//   { text: "Automation With Ai", href: "/services/automation-with-ai" },
-//   { text: "Resource Augmentation", href: "/services/resource-augmentation" },
-//   { text: "Software Service", href: "/services/software-services" },
-// ];
-
-// const AboutUsDropdown: React.FC = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const pathname = usePathname();
-
-//   return (
-//     <Box
-//       onMouseEnter={() => setIsOpen(true)}
-//       onMouseLeave={() => setIsOpen(false)}
-//       sx={{ position: "static" }}
-//     >
-//       <Typography
-//         variant="h6"
-//         component="span"
-//         sx={{
-//           px: 4,
-//           py: 3,
-//           fontSize: { xs: "16px", sm: "18px" },
-//           cursor: "pointer",
-//           fontWeight: 500,
-//           borderBottom: pathname.startsWith("/service")
-//             ? "2px solid #FFB247"
-//             : "none",
-//           color: pathname.startsWith("/aboutus") ? "#FFB247" : "white",
-//           ":hover": {
-//             borderBottom: "2px solid #FFB247",
-//             color: "#FFB247",
-//           },
-//           display: "inline-block",
-//         }}
-//       >
-//         Services
-//       </Typography>
-
-//       {isOpen && (
-//         <Box
-//           sx={{
-//             position: "absolute",
-//             top: "100%",
-//             // left: 0,
-//             width: "300px",
-//             bgcolor: "white",
-//             boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-//             borderRadius: "8px",
-//             p: 2,
-//             zIndex: 1000,
-//           }}
-//         >
-//           {AboutLinks.map((link) => (
-//             <Link
-//               key={link.text}
-//               href={link.href}
-//               style={{ textDecoration: "none" }}
-//             >
-//               <Typography
-//                 sx={{
-//                   // color: "#6B46C1",
-//                   color: "rg9, 49, 49)"b(4,
-//                   p: 2,
-//                   fontSize: "16px",
-//                   fontWeight: 500,
-//                   transition: "all 0.2s ease",
-//                   "&:hover": {
-//                     // bgcolor: "#f0f0f0",
-//                     color: "#FFB247",
-//                     transform: "translateX(5px)",
-//                   },
-//                   borderBottom: "1px solid #eee",
-//                   "&:last-child": {
-//                     borderBottom: "none",
-//                   },
-//                 }}
-//               >
-//                 {link.text}
-//               </Typography>
-//             </Link>
-//           ))}
-//         </Box>
-//       )}
-//     </Box>
-//   );
-// };
-
-// export default AboutUsDropdown;

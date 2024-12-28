@@ -291,12 +291,12 @@ export default function LeadershipTeam() {
         py: 6,
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Typography
           variant="h3"
           component="h1"
           gutterBottom
-          sx={{ mb: 6, fontWeight: "bold", color: "#4A4A4A" }}
+          sx={{ mb: 6, fontWeight: "bold", color: "#4A4A4A", pl: 7 }}
         >
           <Box
             component="span"
@@ -314,58 +314,65 @@ export default function LeadershipTeam() {
         </Typography>
 
         {leaders.map((leader, index) => (
-          <StyledPaper key={index} elevation={0} sx={{}}>
-            <Grid
-              container
-              spacing={4}
-              direction={index % 2 ? "row" : "row-reverse"}
-            >
+          <Box
+            key={index}
+            sx={{
+              px: 7,
+            }}
+          >
+            <StyledPaper key={index} elevation={0} sx={{}}>
               <Grid
-                item
-                xs={12}
-                md={4}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
+                container
+                spacing={4}
+                direction={index % 2 ? "row" : "row-reverse"}
               >
-                <ProfileImage src={leader.image} alt={leader.name} />
-                <Typography
-                  variant="h5"
-                  component="h2"
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
                   sx={{
-                    mt: 2,
-                    color: "#4294A2",
-                    // color: "#4d7990",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
                   }}
                 >
-                  {leader.name}
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  color="text.secondary"
-                  gutterBottom
+                  <ProfileImage src={leader.image} alt={leader.name} />
+                  <Typography
+                    variant="h5"
+                    component="h2"
+                    sx={{
+                      mt: 2,
+                      color: "#4294A2",
+                      // color: "#4d7990",
+                    }}
+                  >
+                    {leader.name}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {leader.designation}
+                  </Typography>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  md={8}
+                  sx={{ display: "flex", alignItems: "center" }}
                 >
-                  {leader.designation}
-                </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ lineHeight: 1.7 }}
+                  >
+                    {leader.description}
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                md={8}
-                sx={{ display: "flex", alignItems: "center" }}
-              >
-                <Typography
-                  variant="body1"
-                  color="text.secondary"
-                  sx={{ lineHeight: 1.7 }}
-                >
-                  {leader.description}
-                </Typography>
-              </Grid>
-            </Grid>
-          </StyledPaper>
+            </StyledPaper>
+          </Box>
         ))}
       </Container>
     </Box>

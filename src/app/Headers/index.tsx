@@ -21,18 +21,7 @@ import AboutUsDropdown from "../components/AboutUsDropdown";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  // const [scrolling, setScrolling] = useState(false);
-
   const pathname = usePathname();
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolling(window.scrollY > 20);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -66,34 +55,61 @@ const Header = () => {
               color="white"
               component="div"
               sx={{
-                // color: 'white',
-                px: 4,
+                px: 3.5,
                 py: 3,
                 fontSize: { xs: "16px", sm: "18px" },
                 cursor: "pointer",
                 fontWeight: 500,
+                display: "inline-block",
+                position: "relative", // Required for the pseudo-element to work
 
-                borderBottom:
-                  pathname === link.href && pathname !== "/"
-                    ? "2px solid #68a9b7 "
-                    : "none",
+                // Set the color based on the current pathname
                 color:
                   pathname === link.href && pathname !== "/"
-                    ? " #68a9b7 "
+                    ? "#4294a5"
                     : "none",
-                // ":hover": {
-                //   borderBottom: "2px solid white",
-                // },
-                display: "inline-block",
-                // display: "inline-block",
-
-                // textDecoration: pathname === link.href ? "underline" : "none",
                 transition: "color 0.2s ease",
-                "&:hover": {
-                  borderBottom: "2px solid #4294a5",
-                  // color: "#FFB247",
-                  color: "#68a9b7",
+
+                // Bottom border logic for the specific path
+                borderBottom:
+                  (pathname === link.href && pathname !== "/") ||
+                  (link.href === "/services" &&
+                    pathname.startsWith("/services"))
+                    ? "3.5px solid #4294a5" // Border for the specific path
+                    : "none",
+
+                // Disable hover effect for the active link
+                "&:hover":
+                  pathname === link.href ||
+                  (link.href === "/services" &&
+                    pathname.startsWith("/services"))
+                    ? {} // No hover effect on the active path
+                    : {
+                        color: "#4294a5", // On hover, change the text color
+                      },
+
+                // Use the ::after pseudo-element to create the borderBottom effect
+                "&::after": {
+                  content: '""', // Create an empty pseudo-element
+                  position: "absolute",
+                  bottom: -2, // Position it at the bottom of the text
+                  left: 0,
+                  width: "100%",
+                  height: "3.5px", // Thickness of the underline
+                  backgroundColor: "#4294a5", // Color of the underline
+                  transform: "scaleX(0)", // Initially hidden
+                  transition: "transform 0.3s ease", // Smooth transition for the underline
                 },
+
+                // Reveal the underline on hover
+                "&:hover::after":
+                  pathname === link.href ||
+                  (link.href === "/services" &&
+                    pathname.startsWith("/services"))
+                    ? {} // No hover underline for the active link
+                    : {
+                        transform: "scaleX(1)", // Make the underline appear
+                      },
               }}
             >
               {link.text}
@@ -109,10 +125,7 @@ const Header = () => {
             height: { xs: "35px", sm: "45px", md: "50px" },
             minWidth: "100px",
             bgcolor: "#4294A5",
-            // bgcolor: "#4d7990",
-            // bgcolor: "#FFB247",
             color: "black",
-            // fontWeight: "bold",
             fontWeight: "medium",
             borderRadius: "50px",
             fontSize: { xs: "11px", sm: "13px", md: "15px" },
@@ -190,17 +203,11 @@ const Header = () => {
       <AppBar
         position="fixed"
         sx={{
-          background:
-            // pathname === "/ourpartners" ||
-            // pathname === "/services" ||
-            // pathname === "/blogs" ||
-            // pathname === "/aboutus" ||
-            // pathname.startsWith("/blog") ||
-            trigger ? "white" : "transparent",
+          background: trigger ? "white" : "transparent",
           transition: "background-color 0.3s ease",
           boxShadow: 0,
           color: trigger ? "black" : "white",
-          height: { xs: "60px", sm: "70px", md: "80px" },
+          height: { xs: "60px", sm: "70px", md: "78px" },
         }}
       >
         <Toolbar
@@ -226,7 +233,7 @@ const Header = () => {
                 height: { xs: "40px", sm: "50px", md: "60px" },
                 display: "flex",
                 alignItems: "center",
-                // boxShadow: "5px 5px 5px white",
+                mt: 1,
               }}
             >
               <Box
@@ -237,12 +244,10 @@ const Header = () => {
                 <Image
                   src="/Innoblooms-logo.png"
                   alt="Innoblooms Logo"
-                  width={350}
+                  width={340}
                   height={80}
                 />
               </Box>
-
-              {/* Innoblooms */}
             </Typography>
           </Link>
           <Box

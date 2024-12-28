@@ -18,13 +18,17 @@ const Services = () => {
   const router = useRouter();
   return (
     <Container maxWidth="xl">
-      <Box>
+      <Box
+        sx={{
+          pl: 7,
+        }}
+      >
         <Typography
           variant="h3"
           color="initial"
           sx={{
             // textDecoration: "underline",
-            textAlign: "center",
+            textAlign: "left",
             // color: "#a6a5b1",
             // color: "black",
             color: "#4A4A4A",
@@ -49,12 +53,16 @@ const Services = () => {
           Services
         </Typography>
       </Box>
-      <Box>
+      <Box
+        sx={{
+          pl: 7,
+        }}
+      >
         <Typography
           variant="h6"
           sx={{
-            textAlign: "center",
-            mt: 2,
+            textAlign: "left",
+            mt: 1,
             mb: 2,
             // color: "black",
             color: "rgba(0, 0, 0, 0.6)",
