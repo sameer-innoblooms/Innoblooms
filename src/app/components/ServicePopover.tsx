@@ -88,9 +88,9 @@ const ServicesDropdown = () => {
             position: "relative", // Required for the pseudo-element to work
 
             // Set the color based on the current pathname or hover state
-            borderBottom: pathname.startsWith("/services")
-              ? "3.5px solid #4294a5" // Show underline if not on /services pages
-              : "none", // Hide the bottom underline when on /services pages
+            //  borderBottom: pathname.startsWith("/services")
+            //     ? "3.5px solid #4294a5" // Show underline if not on /services pages
+            //     : "none", // Hide the bottom underline when on /services pages
             color:
               pathname.startsWith("/services") || isOpen ? "#4294a5" : "none",
 
@@ -106,11 +106,11 @@ const ServicesDropdown = () => {
               width: "100%",
               height: "3px", // Thickness of the underline
               backgroundColor: "#4294a5", // Color of the underline
-              transform: isOpen ? "scaleX(0)" : "scaleX(0)",
-              // transform: isOpen ? "scaleX(1)" : "scaleX(0)", // Persist underline when open
-              transition: pathname.startsWith("/services")
-                ? "none"
-                : "transform 0.3s ease", // No transition if on services page
+              transform:
+                isOpen || pathname.startsWith("/services")
+                  ? "scaleX(1)"
+                  : "scaleX(0)", // Show underline when open
+              transition: "transform 0.3s ease", // No transition if on services page
             },
 
             // Reveal the underline on hover (only if not on the "/services" page)
@@ -140,7 +140,7 @@ const ServicesDropdown = () => {
       {isOpen && (
         <Box
           sx={{
-            mt: 0.5,
+            mt: 0.25,
             position: "absolute",
             top: "100%",
             left: 0,

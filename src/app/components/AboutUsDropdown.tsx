@@ -38,9 +38,9 @@ const AboutUsDropdown: React.FC = () => {
             fontSize: { xs: "16px", sm: "18px" },
             cursor: "pointer",
             fontWeight: 500,
-            borderBottom: pathname.startsWith("/aboutus")
-              ? "3.5px solid #4294a5"
-              : "none",
+            //  borderBottom: pathname.startsWith("/aboutus")
+            //     ? "3.5px solid #4294a5"
+            //     : "none",
             color:
               pathname.startsWith("/aboutus") || isOpen
                 ? "#4294a5"
@@ -59,14 +59,16 @@ const AboutUsDropdown: React.FC = () => {
               width: "100%",
               height: "3px", // Thickness of the underline
               backgroundColor: "#4294a5", // Color of the underline
-              transform: isOpen ? "scaleX(0)" : "scaleX(0)",
-              // transform: isOpen ? "scaleX(1)" : "scaleX(0)", // Persist underline when open
+              transform:
+                isOpen || pathname.startsWith("/aboutus")
+                  ? "scaleX(1)"
+                  : "scaleX(0)", // Show underline when open
               transition: "transform 0.3s ease", // Smooth transition for the underline
             },
 
             // // Reveal the underline on hover
             "&:hover::after": {
-              transform: pathname.startsWith("/aboutus") ? "none" : "scaleX(0)", // Make the underline appear
+              transform: pathname.startsWith("/aboutus") ? "none" : "scaleX(1)", // Make the underline appear
             },
           }}
         >

@@ -61,54 +61,49 @@ const Header = () => {
                 cursor: "pointer",
                 fontWeight: 500,
                 display: "inline-block",
-                position: "relative", // Required for the pseudo-element to work
+                position: "relative",
 
-                // Set the color based on the current pathname
                 color:
                   pathname === link.href && pathname !== "/"
                     ? "#4294a5"
                     : "none",
                 transition: "color 0.2s ease",
 
-                // Bottom border logic for the specific path
                 borderBottom:
                   (pathname === link.href && pathname !== "/") ||
                   (link.href === "/services" &&
                     pathname.startsWith("/services"))
-                    ? "3.5px solid #4294a5" // Border for the specific path
+                    ? "3.5px solid #4294a5"
                     : "none",
 
-                // Disable hover effect for the active link
                 "&:hover":
                   pathname === link.href ||
                   (link.href === "/services" &&
                     pathname.startsWith("/services"))
-                    ? {} // No hover effect on the active path
+                    ? {}
                     : {
-                        color: "#4294a5", // On hover, change the text color
+                        color: "#4294a5",
                       },
 
-                // Use the ::after pseudo-element to create the borderBottom effect
                 "&::after": {
-                  content: '""', // Create an empty pseudo-element
+                  content: '""',
                   position: "absolute",
-                  bottom: -2, // Position it at the bottom of the text
+                  bottom: -2,
                   left: 0,
                   width: "100%",
-                  height: "3.5px", // Thickness of the underline
-                  backgroundColor: "#4294a5", // Color of the underline
-                  transform: "scaleX(0)", // Initially hidden
-                  transition: "transform 0.3s ease", // Smooth transition for the underline
+                  height: "3.5px",
+                  backgroundColor: "#4294a5",
+                  transform: "scaleX(0)",
+                  transition: "transform 0.3s ease",
                 },
 
-                // Reveal the underline on hover
                 "&:hover::after":
                   pathname === link.href ||
                   (link.href === "/services" &&
                     pathname.startsWith("/services"))
-                    ? {} // No hover underline for the active link
+                    ? {}
                     : {
-                        transform: "scaleX(1)", // Make the underline appear
+                        transform: "scaleX(1)",
                       },
               }}
             >
@@ -207,7 +202,7 @@ const Header = () => {
           transition: "background-color 0.3s ease",
           boxShadow: 0,
           color: trigger ? "black" : "white",
-          height: { xs: "60px", sm: "70px", md: "78px" },
+          height: { xs: "60px", sm: "70px", md: "80px" },
         }}
       >
         <Toolbar
