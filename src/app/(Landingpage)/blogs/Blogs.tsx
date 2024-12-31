@@ -14,7 +14,9 @@ import {
   Stack,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { BlogPost, blogPosts } from "./Blog-post";
+// import { BlogPost, blogPosts } from "./Blog-post";
+import { BlogsArray } from "./BlogsDataArray";
+import { useRouter } from "next/navigation";
 
 const StyledCard = styled(Card)(({}) => ({
   height: "100%",
@@ -29,6 +31,7 @@ const StyledCard = styled(Card)(({}) => ({
 const POSTS_PER_PAGE = 6;
 
 export default function BlogListing() {
+  const router = useRouter();
   const [visiblePosts, setVisiblePosts] = useState<number>(POSTS_PER_PAGE);
 
   const handleLoadMore = () => {
@@ -46,8 +49,17 @@ export default function BlogListing() {
       </Typography>
 
       <Grid container spacing={4}>
-        {blogPosts.slice(0, visiblePosts).map((post: BlogPost) => (
-          <Grid item key={post.id} xs={12} sm={6} md={4}>
+        {BlogsArray.slice(0, visiblePosts).map((post: any, index) => (
+          <Grid
+            onClick={() => {
+              router.push(`/recent-blog/${index}`);
+            }}
+            item
+            key={post.id}
+            xs={12}
+            sm={6}
+            md={4}
+          >
             <StyledCard>
               <CardMedia
                 component="img"
@@ -93,21 +105,28 @@ export default function BlogListing() {
         ))}
       </Grid>
 
-      {visiblePosts < blogPosts.length && (
+      {visiblePosts < BlogsArray.length && (
         <Box sx={{ mt: 8, textAlign: "center" }}>
           <Button
             variant="contained"
             onClick={handleLoadMore}
             sx={{
-              // bgcolor: 'grey.900',
-              bgcolor: "#4d7990",
+              width: { xs: "100px", sm: "130px", md: "150px" },
+              height: { xs: "35px", sm: "45px", md: "50px" },
+              minWidth: "100px",
+              bgcolor: "#4294A5",
+              color: "black",
+              fontWeight: "medium",
+              borderRadius: "50px",
+              fontSize: { xs: "11px", sm: "13px", md: "15px" },
+              ml: { xs: 1, sm: 2 },
               "&:hover": {
-                bgcolor: "white",
                 color: "black",
+                backgroundColor: "white",
               },
             }}
           >
-            Loading more...
+            Load more...
           </Button>
         </Box>
       )}

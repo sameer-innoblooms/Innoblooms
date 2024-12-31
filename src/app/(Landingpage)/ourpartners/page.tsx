@@ -175,7 +175,7 @@ export default function PartnersPage() {
             mb: 2,
           }}
         >
-          Partners & Team
+          Our Partners
         </Typography>
         <Box
           sx={{

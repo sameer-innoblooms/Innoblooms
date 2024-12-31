@@ -145,8 +145,9 @@ const SliderCard: React.FC<SliderCardProps> = ({ item }) => {
                 backgroundColor: "#4294a5",
 
                 color: "black",
-                textTransform: "capitalize",
-                fontWeight: "bold",
+                // textTransform: "capitalize",
+                textTransform: "uppercase",
+                // fontWeight: "bold",
                 fontSize: { xs: "16px", sm: "18px", md: "20px" },
                 borderRadius: "40px",
                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",

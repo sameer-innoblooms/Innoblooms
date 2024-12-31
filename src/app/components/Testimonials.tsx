@@ -15,61 +15,61 @@ import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
 const testimonials = [
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/ibm-logo.png?height=10&width=10",
     quote:
       "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/Cars24.png?height=50&width=50",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
+      "Innoblooms has been critical in deploying Cars24 Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
+    author: "Jane haley",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/kentico.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
+      "Innoblooms has been critical in deploying kentonic Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/dell.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
+      "Innoblooms has been critical in deploying dell Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
 
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/tata.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
+      "Innoblooms has been critical in deploying tata Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/adobe.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
+      "Innoblooms has been critical in deploying adobe Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "./logo/paytm.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
+      "Innoblooms has been critical in deploying paytm Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
   },
 ];
 
@@ -178,17 +178,26 @@ export default function TestimonialSlider() {
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
+                  // width: "100%",
                 }}
               >
                 <Box
-                  component="img"
-                  src={testimonial.logo}
-                  alt="Company logo"
-                  sx={{ height: 50, width: 90, mb: 3 }}
-                />
+                  sx={{
+                    width: "100px",
+                    height: "50px",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={testimonial.logo}
+                    alt="Company logo"
+                    sx={{ height: "auto", width: "100%", mb: 3 }}
+                  />
+                </Box>
+
                 <Typography
                   variant="body1"
-                  sx={{ flex: 1, mb: 4, color: "#4A4A4A" }}
+                  sx={{ flex: 1, mb: 4, mt: 2, color: "#4A4A4A" }}
                 >
                   &quot;{testimonial.quote}&quot;
                 </Typography>

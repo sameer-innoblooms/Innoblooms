@@ -20,6 +20,8 @@ import {
   AccessTime,
   Twitter,
   Message,
+  Instagram,
+  X,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
@@ -130,7 +132,7 @@ export default function Footer() {
           <Grid item xs={12} md={4}>
             <Box sx={{ mb: 3 }}>
               <Image
-                src="/Innoblooms-logo.png"
+                src="./Innoblooms-logo.png"
                 alt="Innoblooms"
                 width={200}
                 height={60}
@@ -144,24 +146,61 @@ export default function Footer() {
             </Typography>
             <Stack direction="row" spacing={1}>
               <Link href="https://in.linkedin.com/company/innoblooms-info-services-pvt-ltd">
-                <IconButton sx={{ color: "white" }} aria-label="LinkedIn">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="LinkedIn"
+                >
                   <LinkedIn />
                 </IconButton>
               </Link>
               <Link href="https://x.com/services21256">
-                <IconButton sx={{ color: "white" }} aria-label="Facebook">
-                  <Twitter />
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <X />
                 </IconButton>
               </Link>
               <Link href="https://www.facebook.com/people/Innoblooms-Info-Services-Pvt-Ltd/100095194770163/">
-                <IconButton sx={{ color: "white" }} aria-label="Facebook">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
                   <Facebook />
+                </IconButton>
+              </Link>
+              <Link href="https://www.instagram.com/innoblooms_info/">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <Instagram />
                 </IconButton>
               </Link>
             </Stack>
             <Box sx={{ mt: 4 }}>
               <Image
-                src="/ISO-9001-certified.png"
+                src="./ISO-9001-certified.png"
                 alt="ISO 9001 Certified"
                 width={50}
                 height={50}
