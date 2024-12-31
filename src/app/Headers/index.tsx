@@ -71,19 +71,19 @@ const Header = () => {
 
                 borderBottom:
                   (pathname === link.href && pathname !== "/") ||
-                  (link.href === "/services" &&
-                    pathname.startsWith("/services"))
+                    (link.href === "/services" &&
+                      pathname.startsWith("/services"))
                     ? "3.5px solid #4294a5"
                     : "none",
 
                 "&:hover":
                   pathname === link.href ||
-                  (link.href === "/services" &&
-                    pathname.startsWith("/services"))
+                    (link.href === "/services" &&
+                      pathname.startsWith("/services"))
                     ? {}
                     : {
-                        color: "#4294a5",
-                      },
+                      color: "#4294a5",
+                    },
 
                 "&::after": {
                   content: '""',
@@ -99,12 +99,12 @@ const Header = () => {
 
                 "&:hover::after":
                   pathname === link.href ||
-                  (link.href === "/services" &&
-                    pathname.startsWith("/services"))
+                    (link.href === "/services" &&
+                      pathname.startsWith("/services"))
                     ? {}
                     : {
-                        transform: "scaleX(1)",
-                      },
+                      transform: "scaleX(1)",
+                    },
               }}
             >
               {link.text}
@@ -233,7 +233,7 @@ const Header = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "40px", sm: "50px", md: "60px" },
+                  width: { xs: "100px", sm: "150px", md: "300px" },
                 }}
               >
                 <Image
@@ -241,6 +241,7 @@ const Header = () => {
                   alt="Innoblooms Logo"
                   width={340}
                   height={80}
+                  layout="responsive"
                 />
               </Box>
             </Typography>

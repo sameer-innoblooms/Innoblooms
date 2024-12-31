@@ -11,17 +11,24 @@ import {
 import { Container, Typography, Box, Avatar, IconButton } from "@mui/material";
 import { ClapperboardIcon, ShareIcon } from "lucide-react";
 
+const data = [{
+  title: "This new JavaScript operator is an absolute game changer",
+  subTitle: "An amazing new JavaScript operator has arrived and things are not looking too good for try-catch!",
+  autohor: "Author Name",
+  blogDetails: 'Published On 23 Dec 2024 || 4min Read',
+  content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro numquam, ad soluta delectus excepturi quae reprehenderit enim illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro numquam, ad soluta delectus excepturi quae reprehenderit enim illum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro numquam, ad soluta delectus excepturi quae reprehenderit enim illum.`
+}]
+
 export default function BlogPage() {
   return (
-    <>
-      <Container maxWidth="lg" sx={{ mt: 20, mb: 4 }}>
-        <Typography variant="h2" fontWeight="bolder" gutterBottom>
-          This new JavaScript operator is an absolute game changer
+    <>{data.map((article) => (
+      <Container maxWidth="lg" sx={{ mt: 20, mb: 4, fontFamily:'GeistMonoVF'}}>
+        <Typography variant="h2" fontWeight="bolder" gutterBottom fontFamily="Inter, sans-serif">
+          {article.title}
         </Typography>
 
-        <Typography variant="h5" mb="35px">
-          An amazing new JavaScript operator has arrived and things are not
-          looking too good for try-catch!
+        <Typography variant="h5" mb="35px" fontFamily="Inter, sans-serif">
+          {article.subTitle}
         </Typography>
         <Box
           sx={{
@@ -43,11 +50,11 @@ export default function BlogPage() {
             BN
           </Avatar>
           <Box>
-            <Typography variant="subtitle1" fontWeight="bolder">
-              Blogger Name
+            <Typography variant="subtitle1" fontWeight="bolder" fontFamily="Inter, sans-serif">
+              {article.autohor}
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
-              Published On 23 Dec 2024 || 4min Read
+            <Typography variant="subtitle2" gutterBottom  fontFamily="Inter, sans-serif">
+              {article.blogDetails}
             </Typography>
           </Box>
         </Box>
@@ -139,15 +146,7 @@ export default function BlogPage() {
           lineHeight="1.7"
           fontSize="1.5rem"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in
-          nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro
-          numquam, ad soluta delectus excepturi quae reprehenderit enim illum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in
-          nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro
-          numquam, ad soluta delectus excepturi quae reprehenderit enim illum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in
-          nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro
-          numquam, ad soluta delectus excepturi quae reprehenderit enim illum.
+          {article.content}
         </Typography>
 
         <Typography
@@ -156,15 +155,7 @@ export default function BlogPage() {
           lineHeight="1.7"
           fontSize="1.5rem"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in
-          nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro
-          numquam, ad soluta delectus excepturi quae reprehenderit enim illum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in
-          nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro
-          numquam, ad soluta delectus excepturi quae reprehenderit enim illum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in
-          nihil dicta ducimus, non pariatur, quis ullam nemo eveniet vel porro
-          numquam, ad soluta delectus excepturi quae reprehenderit enim illum.
+           {article.content}
         </Typography>
 
         <Box
@@ -335,6 +326,7 @@ export default function BlogPage() {
           </Typography>
         </Box>
       </Container>
+    ))}
       <Footer />
     </>
   );
