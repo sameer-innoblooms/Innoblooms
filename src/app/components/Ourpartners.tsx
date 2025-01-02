@@ -32,7 +32,7 @@ const theme = createTheme({
   },
 });
 
-const StyledImage = styled(Image)(({}) => ({
+const StyledImage = styled(Image)(({ }) => ({
   maxWidth: "100%",
   height: "auto",
   objectFit: "contain",

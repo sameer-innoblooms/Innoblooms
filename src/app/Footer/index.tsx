@@ -20,12 +20,14 @@ import {
   AccessTime,
   Twitter,
   Message,
+  Instagram,
+  X,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
 import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
 
-const GradientBackground = styled(Box)(({}) => ({
+const GradientBackground = styled(Box)(({ }) => ({
   // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
 
   background: "#000000",
@@ -43,7 +45,7 @@ const GradientBackground = styled(Box)(({}) => ({
   },
 }));
 
-const StyledLink = styled(Typography)(({}) => ({
+const StyledLink = styled(Typography)(({ }) => ({
   color: "white",
   textDecoration: "none",
   // "&:hover": {
@@ -109,7 +111,7 @@ export default function Footer() {
               "&:hover": {
                 color: "black",
                 backgroundColor: "white",
-              },
+                 },
               "&:hover .MuiSvgIcon-root": {
                 transform: "translateX(4px)",
                 transition: "transform 0.2s",
@@ -134,7 +136,7 @@ export default function Footer() {
                 alt="Innoblooms"
                 width={200}
                 height={60}
-                // style={{ filter: "brightness(0) invert(1)" }}
+              // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
             <Typography sx={{ mb: 3 }}>
@@ -144,18 +146,55 @@ export default function Footer() {
             </Typography>
             <Stack direction="row" spacing={1}>
               <Link href="https://in.linkedin.com/company/innoblooms-info-services-pvt-ltd">
-                <IconButton sx={{ color: "white" }} aria-label="LinkedIn">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="LinkedIn"
+                >
                   <LinkedIn />
                 </IconButton>
               </Link>
               <Link href="https://x.com/services21256">
-                <IconButton sx={{ color: "white" }} aria-label="Facebook">
-                  <Twitter />
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <X />
                 </IconButton>
               </Link>
               <Link href="https://www.facebook.com/people/Innoblooms-Info-Services-Pvt-Ltd/100095194770163/">
-                <IconButton sx={{ color: "white" }} aria-label="Facebook">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
                   <Facebook />
+                </IconButton>
+              </Link>
+              <Link href="https://www.instagram.com/innoblooms_info/">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <Instagram />
                 </IconButton>
               </Link>
             </Stack>
@@ -165,7 +204,7 @@ export default function Footer() {
                 alt="ISO 9001 Certified"
                 width={50}
                 height={50}
-                // style={{ filter: "brightness(0) invert(1)" }}
+              // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
           </Grid>

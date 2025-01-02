@@ -11,7 +11,7 @@ import {
   useTheme,
   Container,
 } from "@mui/material";
-import Slider from "react-slick";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TestimonialSlider from "../components/Testimonials";
 

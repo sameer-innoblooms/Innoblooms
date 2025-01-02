@@ -290,8 +290,46 @@ const technologies: ServiceCategory = {
 };
 
 const industries: ServiceCategory = {
-  TECHNOLOGY: ["SaaS", "Fintech", "E-commerce", "Artificial Intelligence"],
-  HEALTHCARE: ["Telemedicine", "Health Tech", "Medical Devices"],
+  HEALTHCARE: [
+    "Heathcare software development",
+    "Health Tech",
+    "Medical Devices",
+    "Health IT consulting",
+    "Healthcare UI/UX design",
+    "Medical apps for patients",
+    "Healthcare software testing",
+    "Healthcare website design",
+  ],
+  EDUCATION: [
+    "Education software development",
+    "LMS development services",
+    "E-learning application development",
+    "E-learning software development",
+    "Educations portals development",
+    "School mangement software",
+  ],
+  FINACE: [
+    "Financial software development",
+    "Web design for financial institutions",
+    "Financial application development",
+    "Banking apps development",
+    "Payment apps development",
+    "Payment integration services",
+  ],
+  "TRANSPOTATION AND LOGISTICS": [
+    "Transportation software development",
+    "Logistics app development",
+    "Logistics web design",
+    "Transportation management software",
+    "Supply chain software development",
+  ],
+  "MACHINE LEARNING & AI": [
+    "AI consulting services",
+    "AI development services",
+    "AI integration services",
+    "AI chatbot development",
+    "ChatGPT integration",
+  ],
 };
 
 const accordionSections: AccordionSection[] = [
@@ -588,7 +626,7 @@ const getItemIcon = (item: string) => {
     case "java":
       return (
         <Image
-          src="/logo/java-logo.png"
+          src="/logo/java.png"
           alt="react logo"
           height={20}
           width={20}
@@ -712,6 +750,18 @@ const getItemIcon = (item: string) => {
           style={{ marginRight: 10 }}
         />
       );
+
+    case "heathcare software development":
+      return (
+        <Image
+          src="/logo/h2.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+
     case "health tech":
       return (
         <Image
@@ -726,6 +776,290 @@ const getItemIcon = (item: string) => {
       return (
         <Image
           src="/logo/medicalDevices-logo.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "health it consulting":
+      return (
+        <Image
+          src="/logo/h4.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "healthcare ui/ux design":
+      return (
+        <Image
+          src="/logo/h5.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "medical apps for patients":
+      return (
+        <Image
+          src="/logo/h6.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "healthcare software testing":
+      return (
+        <Image
+          src="/logo/h3.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "healthcare website design":
+      return (
+        <Image
+          src="/logo/h8.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+
+    case "education software development":
+      return (
+        <Image
+          src="/logo/e1.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "lms development services":
+      return (
+        <Image
+          src="/logo/e2.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "lms development services":
+      return (
+        <Image
+          src="/logo/e2.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "e-learning application development":
+      return (
+        <Image
+          src="/logo/e3.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "e-learning software development":
+      return (
+        <Image
+          src="/logo/e4.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "educations portals development":
+      return (
+        <Image
+          src="/logo/e5.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "school mangement software":
+      return (
+        <Image
+          src="/logo/e6.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "financial software development":
+      return (
+        <Image
+          src="/logo/f1.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "web design for financial institutions":
+      return (
+        <Image
+          src="/logo/f2.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "financial application development":
+      return (
+        <Image
+          src="/logo/f3.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "banking apps development":
+      return (
+        <Image
+          src="/logo/f4.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "payment apps development":
+      return (
+        <Image
+          color="red"
+          src="/logo/f5.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "payment integration services":
+      return (
+        <Image
+          src="/logo/f6.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+
+    case "transportation software development":
+      return (
+        <Image
+          src="/logo/tsd.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "logistics app development":
+      return (
+        <Image
+          src="/logo/t2.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "logistics web design":
+      return (
+        <Image
+          src="/logo/t3.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "transportation management software":
+      return (
+        <Image
+          src="/logo/t4.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "supply chain software development":
+      return (
+        <Image
+          src="/logo/t5.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "ai consulting services":
+      return (
+        <Image
+          src="/logo/ai1.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "ai development services":
+      return (
+        <Image
+          src="/logo/aii2.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "ai integration services":
+      return (
+        <Image
+          src="/logo/ai3.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+    case "ai chatbot development":
+      return (
+        <Image
+          src="/logo/ai4.png"
+          alt="react logo"
+          height={25}
+          width={25}
+          style={{ marginRight: 10 }}
+        />
+      );
+
+    case "chatgpt integration":
+      return (
+        <Image
+          src="/logo/ai5.png"
           alt="react logo"
           height={25}
           width={25}

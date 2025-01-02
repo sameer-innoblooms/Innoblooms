@@ -142,7 +142,7 @@ export default function ContactSection() {
                   "&:hover": { color: "#000000" },
                 }}
                 component="a"
-                href="tel:+40728303133"
+                href="tel:+918979799833"
               >
                 +40728303133
               </Typography>
@@ -159,7 +159,7 @@ export default function ContactSection() {
                   "&:hover": { color: "#000000" },
                 }}
                 component="a"
-                href="mailto:contact@brandaffair.ro"
+                href="mailto:info@innoblooms.com"
               >
                 contact@brandaffair.ro
               </Typography>

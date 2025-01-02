@@ -38,7 +38,7 @@ function Home() {
       },
     },
     {
-      image: "images/Image4.jfif",
+      image: "/images/Image4.jfif",
       tabContent: {
         text1: "Innovative Software Solutions",
         text2: "for Your Business",

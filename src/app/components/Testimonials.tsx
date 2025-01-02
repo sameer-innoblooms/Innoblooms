@@ -23,53 +23,53 @@ const testimonials = [
     avatar: "/ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/Cars24.png?height=50&width=50",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+      "I am thrilled to collaborate with such an innovative company. At CARS24, we share your passion for cutting-edge solutions and customer satisfaction. Together, we can drive the future of automotive technology and create unparalleled experiences for our customers.",
+    author: "Vikram Chopra",
+    title: "Founder and CEO",
+    avatar: "/ourpartners/cars24.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/kentico.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has been a game-changer for our business. Their IT solutions are top-notch, and their team is incredibly responsive and professional. From website development to digital marketing, they've exceeded our expectations. Highly recommend!",
+    author: "Petr Palas",
+    title: "CEO and chairman",
+    avatar: "/ourpartners/kentico.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/dell.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has consistently delivered exceptional IT solutions, enhancing our operational efficiency and digital presence. Their innovative approach and professional team make them a highly valued partner. Highly recommended.",
+    author: "Michael Dell",
+    title: "CEO of Dell Technologies",
+    avatar: "/ourpartners/dell.jpg?height=60&width=60",
   },
 
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/tata.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has been an outstanding partner in delivering innovative IT solutions. Their professionalism, creativity, and commitment to excellence have greatly enhanced our digital transformation journey. Highly recommended",
+    author: "Warren Harris",
+    title: "CEO Tata Technologies",
+    avatar: "/ourpartners/tata.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/adobe.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has been instrumental in enhancing our digital initiatives. Their innovative solutions and dedicated team have greatly contributed to our success. We highly appreciate their partnership.",
+    author: "Shantanu Narayen",
+    title: "CEO of Adobe Inc.",
+    avatar: "/ourpartners/adobe.jpg?height=60&width=60",
   },
   {
-    logo: "/logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/paytm.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has significantly improved our digital operations. Their innovative IT solutions and dedicated support team have been invaluable in advancing our business goals. Highly recommend their services.",
+    author: "Vijay Shekhar Sharma",
+    title: "Founder and CEO One97 ",
+    avatar: "/ourpartners/paytm.jpg?height=60&width=60",
   },
 ];
 
@@ -178,17 +178,26 @@ export default function TestimonialSlider() {
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
+                  // width: "100%",
                 }}
               >
                 <Box
-                  component="img"
-                  src={testimonial.logo}
-                  alt="Company logo"
-                  sx={{ height: 50, width: 90, mb: 3 }}
-                />
+                  sx={{
+                    width: "100px",
+                    height: "50px",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={testimonial.logo}
+                    alt="Company logo"
+                    sx={{ height: "auto", width: "100%", mb: 3 }}
+                  />
+                </Box>
+
                 <Typography
                   variant="body1"
-                  sx={{ flex: 1, mb: 4, color: "#4A4A4A" }}
+                  sx={{ flex: 1, mb: 4, mt: 2, color: "#4A4A4A" }}
                 >
                   &quot;{testimonial.quote}&quot;
                 </Typography>
@@ -211,29 +220,30 @@ export default function TestimonialSlider() {
         <IndicatorContainer sx={{}}>
           <IndicatorBar progress={progress} />
         </IndicatorContainer>
-
-        <NavigationButton
-          onClick={handlePrevious}
-          sx={{ left: { xs: 16, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
-        >
-          <KeyboardArrowLeft
-            sx={{
-              fontSize: 70,
-              color: "#4A4A4A",
-            }}
-          />
-        </NavigationButton>
-        <NavigationButton
-          onClick={handleNext}
-          sx={{ left: { xs: 16, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
-        >
-          <KeyboardArrowRight
-            sx={{
-              fontSize: 70,
-              color: "#4A4A4A",
-            }}
-          />
-        </NavigationButton>
+        <Box display='flex' justifyContent='center' alignItems='center'>
+          <NavigationButton
+            onClick={handlePrevious}
+            sx={{ left: { xs: 16, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+          >
+            <KeyboardArrowLeft
+              sx={{
+                fontSize: 70,
+                color: "#4A4A4A",
+              }}
+            />
+          </NavigationButton>
+          <NavigationButton
+            onClick={handleNext}
+            sx={{ left: { xs: 16, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+          >
+            <KeyboardArrowRight
+              sx={{
+                fontSize: 70,
+                color: "#4A4A4A",
+              }}
+            />
+          </NavigationButton>
+        </Box>
       </SliderContainer>
     </Container>
   );
