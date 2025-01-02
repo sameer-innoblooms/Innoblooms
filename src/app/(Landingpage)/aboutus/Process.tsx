@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import { Box, styled } from "@mui/material";
 import Image from "next/image";
 
-const StyledSection = styled(Box)(({}) => ({
+const StyledSection = styled(Box)(({ }) => ({
   //   marginBottom: theme.spacing(12),
   position: "relative",
 }));
@@ -125,7 +125,7 @@ export default function Process() {
                 <Grid item xs={12} md={6}>
                   <Box sx={{ position: "relative", height: 300 }}>
                     <Image
-                      src="/images/process-01.svg"
+                      src="/process-01.svg"
                       alt="Planning illustration"
                       fill
                       style={{ objectFit: "contain" }}
@@ -168,7 +168,7 @@ export default function Process() {
                 >
                   <Box sx={{ position: "relative", height: 300, mb: 10 }}>
                     <Image
-                      src="/images/process-02.svg"
+                      src="/process-02.svg"
                       alt="Planning illustration"
                       fill
                       style={{ objectFit: "contain" }}
@@ -261,7 +261,7 @@ export default function Process() {
                 <Grid item xs={12} md={6}>
                   <Box sx={{ position: "relative", height: 300 }}>
                     <Image
-                      src="/images/process-03.svg"
+                      src="/process-03.svg"
                       alt="Planning illustration"
                       fill
                       style={{ objectFit: "contain" }}
@@ -305,7 +305,7 @@ export default function Process() {
                 >
                   <Box sx={{ position: "relative", height: 300, mb: 10 }}>
                     <Image
-                      src="/images/process-04.svg"
+                      src="/process-04.svg"
                       alt="Planning illustration"
                       fill
                       style={{ objectFit: "contain" }}

@@ -10,22 +10,22 @@ const ServiceSubcategories = [
   {
     category: "BUSINESS CONSULTING",
     description:
-      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+      "Overcome challenges, tap into opportunities. Achieve your business potential with our customized solutions.",
   },
   {
     category: "AUTOMATION WITH AI",
     description:
-      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+      "Imagine tasks finishing themselves. Our AI Automation solutions let your team focus on what matters.",
   },
   {
     category: "RESOURCE AUGMENTATION",
     description:
-      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+      "Extend your capabilities with elite talent. Our manpower solutions help your team scale effortlessly. Resources exactly when needed.",
   },
   {
     category: "SOFTWARE SERVICES",
     description:
-      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+      "Innoblooms Info Services Pvt Ltd: Bringing Ideas to Life with Innovative and Optimized Software Solutions.",
   },
 ];
 
@@ -117,10 +117,10 @@ const ServicesDropdown = () => {
             "&:hover::after": pathname.startsWith("/services")
               ? "none" // Don't show underline on hover when on /services page
               : {
-                  transform: pathname.startsWith("/services")
-                    ? "none"
-                    : "scaleX(1)", // Make the underline appear
-                },
+                transform: pathname.startsWith("/services")
+                  ? "none"
+                  : "scaleX(1)", // Make the underline appear
+              },
           }}
         >
           Service

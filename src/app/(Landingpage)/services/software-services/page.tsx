@@ -93,7 +93,7 @@ const page = () => {
       textAlign: 'center', // Center align the text
     }}
   >
-   Innoblooms Info Services Pvt Ltd: Bringing Your Ideas To Life Finest Software Services with Innovative Solutions Designed to Optimize
+   Innoblooms Info Services Pvt. Ltd. Bringing Your Ideas To Life Finest Software Services with Innovative Solutions Designed to Optimize
   </Typography> */}
       </Box>
       <Overview />

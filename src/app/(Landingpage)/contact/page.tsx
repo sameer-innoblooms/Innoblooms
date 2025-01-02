@@ -92,7 +92,7 @@ export default function ContactSection() {
           }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.8444388087937!2d26.1019833!3d44.4568359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4461e878dd%3A0x4075fedadb22b72a!2sBucharest%2C%20Romania!5e0!3m2!1sen!2s!4v1635959562000!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed/v1/place?q=C-47(SH-120),+Sector+63+A,+Noida,+Chotpur,+Uttar+Pradesh+201307&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
             width="109%"
             height="100%"
             style={{
@@ -105,7 +105,6 @@ export default function ContactSection() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </Box>
-
         <Box
           sx={{
             flex: 1,
@@ -144,7 +143,7 @@ export default function ContactSection() {
                 component="a"
                 href="tel:+918979799833"
               >
-                +40728303133
+                +91 7252833134
               </Typography>
             </Box>
 
@@ -161,7 +160,7 @@ export default function ContactSection() {
                 component="a"
                 href="mailto:info@innoblooms.com"
               >
-                contact@brandaffair.ro
+                info@innoblooms.com
               </Typography>
             </Box>
 
@@ -176,7 +175,7 @@ export default function ContactSection() {
                   maxWidth: "300px",
                 }}
               >
-                Amman St, no 35, 4th floor, ap 10, Bucharest
+                C-47(SH-120), Sector 63 A, Noida, Chotpur, Uttar Pradesh 201307
               </Typography>
             </Box>
           </Box>

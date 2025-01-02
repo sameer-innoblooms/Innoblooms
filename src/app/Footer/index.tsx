@@ -136,6 +136,7 @@ export default function Footer() {
                 alt="Innoblooms"
                 width={200}
                 height={60}
+                // layout="responsive"
               // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
@@ -252,7 +253,7 @@ export default function Footer() {
                 <Box>
                   <Typography>
                     {" "}
-                    C-47(SH-120, Sector 63 A, Noida, Chotpur, Uttar Pradesh
+                    C-47(SH-120), Sector 63 A, Noida, Chotpur, Uttar Pradesh
                     201307
                   </Typography>
                   {/* <Typography sx={{ mt: 2 }}>US Office: 17075 TESORO DR SAN DIEGO, CA 92128</Typography> */}
