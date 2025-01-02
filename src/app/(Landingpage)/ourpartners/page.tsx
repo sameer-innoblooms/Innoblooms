@@ -19,6 +19,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "@/app/Footer";
+import ServicesAccordion from "@/app/components/ServicesAccordian";
+import Link from "next/link";
 
 const theme = createTheme({
   palette: {
@@ -133,58 +135,62 @@ export default function PartnersPage() {
   return (
     <ThemeProvider theme={theme}>
       <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          justifyItems: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          height: { xs: "50vh", sm: "60vh", md: "70vh" },
+          width: "100%",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          transition: "background-size 0.5s ease",
+          position: "relative",
+          objectFit: "cover",
+          maxHeight: "1500px",
+          backgroundPositionY: -115,
+          backgroundImage: `url(/images/resource-augmentation.jpg)`,
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
+            zIndex: 1, // Ensure the overlay is above the background image
+          },
+        }}
+      >
+        <Typography
+          variant="h1"
+          color="white"
+          align="center"
           sx={{
+            zIndex: 9,
+            mb: 2,
+          }}
+        >
+          Our Partners
+        </Typography>
+        <Box
+          sx={{
+            zIndex: 9,
+            width: "700px",
             display: "flex",
             justifyContent: "center",
             justifyItems: "center",
             alignItems: "center",
             flexDirection: "column",
-            height: { xs: "50vh", sm: "60vh", md: "70vh" },
-            width: "100%",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            transition: "background-size 0.5s ease",
-            position: "relative",
-            objectFit: "cover",
-            maxHeight: "1500px",
-            backgroundPositionY: -115,
-            backgroundImage: `url(/images/resource-augmentation.jpg)`,
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
-              zIndex: 1, // Ensure the overlay is above the background image
-            },
           }}
         >
-          <Typography
-            variant="h1"
-            color="white"
-            align="center"
-            sx={{
-              zIndex: 9,
-              mb:2
-            }}
-          >
-            Partners & Team
-          </Typography>
-          <Box sx={{
-            zIndex: 9,
-            width: '700px',
-            display: 'flex',
-            justifyContent: 'center',
-            justifyItems: 'center',
-            alignItems: 'center',
-            flexDirection: 'column'
-          }}>
-            <Breadcrumb/>
-          </Box>
-          {/* <Typography
+          <Breadcrumb />
+        </Box>
+        {/* <Typography
             variant="body1"
             color="white"
             sx={{
@@ -196,14 +202,18 @@ export default function PartnersPage() {
             business potential. Our experienced consultants provide customized
             solutions that suit the needs at every level.
           </Typography> */}
-        </Box>
-      <Container maxWidth="xl" sx={{ py: 6, mt: 1 }} >
-        <Box sx={{ mb: 6, display: 'flex',
-          
-          flexDirection: 'column',
-          // justifyContent: 'center',
-          alignItems: 'center'
-         }}>
+      </Box>
+      <Container maxWidth="xl" sx={{ py: 6 }}>
+        <Box
+          sx={{
+            mb: 3,
+            display: "flex",
+            px: 7,
+            flexDirection: "column",
+            // justifyContent: 'center',
+            alignItems: "left",
+          }}
+        >
           {/* <Typography variant="overline" color="text.secondary" gutterBottom>
             Partners & Team
           </Typography> */}
@@ -212,14 +222,28 @@ export default function PartnersPage() {
             component="h1"
             gutterBottom
             fontWeight="bold"
+            sx={{
+              color: "#4A4A4A",
+            }}
           >
-            Collaborative Excellence: Building Bridges, Driving Success
+            <Box
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+              }}
+            >
+              Collaborative Excellence:
+            </Box>{" "}
+            Building Bridges, Driving Success
           </Typography>
           <Typography
             variant="body1"
             color="text.secondary"
-            align="center"
-            sx={{ maxWidth: "sm", }}
+            align="left"
+            sx={{ maxWidth: "md" }}
           >
             Empowering partnerships and fostering teamwork to achieve
             unparalleled excellence. Our dedicated approach and shared vision
@@ -258,7 +282,7 @@ export default function PartnersPage() {
                     borderColor: "grey.200",
                     borderRadius: 1,
                     p: 2,
-                    m:0.2,
+                    m: 0.2,
                     transition: "all 0.3s ease-in-out",
                     "&:hover": {
                       boxShadow: 2,
@@ -282,7 +306,7 @@ export default function PartnersPage() {
           </Slider>
         </Box>
 
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
@@ -293,8 +317,8 @@ export default function PartnersPage() {
             p: 3,
             borderRadius: 2,
           }}
-        >
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        > */}
+        {/* <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <AvatarGroup max={4}>
               {teamAvatars.map((member, index) => (
                 <Avatar
@@ -310,25 +334,44 @@ export default function PartnersPage() {
                 />
               ))}
             </AvatarGroup>
-            <Typography variant="subtitle1" fontWeight="medium">
+            <Typography
+              variant="subtitle1"
+              fontWeight="medium"
+              sx={{
+                color: "#4A4A4A",
+              }}
+            >
               Join the partners network
             </Typography>
-          </Box>
-          <Button
-            variant="contained"
-            endIcon={<ArrowForwardIcon />}
-            sx={{
-              "&:hover .MuiSvgIcon-root": {
-                transform: "translateX(4px)",
-                transition: "transform 0.2s",
-              },
-            }}
-          >
-            Become a partner
-          </Button>
-        </Box>
+          </Box> */}
+        {/* <Link href={"/contact"}>
+            <Button
+              variant="contained"
+              endIcon={<ArrowForwardIcon />}
+              sx={{
+                width: { xs: "100px", sm: "130px", md: "230px" },
+                height: { xs: "35px", sm: "45px", md: "50px" },
+                minWidth: "100px",
+                bgcolor: "#4294a5",
+                // bgcolor: "#FFB247",
+                color: "black",
+                fontWeight: "bold",
+                borderRadius: "50px",
+                fontSize: { xs: "11px", sm: "13px", md: "15px" },
+                ml: { xs: 1, sm: 2 },
+                "&:hover .MuiSvgIcon-root": {
+                  transform: "translateX(4px)",
+                  transition: "transform 0.2s",
+                },
+              }}
+            >
+              Become a partner
+            </Button>
+          </Link> */}
+        {/* </Box> */}
       </Container>
-      <Footer/>
+      <ServicesAccordion />
+      <Footer />
     </ThemeProvider>
   );
 }

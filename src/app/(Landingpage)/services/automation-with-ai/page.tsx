@@ -20,6 +20,19 @@ const page = () => {
           position: "relative",
           overflow: "hidden", // Ensure no overflow from the video
           maxHeight: "1500px",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            // backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))", // Gradient overlay
+
+            zIndex: 1, // Ensure the overlay is above the background image
+          },
         }}
       >
         {/* Background Video */}
@@ -62,23 +75,24 @@ const page = () => {
           align="center"
           sx={{
             zIndex: 2, // Ensure text is above the overlay
-            md:2
+            md: 2,
           }}
         >
           Automation With Ai
         </Typography>
-        <Box sx={{
+        <Box
+          sx={{
             zIndex: 9,
-            width: '700px',
-            display: 'flex',
-            justifyContent: 'center',
-            justifyItems: 'center',
-            alignItems: 'center',
-            flexDirection: 'column'
-          }}>
-          <Breadcrumb/>
-
-          </Box>
+            width: "700px",
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Breadcrumb />
+        </Box>
         {/* <Typography
           variant="body1"
           color="white"
@@ -93,12 +107,10 @@ const page = () => {
           that suit the needs at every level.
         </Typography> */}
       </Box>
-      <Overview/>
-      <WhatWeDoAutomation/>
-      <ServicesAccordion/>
-      <Footer/>
-
-
+      <Overview />
+      <WhatWeDoAutomation />
+      <ServicesAccordion />
+      <Footer />
     </>
   );
 };

@@ -7,8 +7,7 @@ import SliderCard from "./SliderCard";
 function Home() {
   const SliderDetails = [
     {
-      image:
-        "/images/Image1.jpg",
+      image: "./images/Image1.jpg",
       tabContent: {
         text1: " Revolutionize Your Business",
         text2: " with AI-Driven Automation",
@@ -18,8 +17,7 @@ function Home() {
       },
     },
     {
-      image:
-        "/images/Image2.gif",
+      image: "./images/Image2.gif",
       tabContent: {
         text1: " Empower Your Projects with Expert",
         text2: "Resources at Your Fingertips!",
@@ -30,7 +28,7 @@ function Home() {
       },
     },
     {
-      image: "/images/Image3.jfif",
+      image: "./images/Image3.jfif",
       tabContent: {
         text1: " Drive Transformation with Strategic",
         text2: "Business Consulting",
@@ -40,8 +38,7 @@ function Home() {
       },
     },
     {
-      image:
-        "images/Image4.jfif",
+      image: "./images/Image4.jfif",
       tabContent: {
         text1: "Innovative Software Solutions",
         text2: "for Your Business",

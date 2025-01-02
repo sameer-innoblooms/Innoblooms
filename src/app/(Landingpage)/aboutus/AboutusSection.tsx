@@ -11,14 +11,18 @@ export default function AboutusSection() {
 
         // bgcolor: 'grey',
         py: { xs: 8, md: 12 },
+        // bgcolor: "#F5F9FF",
+        bgcolor: "#e9f5f9",
+        // bgcolor: "#d3eaf2",
       }}
     >
       <Container maxWidth="xl">
         <Box
           sx={{
-            textAlign: "center",
+            pl: 7,
+            textAlign: "left",
             maxWidth: "1200px",
-            mx: "auto",
+            // mx: "auto",
           }}
         >
           {/* <Typography
@@ -42,9 +46,22 @@ export default function AboutusSection() {
               mb: 3,
               fontSize: { xs: "2rem", md: "2.75rem" },
               lineHeight: 1.2,
+              color: "#4A4A4A",
             }}
           >
-            Innoblooms Info Services
+            <Box
+              component="span"
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              Innoblooms
+            </Box>{" "}
+            Info Services
           </Typography>
 
           <Typography

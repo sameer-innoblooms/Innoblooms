@@ -18,14 +18,19 @@ import {
   Email,
   LocationOn,
   AccessTime,
+  Twitter,
+  Message,
+  Instagram,
+  X,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
+import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
 
-const GradientBackground = styled(Box)(({  }) => ({
+const GradientBackground = styled(Box)(({}) => ({
   // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
 
-  background: '#000000',
+  background: "#000000",
   color: "white",
   position: "relative",
   "&::before": {
@@ -40,12 +45,12 @@ const GradientBackground = styled(Box)(({  }) => ({
   },
 }));
 
-const StyledLink = styled(Link)(({  }) => ({
+const StyledLink = styled(Typography)(({}) => ({
   color: "white",
   textDecoration: "none",
-  "&:hover": {
-    textDecoration: "underline",
-  },
+  // "&:hover": {
+  //   textDecoration: "underline",
+  // },
 }));
 
 export default function Footer() {
@@ -57,7 +62,7 @@ export default function Footer() {
       <Container maxWidth="lg" sx={{ pt: 8, pb: 8 }}>
         <Box
           sx={{
-            bgcolor: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
+            // bgcolor: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
             borderRadius: 4,
             p: 4,
             mb: 8,
@@ -73,16 +78,48 @@ export default function Footer() {
             component="h2"
             sx={{ color: "white", maxWidth: 600 }}
           >
-            Let us know if there&apos;s an opportunity for us to build something
-            awesome together.
+            <Box
+              sx={{
+                background: "linear-gradient(to right, #476884, #35A7C6)",
+                // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                display: "inline-block",
+              }}
+            >
+              Let us know
+            </Box>{" "}
+            if there&apos;s an opportunity for us to build something awesome
+            together.
           </Typography>
           <Button
             variant="contained"
+            endIcon={<ArrowForwardIcon />}
             sx={{
-              bgcolor: "rgba(255, 255, 255, 0.2)",
-              "&:hover": { bgcolor: "rgba(255, 255, 255, 0.3)" },
-              px: 4,
+              width: { xs: "100px", sm: "130px", md: "185px" },
+              height: { xs: "35px", sm: "45px", md: "50px" },
+              minWidth: "100px",
+              bgcolor: "#4294a5",
+              // bgcolor: "#4d7990",
+              // bgcolor: "#FFB247",
+              color: "black",
+              // fontWeight: "bold",
+              fontWeight: "16px",
+              borderRadius: "50px",
+              fontSize: { xs: "11px", sm: "13px", md: "15px" },
+              ml: { xs: 1, sm: 2 },
+              "&:hover": {
+                color: "black",
+                backgroundColor: "white",
+              },
+              "&:hover .MuiSvgIcon-root": {
+                transform: "translateX(4px)",
+                transition: "transform 0.2s",
+              },
+
+              px: 1,
               py: 1.5,
+              // fontFamily: "Inter, sans-serif",
             }}
             onClick={() => router.push("/contact")}
           >
@@ -95,11 +132,11 @@ export default function Footer() {
           <Grid item xs={12} md={4}>
             <Box sx={{ mb: 3 }}>
               <Image
-                src="/placeholder.svg"
+                src="./Innoblooms-logo.png"
                 alt="Innoblooms"
                 width={200}
                 height={60}
-                style={{ filter: "brightness(0) invert(1)" }}
+                // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
             <Typography sx={{ mb: 3 }}>
@@ -108,25 +145,66 @@ export default function Footer() {
               strategy, technology, marketing, and people services.
             </Typography>
             <Stack direction="row" spacing={1}>
-               <Link href="https://www.facebook.com/people/Innoblooms-Info-Services-Pvt-Ltd/100095194770163/">             
-              <IconButton sx={{ color: "white" }} aria-label="LinkedIn">
-                <LinkedIn />
-              </IconButton>
+              <Link href="https://in.linkedin.com/company/innoblooms-info-services-pvt-ltd">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="LinkedIn"
+                >
+                  <LinkedIn />
+                </IconButton>
               </Link>
-              <IconButton sx={{ color: "white" }} aria-label="Facebook">
-                <Facebook />
-              </IconButton>
-              <IconButton sx={{ color: "white" }} aria-label="Facebook">
-                <Facebook />
-              </IconButton>
+              <Link href="https://x.com/services21256">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <X />
+                </IconButton>
+              </Link>
+              <Link href="https://www.facebook.com/people/Innoblooms-Info-Services-Pvt-Ltd/100095194770163/">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <Facebook />
+                </IconButton>
+              </Link>
+              <Link href="https://www.instagram.com/innoblooms_info/">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <Instagram />
+                </IconButton>
+              </Link>
             </Stack>
             <Box sx={{ mt: 4 }}>
               <Image
-                src="/placeholder.svg"
+                src="./ISO-9001-certified.png"
                 alt="ISO 9001 Certified"
-                width={100}
-                height={100}
-                style={{ filter: "brightness(0) invert(1)" }}
+                width={50}
+                height={50}
+                // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
           </Grid>
@@ -137,17 +215,20 @@ export default function Footer() {
               Commerce Solutions
             </Typography>
             <Stack spacing={2}>
-              <StyledLink href="#">Business consulting</StyledLink>
+              {/* <StyledLink href="#">Business consulting</StyledLink>
               <StyledLink href="#"> Resource augmentation</StyledLink>
-              <StyledLink href="#">Software services</StyledLink>
+              <StyledLink href="#">Software services</StyledLink> */}
+              <StyledLink>Business consulting</StyledLink>
+              <StyledLink> Resource augmentation</StyledLink>
+              <StyledLink>Software services</StyledLink>
             </Stack>
 
             <Typography variant="h6" sx={{ mt: 4, mb: 3 }}>
               Other Solutions
             </Typography>
             <Stack spacing={2}>
-              <StyledLink href="#">Mobile App Development</StyledLink>
-              <StyledLink href="#">Web App Development</StyledLink>
+              <StyledLink>Mobile App Development</StyledLink>
+              <StyledLink>Web App Development</StyledLink>
             </Stack>
           </Grid>
 
@@ -192,7 +273,7 @@ export default function Footer() {
                 borderTop: "1px solid grey",
               }}
             >
-              © 2023 All Rights Reserved By Innoblooms Pvt. Ltd.
+              © 2024 All Rights Reserved By Innoblooms Info Services Pvt. Ltd.
             </Typography>
           </Grid>
         </Grid>

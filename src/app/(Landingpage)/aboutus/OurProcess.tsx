@@ -75,8 +75,8 @@ export default function OurProcess() {
                     alt="Planning illustration"
                     fill
                     style={{ objectFit: "contain" }}
-                    width={1}
-                    height={1}
+                    // width={1}
+                    // height={1}
                   />
                 </Box>
               </Grid>
@@ -125,12 +125,12 @@ export default function OurProcess() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src='/images/process-02.svg'
+                    src="/images/process-02.svg"
                     alt="Design illustration"
                     fill
                     style={{ objectFit: "contain" }}
-                    width={1}
-                    height={1}
+                    // width={1}
+                    // height={1}
                   />
                 </Box>
               </Grid>
@@ -161,8 +161,8 @@ export default function OurProcess() {
                     alt="Development illustration"
                     fill
                     style={{ objectFit: "contain" }}
-                    width={1}
-                    height={1}
+                    // width={1}
+                    // height={1}
                   />
                 </Box>
               </Grid>
@@ -213,8 +213,8 @@ export default function OurProcess() {
                     alt="Deployment illustration"
                     fill
                     style={{ objectFit: "contain" }}
-                    width={1}
-                    height={1}
+                    // width={1}
+                    // height={1}
                   />
                 </Box>
               </Grid>

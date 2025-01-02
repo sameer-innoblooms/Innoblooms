@@ -7,6 +7,7 @@ import BackgroundImage from "@/app/BackgroundImage";
 import Footer from "@/app/Footer";
 import Breadcrumb from "./Breadcrumb";
 import ContactPage from "@/app/components/FormFeedback";
+import ServicesAccordion from "@/app/components/ServicesAccordian";
 
 export default function ContactSection() {
   return (
@@ -37,6 +38,8 @@ export default function ContactSection() {
             right: 0,
             bottom: 0,
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0))",
             zIndex: 1, // Ensure the overlay is above the background image
           },
         }}
@@ -120,6 +123,7 @@ export default function ContactSection() {
               mb: 6,
               fontSize: { xs: "2.5rem", md: "3.5rem" },
               fontWeight: 600,
+              color: "#4A4A4A",
               ml: 5,
             }}
           >
@@ -132,7 +136,8 @@ export default function ContactSection() {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#000000DE",
+                  // color: "#000000DE",
+                  color: "#4A4A4A",
                   fontSize: "1.1rem",
                   "&:hover": { color: "#000000" },
                 }}
@@ -148,7 +153,8 @@ export default function ContactSection() {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#000000DE",
+                  // color: "#000000DE",
+                  color: "#4A4A4A",
                   fontSize: "1.1rem",
                   "&:hover": { color: "#000000" },
                 }}
@@ -164,7 +170,8 @@ export default function ContactSection() {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#000000DE",
+                  // color: "#000000DE",
+                  color: "#4A4A4A",
                   fontSize: "1.1rem",
                   maxWidth: "300px",
                 }}
@@ -175,7 +182,7 @@ export default function ContactSection() {
           </Box>
         </Box>
       </Container>
-
+      <ServicesAccordion />
       <Footer />
     </>
   );

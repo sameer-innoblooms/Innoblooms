@@ -5,7 +5,9 @@ import { styled } from "@mui/material/styles";
 import Image from "next/image";
 
 const StyledOverview = styled(Typography)(({ theme }) => ({
-  color: "#8B3DFF",
+  // color: "#8B3DFF",
+  // color: "black",
+  color: "#4A4A4A",
   marginBottom: theme.spacing(2),
   fontWeight: 500,
 }));
@@ -57,7 +59,7 @@ export default function Overview() {
     <Box
       sx={{
         backgroundColor: "#FFFFFF",
-        minHeight: "100vh",
+        minHeight: "700px",
         display: "flex",
         alignItems: "center",
         py: 8,
@@ -69,14 +71,28 @@ export default function Overview() {
             <Box>
               <StyledOverview variant="subtitle1">OVERVIEW</StyledOverview>
               <StyledHeading variant="h1">
-                Take your business to a whole new level with a user friendly web
-                application.
+                <Box
+                  sx={{
+                    background: "linear-gradient(to right, #476884, #35A7C6)",
+                    // background: "linear-gradient(to right , #4294a5, #48c5a8);",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    display: "inline-block",
+                  }}
+                >
+                  Take your business
+                </Box>{" "}
+                to a whole new level with a user friendly web application.
               </StyledHeading>
               <StyledSubheading>
                 Elevate Your Business with Us!
               </StyledSubheading>
               <StyledDescription>
-              At Innoblooms, we are dedicated to helping you navigate the complex world of business with bespoke, innovative solutions. Our consulting expertise will empower your organization to overcome challenges and achieve sustainable success. Partner with us and transform your business aspirations into reality.
+                At Innoblooms, we are dedicated to helping you navigate the
+                complex world of business with bespoke, innovative solutions.
+                Our consulting expertise will empower your organization to
+                overcome challenges and achieve sustainable success. Partner
+                with us and transform your business aspirations into reality.
               </StyledDescription>
             </Box>
           </Grid>
