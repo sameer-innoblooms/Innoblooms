@@ -67,6 +67,7 @@ const page = () => {
           sx={{
             zIndex: 2, // Ensure text is above the overlay
             mb: 2,
+            fontSize: {xs: "2.5rem", sm: "3rem", md: "6rem"},
           }}
         >
           Software Services

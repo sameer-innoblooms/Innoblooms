@@ -49,6 +49,7 @@ const page = () => {
           sx={{
             zIndex: 9,
             mb: 2,
+            fontSize: {xs: "2.5rem", sm: "3rem", md: "6rem"},
           }}
         >
           Business Consulting

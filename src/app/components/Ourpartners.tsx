@@ -20,6 +20,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "@/app/Footer";
 import ServicesAccordion from "@/app/components/ServicesAccordian";
+import Link from "next/link";
 
 const theme = createTheme({
   palette: {
@@ -47,38 +48,32 @@ export default function Partners() {
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const partners = [
-    { logo: "./ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "./ourpartners/Kentico.png", name: "Kentico" },
-    { logo: "./ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "./ourpartners/Kentico.png", name: "Kentico" },
-    { logo: "./ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "./ourpartners/Kentico.png", name: "Kentico" },
-    { logo: "./ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "./ourpartners/Kentico.png", name: "Kentico" },
+    { logo: "./ourpartners/amazon-logo.png", name: "Amazon", href: "https://www.amazon.in/" },
+    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft",  href: "https://www.microsoft.com/" },
+    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe", href: "https://www.adobe.com/" },
+    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" , href: "https://www.apexlegends.com/" },
+    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip", href: "https://www.digiflip.com/" },
+    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24", href: "https://www.cars24.com/" },
+    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect", href: "https://www.cloudconnect.in/" },
+    { logo: "./ourpartners/Kentico.png", name: "Kentico", href: "https://www.kentico.com/" },
+    { logo: "./ourpartners/amazon-logo.png", name: "Amazon", href: "https://www.amazon.in/" },
+    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft",  href: "https://www.microsoft.com/" },
+    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe", href: "https://www.adobe.com/" },
+    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" , href: "https://www.apexlegends.com/" },
+    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip", href: "https://www.digiflip.com/" },
+    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24", href: "https://www.cars24.com/" },
+    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect", href: "https://www.cloudconnect.in/" },
+    { logo: "./ourpartners/Kentico.png", name: "Kentico", href: "https://www.kentico.com/" },
+    { logo: "./ourpartners/amazon-logo.png", name: "Amazon", href: "https://www.amazon.in/" },
+    { logo: "./ourpartners/microsoft-logo.png", name: "Microsoft",  href: "https://www.microsoft.com/" },
+    { logo: "./ourpartners/Adobe_Corporate_Logo.png", name: "Adobe", href: "https://www.adobe.com/" },
+    { logo: "./ourpartners/apex-legends-logo.png", name: "Apex" , href: "https://www.apexlegends.com/" },
+    { logo: "./ourpartners/Digiflip_logo.png", name: "Digiflip", href: "https://www.digiflip.com/" },
+    { logo: "./ourpartners/CARS24_Official_New_Logo.png", name: "Cars24", href: "https://www.cars24.com/" },
+    { logo: "./ourpartners/CloudConnect_Logo.png", name: "CloudConnect", href: "https://www.cloudconnect.in/" },
+    { logo: "./ourpartners/Kentico.png", name: "Kentico", href: "https://www.kentico.com/" },
+
+
     // Add all other partners similarly
   ];
 
@@ -108,7 +103,7 @@ export default function Partners() {
     slidesToShow: isMobile ? 2 : isTablet ? 3 : 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1200,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     rows: 1,
     slidesPerRow: 1,
@@ -204,38 +199,40 @@ export default function Partners() {
         >
           <Slider {...settings}>
             {partners.map((partner, index) => (
-              <Box key={index}>
-                <Box
-                  sx={{
-                    height: 100,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "white",
-                    border: "1px solid",
-                    borderColor: "grey.200",
-                    borderRadius: 1,
-                    p: 2,
-                    m: 0.2,
-                    transition: "all 0.3s ease-in-out",
-                    "&:hover": {
-                      boxShadow: 2,
-                      borderColor: "grey.300",
-                    },
-                  }}
-                >
-                  <StyledImage
-                    src={partner.logo}
-                    alt={`${partner.name} logo`}
-                    width={120}
-                    height={60}
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
+              <Link href={partner.href}>
+                <Box key={index}>
+                  <Box
+                    sx={{
+                      height: 100,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "white",
+                      border: "1px solid",
+                      borderColor: "grey.200",
+                      borderRadius: 1,
+                      p: 2,
+                      m: 0.2,
+                      transition: "all 0.3s ease-in-out",
+                      "&:hover": {
+                        boxShadow: 2,
+                        borderColor: "grey.300",
+                      },
                     }}
-                  />
+                  >
+                    <StyledImage
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      width={120}
+                      height={60}
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </Box>
                 </Box>
-              </Box>
+              </Link>
             ))}
           </Slider>
         </Box>

@@ -140,6 +140,26 @@ const IndicatorBar = styled(Box)<{ progress: number }>(({ progress }) => ({
   transition: "width 0.3s ease",
 }));
 
+const ExpandableQuote = ({ quote }: { quote: string }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const words = quote.split(' ');
+  const truncatedQuote = words.slice(0, 15).join(' ');
+
+  return (
+    <Typography variant="body1" sx={{ flex: 1, mb: 4, mt: 2, color: "#4A4A4A" }}>
+      &quot;{isExpanded ? quote : truncatedQuote}
+      {words.length > 15 && (
+        <span
+          onClick={() => setIsExpanded(!isExpanded)}
+          style={{ color: '#4d7990', cursor: 'pointer', marginLeft: '5px' }}
+        >
+          {isExpanded ? ' Read less' : '... Read more'}
+        </span>
+      )}&quot;
+    </Typography>
+  );
+};
+
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(1);
 
@@ -195,12 +215,7 @@ export default function TestimonialSlider() {
                   />
                 </Box>
 
-                <Typography
-                  variant="body1"
-                  sx={{ flex: 1, mb: 4, mt: 2, color: "#4A4A4A" }}
-                >
-                  &quot;{testimonial.quote}&quot;
-                </Typography>
+                <ExpandableQuote quote={testimonial.quote} />
                 <AuthorSection>
                   <Avatar src={testimonial.avatar} alt={testimonial.author} />
                   <Box>
@@ -223,7 +238,7 @@ export default function TestimonialSlider() {
 
         <NavigationButton
           onClick={handlePrevious}
-          sx={{ left: { xs: 16, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+          sx={{ left: { xs: -10, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
         >
           <KeyboardArrowLeft
             sx={{
@@ -234,7 +249,7 @@ export default function TestimonialSlider() {
         </NavigationButton>
         <NavigationButton
           onClick={handleNext}
-          sx={{ left: { xs: 16, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+          sx={{ left: { xs: 80, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
         >
           <KeyboardArrowRight
             sx={{
@@ -247,3 +262,4 @@ export default function TestimonialSlider() {
     </Container>
   );
 }
+

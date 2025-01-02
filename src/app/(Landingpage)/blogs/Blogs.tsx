@@ -111,7 +111,7 @@ export default function BlogListing() {
             variant="contained"
             onClick={handleLoadMore}
             sx={{
-              width: { xs: "100px", sm: "130px", md: "150px" },
+              width: { xs: "120px", sm: "130px", md: "150px" },
               height: { xs: "35px", sm: "45px", md: "50px" },
               minWidth: "100px",
               bgcolor: "#4294A5",

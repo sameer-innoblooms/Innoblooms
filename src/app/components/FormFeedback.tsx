@@ -101,23 +101,46 @@ export default function ContactPage() {
             <Box sx={{ mb: 4 }}>
               <Typography
                 variant="body1"
-                sx={{ mb: 1, color: "#4A4A4A", fontWeight: "bold" }}
+                sx={{
+                  mb: 1,
+                  color: "#4A4A4A",
+                  fontWeight: "bold",
+                  ":hover": {
+                    textDecoration: "underline",
+                  },
+                }}
               >
-                info@innoblooms.com
+                <a
+                  href="mailto:info@innoblooms.com"
+                  style={{ color: "#4A4A4A", textDecoration: "none" }}
+                >
+                  info@innoblooms.com
+                </a>
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ mb: 2, color: "#4A4A4A", fontWeight: "bold" }}
+                sx={{ mb: 1, color: "#4A4A4A", fontWeight: "bold" }}
               >
-                +91 7252833134
+                <a href="tel:+917252833134"
+                 style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "inline",
+                }}
+                className="mobile-only"
+                >+91 7252833134</a>
               </Typography>
-              <Link
+
+              {/* <Link
                 href="#"
                 underline="hover"
                 sx={{ color: "#4A4A4A", fontWeight: "bold" }}
               >
                 Customer Support
-              </Link>
+              </Link> */}
+              <Typography sx={{ color: "#4A4A4A", fontWeight: "bold" }}>
+                Customer Support
+              </Typography>
             </Box>
 
             <Section

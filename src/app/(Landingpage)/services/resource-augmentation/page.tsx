@@ -25,7 +25,7 @@ const page = () => {
           position: "relative",
           objectFit: "cover",
           maxHeight: "1500px",
-          backgroundPositionY: -115,
+          backgroundPositionY: {xs: -20, sm: -30, md: -115},
           backgroundImage: `url(/images/resource-augmentation.jpg)`,
           "&::before": {
             content: '""',
@@ -49,6 +49,7 @@ const page = () => {
           sx={{
             zIndex: 9,
             mb: 2,
+            fontSize: {xs: "2.5rem", sm: "3rem", md: "6rem"},
           }}
         >
           Resource Augmentation
