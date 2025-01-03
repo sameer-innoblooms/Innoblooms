@@ -76,6 +76,8 @@ const page = () => {
           sx={{
             zIndex: 2, // Ensure text is above the overlay
             md: 2,
+            px: 1,
+            fontSize: {xs: "2.5rem", sm: "3rem", md: "6rem"},
           }}
         >
           Automation With Ai

@@ -22,12 +22,13 @@ import {
   Message,
   Instagram,
   X,
+  WhatsApp,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
 import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
 
-const GradientBackground = styled(Box)(({}) => ({
+const GradientBackground = styled(Box)(({ }) => ({
   // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
 
   background: "#000000",
@@ -45,7 +46,7 @@ const GradientBackground = styled(Box)(({}) => ({
   },
 }));
 
-const StyledLink = styled(Typography)(({}) => ({
+const StyledLink = styled(Typography)(({ }) => ({
   color: "white",
   textDecoration: "none",
   // "&:hover": {
@@ -96,7 +97,7 @@ export default function Footer() {
             variant="contained"
             endIcon={<ArrowForwardIcon />}
             sx={{
-              width: { xs: "100px", sm: "130px", md: "185px" },
+              width: { xs: "130px", sm: "130px", md: "185px" },
               height: { xs: "35px", sm: "45px", md: "50px" },
               minWidth: "100px",
               bgcolor: "#4294a5",
@@ -132,11 +133,12 @@ export default function Footer() {
           <Grid item xs={12} md={4}>
             <Box sx={{ mb: 3 }}>
               <Image
-                src="./Innoblooms-logo.png"
+                src="/Innoblooms-logo.png"
                 alt="Innoblooms"
                 width={200}
                 height={60}
-                // style={{ filter: "brightness(0) invert(1)" }}
+              // layout="responsive"
+              // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
             <Typography sx={{ mb: 3 }}>
@@ -197,14 +199,27 @@ export default function Footer() {
                   <Instagram />
                 </IconButton>
               </Link>
+              <Link href="https://api.whatsapp.com/send?phone=917252833134">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <WhatsApp />
+                </IconButton>
+              </Link>
             </Stack>
             <Box sx={{ mt: 4 }}>
               <Image
-                src="./ISO-9001-certified.png"
+                src="/ISO-9001-certified.png"
                 alt="ISO 9001 Certified"
                 width={50}
                 height={50}
-                // style={{ filter: "brightness(0) invert(1)" }}
+              // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
           </Grid>
@@ -240,19 +255,29 @@ export default function Footer() {
             <Stack spacing={3}>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Phone />
-                <Typography>+91 7252833134</Typography>
-                <Typography>+91 8979799833</Typography>
+                <Typography><a href="tel: +91 7252833134">
+                  +91 7252833134
+                </a></Typography>
+                <Typography><a href="tel: +91 8979799833">
+                  +91 8979799833
+                </a></Typography>
               </Stack>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Email />
-                <Typography>info@innoblooms.com</Typography>
+                <Typography sx={{
+                  ":hover": {
+                    textDecoration: 'underline'
+                  }
+                }}>
+                  <a href="mailto:info@innoblooms.com">info@innoblooms.com</a>
+                </Typography>
               </Stack>
               <Stack direction="row" spacing={2}>
                 <LocationOn sx={{ mt: 0.5 }} />
                 <Box>
                   <Typography>
                     {" "}
-                    C-47(SH-120, Sector 63 A, Noida, Chotpur, Uttar Pradesh
+                    C-47(SH-120), Sector 63 A, Noida, Chotpur, Uttar Pradesh
                     201307
                   </Typography>
                   {/* <Typography sx={{ mt: 2 }}>US Office: 17075 TESORO DR SAN DIEGO, CA 92128</Typography> */}

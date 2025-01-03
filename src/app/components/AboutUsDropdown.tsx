@@ -7,8 +7,9 @@ import { usePathname } from "next/navigation";
 import { ArrowDropDown, ArrowForwardIos } from "@mui/icons-material";
 
 const AboutLinks = [
-  { text: "Our team", href: "/aboutus/our-team" },
   { text: "Company Info", href: "/aboutus/company-info" },
+  { text: "Our team", href: "/aboutus/our-team" },
+  
 ];
 
 const AboutUsDropdown: React.FC = () => {

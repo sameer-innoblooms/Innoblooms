@@ -52,6 +52,8 @@ const page = () => {
           sx={{
             zIndex: 9,
             mb: 2,
+            px: {xs: 2, sm: 4},
+            fontSize: {xs: "3rem", sm: "3rem", md: "6rem"},
           }}
         >
           Company Info

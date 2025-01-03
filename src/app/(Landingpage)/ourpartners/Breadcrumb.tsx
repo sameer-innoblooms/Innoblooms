@@ -30,13 +30,13 @@ const Breadcrumb = () => {
 
   return (
     <Breadcrumbs aria-label="breadcrumb" sx={{
-        color: 'white'
+      color: 'white'
     }}>
       {breadcrumbs.map((breadcrumb, index) => (
         // If it's the last breadcrumb (dynamic part), display as plain text and underline it
         index === breadcrumbs.length - 1 ? (
-          <Typography 
-            key={breadcrumb.label}
+          <Typography
+            key={index}
             sx={{ textDecoration: 'underline' }}  // Underline the last breadcrumb
           >
             {breadcrumb.label}
@@ -50,7 +50,7 @@ const Breadcrumb = () => {
             sx={{
               textDecoration: 'none',  // Remove underline by default
               '&:hover': {
-                textDecoration: breadcrumb.label==='Home' ? 'underline': 'none'  // Underline only on hover
+                textDecoration: breadcrumb.label === 'Home' ? 'underline' : 'none'  // Underline only on hover
               },
             }}
           >

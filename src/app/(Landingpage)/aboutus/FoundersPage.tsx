@@ -248,25 +248,16 @@ const ProfileImage = styled("img")({
 export default function LeadershipTeam() {
   const leaders = [
     {
-      name: "Faiyaz",
-      designation: "Chief Technical Advisor",
-      description: `Tech savvy IT Leader with 23+ Years of Expertise in AI,
-            Cybersecurity, and Cloud Computing. Faiyaz is a seasoned
-            professional with a proven track record of delivering innovative,
-            end-to-end solutions for B2B and B2C industries. Faiyaz has worked
-            with global clients such as Sun Microsystems (Menlo Park), General
-            Electric (US), Michelin Tyre, and United Airlines, and held key
-            roles at IMR Global, Bharti Airtel, Birlasoft, and startups
-            leveraging disruptive technologies. As Country Director at
-            Species360, Faiyaz is aligned strategic leadership with impactful
-            global initiatives. Faiyaz specialize in driving agility and growth
-            by integrating AI, Cybersecurity, and Cloud Computing into scalable,
-            secure solutions, delivering measurable value.`,
-      image: "/CEO.jpeg?height=300&width=250",
+      name: "Shivani Goel",
+      designation: "CEO(Chief Executive Officer)",
+      description: `Shivani Goel is a visionary entrepreneur with expertise in start-up management, e-commerce, and risk management. As the Founder and Director of Innoblooms Info Service Pvt. Ltd., she leads innovative solutions with a focus on product development, marketing, and CRM.
+With over 20 years of experience spanning industries like insurance, travel, and technology, Shivani has consistently delivered impactful results. She has been recognized for her market insights, strategic planning, and ability to cultivate enduring client relationships.
+Her achievements include earning a spot in Kotak Mahindra's Club51 and co-founding Mart And You, an e-commerce platform. Shivani's academic foundation includes a Fellowship in General Insurance and a PG Diploma in Insurance and risk management, which are complemented by her passion for innovation and customer satisfaction.`,
+      image: "/CEO.jpg?height=300&width=250",
     },
     {
       name: "Faiyaz",
-      designation: "Chief Technical Advisor",
+      designation: "CTA(Chief Technical Advisor)",
       description: `Tech savvy IT Leader with 23+ Years of Expertise in AI,
             Cybersecurity, and Cloud Computing. Faiyaz is a seasoned
             professional with a proven track record of delivering innovative,
@@ -279,8 +270,9 @@ export default function LeadershipTeam() {
             global initiatives. Faiyaz specialize in driving agility and growth
             by integrating AI, Cybersecurity, and Cloud Computing into scalable,
             secure solutions, delivering measurable value.`,
-      image: "/CEO.jpeg?height=300&width=250",
+      image: "/CTA.jpeg?height=300&width=250",
     },
+
   ];
 
   return (

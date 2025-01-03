@@ -67,6 +67,7 @@ const page = () => {
           sx={{
             zIndex: 2, // Ensure text is above the overlay
             mb: 2,
+            fontSize: {xs: "2.5rem", sm: "3rem", md: "6rem"},
           }}
         >
           Software Services
@@ -93,7 +94,7 @@ const page = () => {
       textAlign: 'center', // Center align the text
     }}
   >
-   Innoblooms Info Services Pvt Ltd: Bringing Your Ideas To Life Finest Software Services with Innovative Solutions Designed to Optimize
+   Innoblooms Info Services Pvt. Ltd. Bringing Your Ideas To Life Finest Software Services with Innovative Solutions Designed to Optimize
   </Typography> */}
       </Box>
       <Overview />

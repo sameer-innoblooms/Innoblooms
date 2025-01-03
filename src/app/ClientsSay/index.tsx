@@ -11,7 +11,7 @@ import {
   useTheme,
   Container,
 } from "@mui/material";
-import Slider from "react-slick";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TestimonialSlider from "../components/Testimonials";
 
@@ -136,6 +136,7 @@ const ClientsSay: React.FC = () => {
       sx={{
         position: "absolute",
         top: "50%",
+        left: '0',
         transform: "translateY(-50%)",
         zIndex: 1,
         cursor: "pointer",

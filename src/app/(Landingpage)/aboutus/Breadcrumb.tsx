@@ -39,7 +39,7 @@ const Breadcrumb = () => {
         // If it's the last breadcrumb (dynamic part), display as plain text and underline it
         index === breadcrumbs.length - 1 ? (
           <Typography
-            key={breadcrumb.label}
+            key={index}
             sx={{ textDecoration: "underline" }} // Underline the last breadcrumb
           >
             {breadcrumb.label}

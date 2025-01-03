@@ -15,61 +15,61 @@ import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
 const testimonials = [
   {
-    logo: "./logo/ibm-logo.png?height=10&width=10",
+    logo: "/logo/ibm-logo.png?height=10&width=10",
     quote:
       "Innoblooms has been critical in deploying IBM Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
     author: "Phil Gilbert",
     title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+    avatar: "/ourpartners/avatar.jpg?height=60&width=60",
   },
   {
-    logo: "./logo/Cars24.png?height=50&width=50",
+    logo: "/logo/Cars24.png?height=50&width=50",
     quote:
-      "Innoblooms has been critical in deploying Cars24 Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Jane haley",
-    title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+      "I am thrilled to collaborate with such an innovative company. At CARS24, we share your passion for cutting-edge solutions and customer satisfaction. Together, we can drive the future of automotive technology and create unparalleled experiences for our customers.",
+    author: "Vikram Chopra",
+    title: "Founder and CEO",
+    avatar: "/ourpartners/cars24.jpg?height=60&width=60",
   },
   {
-    logo: "./logo/kentico.png?height=10&width=10",
+    logo: "/logo/kentico.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying kentonic Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has been a game-changer for our business. Their IT solutions are top-notch, and their team is incredibly responsive and professional. From website development to digital marketing, they've exceeded our expectations. Highly recommend!",
+    author: "Petr Palas",
+    title: "CEO and chairman",
+    avatar: "/ourpartners/kentico.jpg?height=60&width=60",
   },
   {
-    logo: "./logo/dell.png?height=10&width=10",
+    logo: "/logo/dell.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying dell Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has consistently delivered exceptional IT solutions, enhancing our operational efficiency and digital presence. Their innovative approach and professional team make them a highly valued partner. Highly recommended.",
+    author: "Michael Dell",
+    title: "CEO of Dell Technologies",
+    avatar: "/ourpartners/dell.jpg?height=60&width=60",
   },
 
   {
-    logo: "./logo/tata.png?height=10&width=10",
+    logo: "/logo/tata.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying tata Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has been an outstanding partner in delivering innovative IT solutions. Their professionalism, creativity, and commitment to excellence have greatly enhanced our digital transformation journey. Highly recommended",
+    author: "Warren Harris",
+    title: "CEO Tata Technologies",
+    avatar: "/ourpartners/tata.jpg?height=60&width=60",
   },
   {
-    logo: "./logo/adobe.png?height=10&width=10",
+    logo: "/logo/adobe.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying adobe Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has been instrumental in enhancing our digital initiatives. Their innovative solutions and dedicated team have greatly contributed to our success. We highly appreciate their partnership.",
+    author: "Shantanu Narayen",
+    title: "CEO of Adobe Inc.",
+    avatar: "/ourpartners/adobe.jpg?height=60&width=60",
   },
   {
-    logo: "./logo/paytm.png?height=10&width=10",
+    logo: "/logo/paytm.png?height=10&width=10",
     quote:
-      "Innoblooms has been critical in deploying paytm Design Thinking across the whole company. We now have people in more than 50 countries collaborating daily.",
-    author: "Phil Gilbert",
-    title: "Head of IBM Design",
-    avatar: "./ourpartners/avatar.jpg?height=60&width=60",
+      "Innoblooms has significantly improved our digital operations. Their innovative IT solutions and dedicated support team have been invaluable in advancing our business goals. Highly recommend their services.",
+    author: "Vijay Shekhar Sharma",
+    title: "Founder and CEO One97 ",
+    avatar: "/ourpartners/paytm.jpg?height=60&width=60",
   },
 ];
 
@@ -140,6 +140,26 @@ const IndicatorBar = styled(Box)<{ progress: number }>(({ progress }) => ({
   transition: "width 0.3s ease",
 }));
 
+const ExpandableQuote = ({ quote }: { quote: string }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const words = quote.split(' ');
+  const truncatedQuote = words.slice(0, 15).join(' ');
+
+  return (
+    <Typography variant="body1" sx={{ flex: 1, mb: 4, mt: 2, color: "#4A4A4A" }}>
+      &quot;{isExpanded ? quote : truncatedQuote}
+      {words.length > 15 && (
+        <span
+          onClick={() => setIsExpanded(!isExpanded)}
+          style={{ color: '#4d7990', cursor: 'pointer', marginLeft: '5px' }}
+        >
+          {isExpanded ? ' Read less' : '... Read more'}
+        </span>
+      )}&quot;
+    </Typography>
+  );
+};
+
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(1);
 
@@ -195,12 +215,7 @@ export default function TestimonialSlider() {
                   />
                 </Box>
 
-                <Typography
-                  variant="body1"
-                  sx={{ flex: 1, mb: 4, mt: 2, color: "#4A4A4A" }}
-                >
-                  &quot;{testimonial.quote}&quot;
-                </Typography>
+                <ExpandableQuote quote={testimonial.quote} />
                 <AuthorSection>
                   <Avatar src={testimonial.avatar} alt={testimonial.author} />
                   <Box>
@@ -223,7 +238,7 @@ export default function TestimonialSlider() {
 
         <NavigationButton
           onClick={handlePrevious}
-          sx={{ left: { xs: 16, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+          sx={{ left: { xs: -10, md: -20 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
         >
           <KeyboardArrowLeft
             sx={{
@@ -234,7 +249,7 @@ export default function TestimonialSlider() {
         </NavigationButton>
         <NavigationButton
           onClick={handleNext}
-          sx={{ left: { xs: 16, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
+          sx={{ left: { xs: 80, md: 50 }, bottom: { xs: 0, md: -20 } }} // Adjusted for consistency
         >
           <KeyboardArrowRight
             sx={{
@@ -247,3 +262,4 @@ export default function TestimonialSlider() {
     </Container>
   );
 }
+

@@ -22,7 +22,7 @@ export default function WhatWeDoAutomation() {
       title: "AI-Powered Data Analysis",
       icon: Cloud,
       description:
-        " A Human Resources Consultant initiates and leads HR programs and projects, conducts research to identify issues, provides advice and recommendations, formulates strategic plans, and assists in recruitment, training, and management of personnel.",
+        "An AI Data Analyst initiates and leads data analysis projects, conducts research to identify trends and insights, provides advice and recommendations, formulates strategic data plans, and assists in data management, visualization, and reportin.",
     },
     {
       title: "Smart Customer Engagement",

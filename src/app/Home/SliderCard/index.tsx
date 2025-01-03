@@ -71,7 +71,7 @@ const SliderCard: React.FC<SliderCardProps> = ({ item }) => {
       >
         <Container maxWidth="xl">
           <Box
-            sx={{ textAlign: "left", width: 1, mb: { xs: 4, sm: 6, md: 8 } }}
+            sx={{ textAlign: "left", width: 1, mb: { xs: 20, sm: 6, md: 8 }, mt: {md: 20} }}
           >
             <Typography
               variant="h1"
@@ -152,7 +152,7 @@ const SliderCard: React.FC<SliderCardProps> = ({ item }) => {
                 borderRadius: "40px",
                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
                 ml: { xs: 3 },
-                mb: { xs: 5 },
+                mb: { xs: 25 },
                 "&:hover": {
                   backgroundColor: "white",
                   color: "black",

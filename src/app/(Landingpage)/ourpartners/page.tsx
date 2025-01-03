@@ -48,38 +48,32 @@ export default function PartnersPage() {
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const partners = [
-    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
-    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
-    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
-    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
-    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
-    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
-    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
-    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
-    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
-    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
-    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon", href: "https://www.amazon.in/" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft",  href: "https://www.microsoft.com/" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe", href: "https://www.adobe.com/" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" , href: "https://www.apexlegends.com/" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip", href: "https://www.digiflip.com/" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24", href: "https://www.cars24.com/" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect", href: "https://www.cloudconnect.in/" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico", href: "https://www.kentico.com/" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon", href: "https://www.amazon.in/" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft",  href: "https://www.microsoft.com/" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe", href: "https://www.adobe.com/" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" , href: "https://www.apexlegends.com/" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip", href: "https://www.digiflip.com/" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24", href: "https://www.cars24.com/" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect", href: "https://www.cloudconnect.in/" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico", href: "https://www.kentico.com/" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon", href: "https://www.amazon.in/" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft",  href: "https://www.microsoft.com/" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe", href: "https://www.adobe.com/" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" , href: "https://www.apexlegends.com/" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip", href: "https://www.digiflip.com/" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24", href: "https://www.cars24.com/" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect", href: "https://www.cloudconnect.in/" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico", href: "https://www.kentico.com/" },
+
+
     // Add all other partners similarly
   ];
 
@@ -270,6 +264,7 @@ export default function PartnersPage() {
         >
           <Slider {...settings}>
             {partners.map((partner, index) => (
+              <Link href={partner.href}>
               <Box key={index}>
                 <Box
                   sx={{
@@ -302,6 +297,8 @@ export default function PartnersPage() {
                   />
                 </Box>
               </Box>
+              </Link>
+              
             ))}
           </Slider>
         </Box>

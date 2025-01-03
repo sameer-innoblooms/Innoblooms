@@ -120,6 +120,7 @@ const Services = () => {
             <Typography
               variant="h6"
               marginLeft="-8px"
+              marginBottom="13px"
               sx={{
                 fontWeight: "bold",
                 color: "white",
@@ -154,9 +155,7 @@ const Services = () => {
                   textShadow: "0px 0px 2px rgb(5, 5, 4)",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-                debitis sint dicta ullam alias eveniet, maiores magnam nobis
-                soluta.
+                Overcome challenges, tap into opportunities and achieve your business potential. Our experienced consultants provide customized solutions that suit the needs at every level
               </Typography>
               ,
               <Button
@@ -217,6 +216,7 @@ const Services = () => {
             <Typography
               variant="h6"
               marginLeft="-8px"
+              marginBottom="13px"
               sx={{
                 fontWeight: "bold",
                 color: "white",
@@ -253,9 +253,7 @@ const Services = () => {
                   textShadow: "1px 1px 10px black",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-                debitis sint dicta ullam alias eveniet, maiores magnam nobis
-                soluta.
+                Extend your capabilities with elite talent on demand. Now, at the time of demand, we deliver manpower solutions for your project using our professional resources so that your team can scale easily.
               </Typography>
               ,
               <Button
@@ -316,6 +314,7 @@ const Services = () => {
             <Typography
               variant="h6"
               marginLeft="-8px"
+              marginBottom="13px"
               sx={{
                 textShadow: "1",
                 fontWeight: "bold",
@@ -351,9 +350,7 @@ const Services = () => {
                   marginBottom: "50px",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-                debitis sint dicta ullam alias eveniet, maiores magnam nobis
-                soluta.
+                Picture a world where tasks finish by themselves, and your team can work on what matters! Our AI Automation solutions automate your operations & grow with you automatically.
               </Typography>
               ,
               <Button
@@ -414,6 +411,7 @@ const Services = () => {
             <Typography
               variant="h6"
               marginLeft="-8px"
+              marginBottom="13px"
               sx={{
                 fontWeight: "bold",
                 color: "white",
@@ -448,11 +446,8 @@ const Services = () => {
                   marginBottom: "50px",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-                debitis sint dicta ullam alias eveniet, maiores magnam nobis
-                soluta.
+                Innoblooms Info Services Pvt. Ltd. Bringing Your Ideas To Life Finest Software Services with Innovative Solutions Designed to Optimize.
               </Typography>
-              ,
               <Button
                 variant="contained"
                 onClick={() => router.push("/services/software-services")}
