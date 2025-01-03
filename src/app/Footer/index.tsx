@@ -22,6 +22,7 @@ import {
   Message,
   Instagram,
   X,
+  WhatsApp,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
@@ -96,7 +97,7 @@ export default function Footer() {
             variant="contained"
             endIcon={<ArrowForwardIcon />}
             sx={{
-              width: { xs: "100px", sm: "130px", md: "185px" },
+              width: { xs: "130px", sm: "130px", md: "185px" },
               height: { xs: "35px", sm: "45px", md: "50px" },
               minWidth: "100px",
               bgcolor: "#4294a5",
@@ -198,6 +199,19 @@ export default function Footer() {
                   <Instagram />
                 </IconButton>
               </Link>
+              <Link href="https://api.whatsapp.com/send?phone=917252833134">
+                <IconButton
+                  sx={{
+                    color: "white",
+                    ":hover": {
+                      color: "#4294A5",
+                    },
+                  }}
+                  aria-label="Facebook"
+                >
+                  <WhatsApp />
+                </IconButton>
+              </Link>
             </Stack>
             <Box sx={{ mt: 4 }}>
               <Image
@@ -241,12 +255,22 @@ export default function Footer() {
             <Stack spacing={3}>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Phone />
-                <Typography>+91 7252833134</Typography>
-                <Typography>+91 8979799833</Typography>
+                <Typography><a href="tel: +91 7252833134">
+                +91 7252833134
+                  </a></Typography>
+                <Typography><a href="tel: +91 8979799833">
+                +91 8979799833
+                  </a></Typography>
               </Stack>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Email />
-                <Typography>info@innoblooms.com</Typography>
+                <Typography sx={{
+                  ":hover":{
+                    textDecoration: 'underline'
+                  }
+                }}>
+                  <a href="mailto:info@innoblooms.com">info@innoblooms.com</a>
+                </Typography>
               </Stack>
               <Stack direction="row" spacing={2}>
                 <LocationOn sx={{ mt: 0.5 }} />

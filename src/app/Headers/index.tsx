@@ -18,6 +18,8 @@ import { Box, useScrollTrigger } from "@mui/material";
 import ServicesDropdown from "../components/ServicePopover";
 import Image from "next/image";
 import AboutUsDropdown from "../components/AboutUsDropdown";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -26,6 +28,40 @@ const Header = () => {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
+
+  const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({});
+
+  const handleToggle = (text: any) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [text]: !prev[text], // Toggle the expanded state for the clicked category
+    }));
+  };
+
+  const drawerLink = [
+    { text: "Home", href: "/" },
+    {
+      text: "About Us",
+      subLinks: [
+        {text: "Company Info", href: "/aboutus/company-info"},
+        { text: "Our Team", href: "/aboutus/our-team" },
+        
+      ],
+    },
+    {
+      text: "Services",
+      subLinks: [
+        { text: "Business Consulting", href: "/services/business-consulting" },
+        { text: "Automation With Ai", href: "/services/automation-with-ai" },
+        { text: "Resource Augmentation", href: "/services/resource-augmentation" },
+        { text: "Software Services", href: "/services/software-services" },
+      ],
+    },
+    { text: "Product", href: "/products" },
+    { text: "Our Partners", href: "/ourpartners" },
+    { text: "Blogs", href: "/blogs" },
+    { text: "Contact us", href: "/contact" },
+  ];
 
   const drawerLinks = [
     { text: "Home", href: "/" },
@@ -154,7 +190,7 @@ const Header = () => {
       role="presentation"
     >
       <Box
-        sx={{
+        sx={{ 
           height: { xs: "60px", sm: "80px" },
           display: "flex",
           justifyContent: "flex-end",
@@ -170,31 +206,96 @@ const Header = () => {
       </Box>
       <Divider sx={{ borderColor: "rgba(255,255,255,0.2)" }} />
       <List>
-        {drawerLinks.map((link) => (
+      {drawerLink.map((link) => (
+        <React.Fragment key={link.text}>
           <ListItem
-            key={link.text}
-            onClick={toggleDrawer(false)}
+            onClick={() => {
+              if (link.subLinks) {
+                handleToggle(link.text);
+              } else {
+                toggleDrawer(false)();
+              }
+            }}
             sx={{
               height: { xs: "50px", sm: "60px" },
-              "&:hover": {
-                backgroundColor: "rgba(255,255,255,0.1)",
-              },
+              // "&:hover": {
+              //   backgroundColor: "rgba(255,255,255,0.1)",
+              // },
+              backgroundColor: expanded[link.text]? "rgba(255,255,255,0.1)" : "none",
+              display: "flex",
+              justifyContent: "center", // Center align the main text and icon
             }}
           >
-            <Link href={link.href} passHref style={{ width: "100%" }}>
-              <ListItemText
-                primary={link.text}
-                primaryTypographyProps={{
-                  color: "white",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  fontSize: { xs: "16px", sm: "20px" },
+            {link.href ? (
+              <Link href={link.href} passHref style={{ width: "100%" }}>
+                <ListItemText
+                  primary={link.text}
+                  primaryTypographyProps={{
+                    color: "white",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    fontSize: { xs: "16px", sm: "20px" },
+                  }}
+                />
+              </Link>
+            ) : (
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  
+                  pl: 2,
                 }}
-              />
-            </Link>
+              >
+                <ListItemText
+                  primary={link.text}
+                  primaryTypographyProps={{
+                    color: "white",
+                    fontWeight: "bold",
+                    fontSize: { xs: "16px", sm: "20px" },
+                  }}
+                />
+                {link.subLinks &&
+                  (expanded[link.text] ? (
+                    <ExpandLessIcon sx={{ color: "white" }} />
+                  ) : (
+                    <ExpandMoreIcon sx={{ color: "white" }} />
+                  ))}
+              </Box>
+            )}
           </ListItem>
-        ))}
-      </List>
+          {link.subLinks && expanded[link.text] && (
+            <List component="div" disablePadding>
+              {link.subLinks.map((subLink) => (
+                <ListItem
+                  key={subLink.text}
+                  onClick={toggleDrawer(false)}
+                  sx={{
+                    height: { xs: "40px", sm: "50px" },
+                    display: "flex",
+                    justifyContent: "center", // Center align subcategory text and icon
+                    "&:hover": {
+                      backgroundColor: "rgba(255,255,255,0.1)",
+                    },
+                  }}
+                >
+                  <Link href={subLink.href} passHref style={{ width: "100%" }}>
+                    <ListItemText
+                      primary={subLink.text}
+                      primaryTypographyProps={{
+                        color: "white",
+                        textAlign: "center",
+                        fontSize: { xs: "14px", sm: "18px" },
+                      }}
+                    />
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          )}
+        </React.Fragment>
+      ))}
+    </List>
     </Box>
   );
 
@@ -208,6 +309,7 @@ const Header = () => {
           boxShadow: 0,
           color: trigger ? "black" : "white",
           height: { xs: "60px", sm: "70px", md: "80px" },
+          width: "100%",
         }}
       >
         <Toolbar
@@ -220,25 +322,16 @@ const Header = () => {
             margin: "0 auto",
             width: "100%",
             px: { xs: 2, sm: 4, md: 6 },
+            
           }}
         >
           <Link href="/">
-            <Typography
-              variant="h1"
-              color="white"
-              component="div"
-              sx={{
-                fontWeight: "bold",
-                fontSize: { xs: "20px", sm: "28px", md: "36px" },
-                height: { xs: "40px", sm: "50px", md: "60px" },
-                display: "flex",
-                alignItems: "center",
-                mt: 1,
-              }}
-            >
+            
               <Box
                 sx={{
-                  width: { xs: "100px", sm: "150px", md: "300px" },
+                  width: { xs: "200px", sm: "200px", md: "300px" },
+                  pt:{xs: 3, sm: 1, md: 3},
+                  pb:{xs: 2}
                 }}
               >
                 <Image
@@ -249,7 +342,7 @@ const Header = () => {
                   layout="responsive"
                 />
               </Box>
-            </Typography>
+            
           </Link>
           <Box
             sx={{
@@ -274,9 +367,12 @@ const Header = () => {
               display: { xs: "block", sm: "none" },
               height: "40px",
               width: "40px",
+              mr: 2,
+              
+              mb:2
             }}
           >
-            <MenuIcon />
+            <MenuIcon sx ={{ fontSize: "30px" }} />
           </IconButton>
         </Toolbar>
       </AppBar>

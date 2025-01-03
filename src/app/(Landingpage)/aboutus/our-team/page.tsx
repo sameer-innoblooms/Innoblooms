@@ -49,6 +49,7 @@ const page = () => {
           sx={{
             zIndex: 9,
             mb: 2,
+            fontSize: {xs: "3rem", sm: "3rem", md: "6rem"},
           }}
         >
           Our Team
