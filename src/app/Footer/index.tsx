@@ -112,7 +112,7 @@ export default function Footer() {
               "&:hover": {
                 color: "black",
                 backgroundColor: "white",
-                 },
+              },
               "&:hover .MuiSvgIcon-root": {
                 transform: "translateX(4px)",
                 transition: "transform 0.2s",
@@ -137,7 +137,7 @@ export default function Footer() {
                 alt="Innoblooms"
                 width={200}
                 height={60}
-                // layout="responsive"
+              // layout="responsive"
               // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Box>
@@ -256,16 +256,16 @@ export default function Footer() {
               <Stack direction="row" spacing={2} alignItems="center">
                 <Phone />
                 <Typography><a href="tel: +91 7252833134">
-                +91 7252833134
-                  </a></Typography>
+                  +91 7252833134
+                </a></Typography>
                 <Typography><a href="tel: +91 8979799833">
-                +91 8979799833
-                  </a></Typography>
+                  +91 8979799833
+                </a></Typography>
               </Stack>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Email />
                 <Typography sx={{
-                  ":hover":{
+                  ":hover": {
                     textDecoration: 'underline'
                   }
                 }}>

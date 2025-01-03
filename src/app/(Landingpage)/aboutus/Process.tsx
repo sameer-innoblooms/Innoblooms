@@ -12,6 +12,7 @@ const StyledSection = styled(Box)(({ }) => ({
 }));
 
 export default function Process() {
+  
   return (
     <Box
       sx={{

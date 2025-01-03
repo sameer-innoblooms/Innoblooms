@@ -136,6 +136,7 @@ const ClientsSay: React.FC = () => {
       sx={{
         position: "absolute",
         top: "50%",
+        left: '0',
         transform: "translateY(-50%)",
         zIndex: 1,
         cursor: "pointer",

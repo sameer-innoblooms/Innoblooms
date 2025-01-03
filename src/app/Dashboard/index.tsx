@@ -16,7 +16,9 @@ import Partners from "../components/Ourpartners";
 import ContactPage from "../components/FormFeedback";
 function Dashboard() {
   return (
-    <Box>
+    <Box 
+    // maxWidth="1600px" marginInline='auto'
+    >
       <Home />
       <Services />
       {/* <BackgroundImage /> */}
